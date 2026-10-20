@@ -127,8 +127,6 @@
 6294|579|182|10|Bold|Labels & Captions · Inter
 6317|579|264|11|Semi Bold|SECTION LABEL · STEP 01 · APPROVED
 6441|579|700|16|Regular|If you value seamlessness in financial tools, Daneizo is the credit platform Nigerian SMEs deserve — fast approvals, transparent terms, and a repayment experience that keeps owners in control rather than in the dark. The app achieved a 68.4% reduction in application abandonment and ₦4.2B in disbursements within the first two months of launch on both the App Store and Google Play.
-6629|629|68|14|Semi Bold|App Store
-6629|794|81|14|Semi Bold|Google Play
 6629|948|121|14|Semi Bold|View Prototype →
 6772|579|72|10|Bold|Designer
 6772|814|47|10|Bold|Team

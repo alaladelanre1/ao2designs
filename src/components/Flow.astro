@@ -1,6 +1,6 @@
 ---
 import { layout } from "../lib/flow";
-const { dump, title, year } = Astro.props;
+const { dump, title, year, links = {} } = Astro.props;
 const { hero, rows, xmin, xmax, arrowRows } = layout(dump, title, year);
 
 const labelLike = (i: any) => i.kind === "t" && i.fs <= 12.5 && /Bold|Semi/.test(i.fw) && i.text.length <= 60;
@@ -36,7 +36,7 @@ const cls = (i: any) => {
             <div class:list={["cell", { card: hasImg, right }]}>
               {c.items.map((i: any) => i.kind === "i"
                 ? <img class:list={["shot", { wide: i.w > i.h }]} src={i.src} alt={i.alt ?? ""} loading="lazy" />
-                : <p class:list={[cls(i), { li: i.marker }]} data-marker={i.marker}>{i.text}{i.suffix && <b class="suf">{i.suffix}</b>}</p>)}
+                : <p class:list={[cls(i), { li: i.marker }]} data-marker={i.marker}>{links[i.text] ? <a class="ext" href={links[i.text]} target="_blank" rel="noopener noreferrer">{i.text.replace(" →", "")} ↗</a> : i.text}{i.suffix && <b class="suf">{i.suffix}</b>}</p>)}
             </div>
           );
         })}
@@ -77,6 +77,8 @@ const cls = (i: any) => {
   .cell > .display + .small, .cell > .display + .tiny { margin-top: 2px; }
   .li { position: relative; padding-left: 22px; }
   .li::before { content: attr(data-marker); position: absolute; left: 0; color: var(--pa-text, var(--pa)); font-weight: 700; }
+  .ext { display: inline-block; border: 1px solid var(--pa-text, var(--pa)); color: var(--pa-text, var(--pa)); border-radius: 50px; padding: 10px 22px; font-size: 14px; font-weight: 600; transition: background 0.2s, color 0.2s; }
+  .ext:hover { background: var(--pa); color: #121212; }
   .suf { color: var(--pa-text, var(--pa)); margin-left: 4px; font-weight: 600; }
   @media (max-width: 760px) { .row:not(.flow) { grid-template-columns: 1fr; } .hero img { max-width: 32%; } }
 </style>

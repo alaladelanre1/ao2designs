@@ -4,11 +4,15 @@ import Sparkle from "./Sparkle.astro";
 <footer>
   <div class="spark" aria-hidden="true">{Array.from({ length: 12 }).map(() => <Sparkle size={20} />)}</div>
   <p class="big" aria-hidden="true">AO2</p>
+  <p class="social"><a href="https://www.linkedin.com/in/olanrewaju-alalade/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p>
   <p class="copy">© {new Date().getFullYear()} Olanrewaju Alalade — Product Designer</p>
 </footer>
 <style>
   footer { position: relative; overflow: hidden; padding-top: 40px; text-align: center; }
   .spark { position: absolute; inset: 160px 0 auto; display: flex; justify-content: space-around; color: var(--muted); }
   .big { font-family: var(--font-display); font-weight: 900; color: var(--accent-text); font-size: clamp(120px, 22vw, 320px); line-height: 0.9; }
+  .social { padding-top: 20px; }
+  .social a { display: inline-block; border: 1px solid var(--line); border-radius: 50px; padding: 8px 20px; font-size: 14px; transition: border-color 0.2s, color 0.2s; }
+  .social a:hover { color: var(--accent-text); border-color: var(--accent-text); }
   .copy { color: var(--muted); font-size: 14px; padding: 24px 20px 40px; }
 </style>

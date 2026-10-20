@@ -9,5 +9,5 @@ export const allProjects: ListItem[] = [
     const f = flowStudies.find((s) => s.slug === slug)!;
     return { slug, title: f.title, group: f.company, blurb: f.blurb ?? "", accent: f.accent, thumb: `/img/thumbs/${slug}.webp` };
   }),
-  ...comingSoon.map((c) => ({ slug: c.slug, title: c.title, group: "Side projects", blurb: "Case study coming soon", soon: true })),
+  ...comingSoon.map((c) => ({ slug: c.slug, title: c.title, group: c.group, blurb: "Case study coming soon", soon: true })),
 ];

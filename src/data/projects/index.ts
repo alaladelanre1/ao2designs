@@ -14,7 +14,7 @@ export const projectIndex: NavGroup[] = [
     { company: "Parkway", logo: "/img/logos/parkway.png", crop: "right", projects: [
       { name: "Parkway Wallet", slug: "parkway-wallet" },
       { name: "ReadyCash", slug: "readycash" },
-      { name: "Aggregate Portal" },
+      { name: "Aggregate Portal", slug: "aggregate-portal" },
     ] },
     { company: "Uridium Works", logo: "/img/logos/uwl.png", projects: [
       { name: "G&M Core Banking v1", slug: "gm-core-banking-v1" },
@@ -23,12 +23,12 @@ export const projectIndex: NavGroup[] = [
       { name: "Coronation Recon", slug: "coronation" },
       { name: "Greenwich Mobile", slug: "greenwich-mobile" },
       { name: "Greenwich Admin", slug: "greenwich-admin" },
-      { name: "Covenant MFB" },
+      { name: "Covenant MFB", slug: "covenant-mfb" },
     ] },
     { company: "SimpliRide", logo: "/img/logos/simpliride.png", crop: "left", projects: [
       { name: "SimpliRide Driver", slug: "simpliride-driver" },
       { name: "SimpliRide Rider", slug: "simpliride-rider" },
-      { name: "Fleet Management" },
+      { name: "Fleet Management", slug: "fleet-management" },
     ] },
   ] },
   { group: "Side Projects", items: [

@@ -13,7 +13,7 @@ const { p, dump } = Astro.props;
       <header>
         <div class="top"><h1>{p.title}</h1>{p.year && <span>{p.year}</span>}</div>
       </header>
-      <Flow dump={dump} title={p.title} year={p.year} />
+      <Flow dump={dump} title={p.title} year={p.year} links={p.links} />
     </article>
   </div>
 </Base>

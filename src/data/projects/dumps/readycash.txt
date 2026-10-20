@@ -155,7 +155,6 @@
 8466|583|122|10|Bold|Labels & UI Copy
 8494|583|493|11|Bold|SEND MONEY · BILLS PAYMENT · USSD CASHOUT · AGENT · WITHDRAW
 8618|583|677|16|Regular|ReadyCash is driving financial inclusion and empowering agents and customers alike. Its successful implementation and positive impact underscore the potential of digital solutions in transforming financial services for the 20,000+ agents who depend on it daily. The 60.2% increase in satisfaction scores after design iteration is proof that listening to users — truly listening — is the most powerful design tool available.
-8805|635|68|14|Semi Bold|App Store
 8805|792|81|14|Semi Bold|Google Play
 8805|938|110|14|Semi Bold|View Website →
 8952|583|72|10|Bold|Designer

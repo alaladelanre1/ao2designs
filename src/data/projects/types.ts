@@ -35,4 +35,6 @@ export interface Meta {
   dump: string;      // file name in ./dumps (without extension)
   company: string;   // sidebar group it belongs to
   blurb?: string;
+  /** link text in the dump -> URL */
+  links?: Record<string, string>;
 }

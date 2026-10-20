@@ -6,7 +6,7 @@ export const parkwayWallet: CaseStudy = {
   slug: "parkway-wallet",
   title: "Parkway Wallet",
   year: "2023",
-  meta: ["Full-time", "H2 2024", "wallet.parkway.com.ng"],
+  meta: ["Full-time", "H2 2024", "wallet.parkway.ng"],
   summary: "A secure, quick, and convenient platform for money transfers, bill payments, and online transactions through a virtual Naira card.",
   accent: "#F9956B",
   hero: "/img/assets/container.jpg",
@@ -69,7 +69,10 @@ export const parkwayWallet: CaseStudy = {
     "If you value convenience in financial management, Parkway Wallet is your ultimate solution. Enjoy the ease of sending and receiving money while confidently managing your virtual cards, bills, and invoices — all in one place.",
     "The redesign led to a 60.2% increase in user satisfaction scores, and the app achieved 10,000 downloads and 20,000 users within its first two months on both the App Store and Google Play.",
   ],
-  links: [{ label: "App Store" }, { label: "Google Play" }, { label: "Website", href: "https://wallet.parkway.com.ng" }],
+  links: [
+    { label: "Google Play", href: "https://play.google.com/store/apps/details?id=com.parkway.yurwallet&pcampaignid=web_share" },
+    { label: "Website", href: "https://wallet.parkway.ng/" },
+  ],
   credits: [
     { label: "Product Design", value: "Olanrewaju Alalade" },
     { label: "Product Management", value: "Team" },
