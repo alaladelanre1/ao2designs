@@ -14,7 +14,7 @@ const { id = "contact" } = Astro.props;
         <input name="email" type="email" placeholder="Your email" required aria-label="Email" />
       </div>
       <textarea name="message" placeholder="Message..." required aria-label="Message"></textarea>
-      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
       <button type="submit">Send</button>
       <p class="status" role="status" aria-live="polite"></p>
     </form>
@@ -42,8 +42,10 @@ const { id = "contact" } = Astro.props;
   @media (max-width: 900px) { section { margin-bottom: 80px; } .cols { grid-template-columns: 1fr; gap: 40px; } .row { grid-template-columns: 1fr; } }
 </style>
 <script>
-  // Messages are delivered to the site owner's inbox through FormSubmit (formsubmit.co).
-  const ENDPOINT = "https://formsubmit.co/ajax/alaladelanre1@gmail.com";
+  // Messages are delivered to the site owner's inbox through Web3Forms (web3forms.com).
+  // The access key only allows sending to the owner's address, so it is safe to ship in the page.
+  const ENDPOINT = "https://api.web3forms.com/submit";
+  const ACCESS_KEY = "643e9278-fb2a-4340-92d1-c6355e6d283d";
   document.querySelectorAll<HTMLFormElement>(".contact-form").forEach((f) =>
     f.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -56,12 +58,15 @@ const { id = "contact" } = Astro.props;
           method: "POST",
           headers: { Accept: "application/json", "Content-Type": "application/json" },
           body: JSON.stringify({
-            name: d.get("name"), email: d.get("email"), message: d.get("message"), _honey: d.get("_honey"),
-            _replyto: d.get("email"), _subject: `Portfolio enquiry from ${d.get("name")}`, _template: "table", _captcha: "false",
+            access_key: ACCESS_KEY,
+            subject: `Portfolio enquiry from ${d.get("name")}`,
+            from_name: "ao2designs portfolio",
+            name: d.get("name"), email: d.get("email"), message: d.get("message"),
+            botcheck: d.get("botcheck") ? true : "",
           }),
         });
         const json = await res.json().catch(() => ({}));
-        if (!res.ok || json.success === "false") throw new Error(json.message || "Request failed");
+        if (!res.ok || !json.success) throw new Error(json.message || "Request failed");
         f.reset(); status.classList.add("ok"); status.textContent = "Thanks — your message has been sent. I'll get back to you soon.";
       } catch {
         status.classList.add("err");
