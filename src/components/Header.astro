@@ -11,7 +11,7 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
     <a class="logo" href="/" aria-label="Olanrewaju Alalade, home">AO2</a>
     <div class="right">
       <button class="theme" id="theme-toggle" role="switch" aria-checked="true" aria-label="Dark mode"><i></i></button>
-      <a class="pill" href="https://docs.google.com/document/d/1qb6R9E7V5DoeD_DYWTf02oWYBUNIlRny7dcm1KBCq9k/edit?usp=sharing" target="_blank" rel="noopener noreferrer">My Resume</a>
+      <a class="pill" href="https://docs.google.com/document/d/1qb6R9E7V5DoeD_DYWTf02oWYBUNIlRny7dcm1KBCq9k/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="my">My </span>Resume</a>
     </div>
   </div>
   <nav id="menu" class="menu" hidden aria-label="Main">
@@ -39,6 +39,10 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
   .burger span { display: block; height: 2px; border-radius: 10px; background: var(--fg); width: 34px; }
   .burger span:nth-child(2) { width: 19px; }
   .burger span:nth-child(3) { width: 26px; }
+  .burger span { transition: transform 0.25s, opacity 0.2s, width 0.25s; transform-origin: center; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(10px) rotate(45deg); width: 28px; }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); width: 28px; }
   .right { display: flex; align-items: center; gap: 24px; }
   .theme { width: 65px; height: 34px; border-radius: 43px; border: 0; background: var(--field); position: relative; cursor: pointer; }
   .theme i { position: absolute; top: 4px; right: 4px; width: 27px; height: 27px; border-radius: 50%; background: var(--bg); transition: right 0.25s; }
@@ -56,8 +60,30 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
   aside { padding-left: 30px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; }
   aside h4 { font-size: 14px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 24px; }
   aside h4:first-child { margin-top: 0; }
+  @media (max-width: 700px) {
+    .inner { height: 72px; padding-inline: 16px; }
+    .logo { position: absolute; left: 50%; transform: translateX(-50%); font-size: 34px; }
+    .right { gap: 8px; }
+    .theme { width: 48px; height: 26px; }
+    .theme i { width: 20px; height: 20px; top: 3px; right: 3px; }
+    .theme[aria-checked="false"] i { right: 25px; }
+    .pill { padding: 6px 12px; font-size: 13px; white-space: nowrap; }
+    .pill .my { display: none; }
+    .burger { width: 36px; height: 44px; }
+    .burger span { width: 26px !important; }
+    .burger span:nth-child(2) { width: 16px !important; }
+    .burger span:nth-child(3) { width: 20px !important; }
+    .burger[aria-expanded="true"] span:nth-child(1), .burger[aria-expanded="true"] span:nth-child(3) { width: 24px !important; }
+    .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+    .menu { inset: 72px 0 0 0; }
+    .menu-inner { margin-top: 24px; padding-bottom: 48px; }
+    ol li { gap: 20px; }
+    ol a { font-size: clamp(44px, 14vw, 64px); }
+  }
+  @media (max-width: 360px) { .logo { display: none; } }
   @media (max-width: 700px) { .menu-inner { grid-template-columns: 1fr; gap: 40px; } ol { border: 0; padding: 0; } aside { padding: 0; } }
-  @media (max-width: 600px) { .pill { padding: 8px 14px; } }
 </style>
 <script>
   const root = document.documentElement;
@@ -72,7 +98,7 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
   });
   const b = document.querySelector<HTMLButtonElement>(".burger")!;
   const m = document.getElementById("menu")!;
-  const toggle = (open: boolean) => { m.hidden = !open; b.setAttribute("aria-expanded", String(open)); document.body.style.overflow = open ? "hidden" : ""; };
+  const toggle = (open: boolean) => { m.hidden = !open; b.setAttribute("aria-expanded", String(open)); b.setAttribute("aria-label", open ? "Close menu" : "Open menu"); document.body.style.overflow = open ? "hidden" : ""; };
   b.addEventListener("click", () => toggle(m.hidden));
   m.addEventListener("click", (e) => { if ((e.target as HTMLElement).closest("a")) toggle(false); });
   addEventListener("keydown", (e) => { if (e.key === "Escape") toggle(false); });
