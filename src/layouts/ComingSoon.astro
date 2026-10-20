@@ -1,0 +1,41 @@
+---
+import Base from "./Base.astro";
+import PageTitle from "../components/PageTitle.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+const { p } = Astro.props;
+const expect = ["Problem & context", "Research", "User flows", "Final screens"];
+---
+<Base title={`${p.title} — Olanrewaju Alalade`}>
+  <PageTitle text="Projects" />
+  <div class="container wrap" style="--pa:var(--accent-text)">
+    <ProjectNav current={p.slug} />
+    <article>
+      <h1>{p.title}</h1>
+      <p class="meta">Side project</p>
+      <p class="lead">The full {p.title} case study is being written up — research, flows and final screens will land here soon.</p>
+      <div class="card">
+        <small>In progress</small>
+        <h2>Case study coming soon</h2>
+        <p>I'm putting together the story behind {p.title} — the problem, the decisions and the shipped screens. Check back soon, or reach out if you'd like a walkthrough.</p>
+        <small class="what">What to expect</small>
+        <ul>{expect.map((e) => <li>{e}</li>)}</ul>
+        <a class="cta" href="/contact">Get in touch</a>
+      </div>
+    </article>
+  </div>
+</Base>
+<style>
+  .wrap { display: grid; grid-template-columns: 278px minmax(0, 732px); gap: 40px; justify-content: space-between; margin-bottom: 120px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 41.6px; line-height: 1.15; }
+  .meta { font-size: 12px; color: var(--muted); margin: 8px 0 28px; }
+  .lead { font-size: 15px; line-height: 1.7; margin-bottom: 40px; }
+  .card { background: var(--card); border: 1px solid var(--card-line); border-radius: 14px; padding: 48px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  small { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  h2 { font-family: var(--font-display); font-weight: 700; font-size: 38px; line-height: 1.1; }
+  .card p { max-width: 460px; font-size: 16px; color: var(--muted); line-height: 1.6; }
+  .what { margin-top: 18px; }
+  ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  li { border: 1px solid var(--line); border-radius: 50px; padding: 6px 14px; font-size: 12px; }
+  .cta { margin-top: 18px; background: var(--accent); color: var(--on-accent); border-radius: 50px; padding: 12px 26px; font-weight: 500; font-size: 14px; }
+  @media (max-width: 900px) { .wrap { grid-template-columns: 1fr; margin-bottom: 80px; } .card { padding: 32px 20px; } }
+</style>

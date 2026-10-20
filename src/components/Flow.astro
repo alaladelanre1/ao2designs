@@ -1,0 +1,82 @@
+---
+import { layout } from "../lib/flow";
+const { dump, title, year } = Astro.props;
+const { hero, rows, xmin, xmax, arrowRows } = layout(dump, title, year);
+
+const labelLike = (i: any) => i.kind === "t" && i.fs <= 12.5 && /Bold|Semi/.test(i.fw) && i.text.length <= 60;
+const isLabelCell = (c: any) => c.items.length >= 1 && labelLike(c.items[0]);
+const isFlowRow = (r: any) => r.cells.length >= 2 && r.cells.every((c: any) => c.items.length === 1 && c.items[0].kind === "t" && c.items[0].fs <= 13 && c.items[0].text.length < 28);
+const isChips = (r: any) => r.cells.length >= 2 && r.cells.every((c: any) => c.items.length === 1 && c.items[0].kind === "t" && c.items[0].fs <= 13.1 && (/Medium/.test(c.items[0].fw) || c.y0 < 600) && c.items[0].text.length < 30);
+const cls = (i: any) => {
+  if (i.kind === "i") return "img";
+  if (i.fs >= 36) return "display";
+  if (i.fs >= 22) return "h3";
+  if (labelLike(i)) return "label";
+  if (i.fs >= 15 && /Bold|Semi/.test(i.fw)) return "strong";
+  if (i.fs >= 15) return "lead";
+  if (i.fs <= 11.5) return "tiny";
+  return "small";
+};
+---
+{hero.length > 0 && (
+  <div class:list={["hero", { banner: hero.length === 1 && hero[0].w >= 500 }]}>{hero.sort((a: any, b: any) => a.x - b.x).map((h: any) => <img src={h.src} alt={h.alt ?? ""} loading="eager" />)}</div>
+)}
+<div class="flow">
+  {rows.map((r) => {
+    const label = r.cells.length === 1 && isLabelCell(r.cells[0]);
+    const chips = isChips(r);
+    const flow = isFlowRow(r) && [...arrowRows].some((a) => Math.abs(a - Math.round(r.y0 / 10)) <= 2);
+    const gapPx = Math.min(Math.max(r.gap * 0.55, 6), label ? 72 : 56);
+    return (
+      <div class:list={["row", { sect: label && r.gap > 40, flow, chips }]} style={`margin-top:${gapPx}px;--n:${r.cells.length};--cols:${r.cells.map((c: any, k: number) => Math.max(60, Math.round(((r.cells[k + 1]?.x0 ?? xmax) - c.x0)))).map((n: number) => `${n}fr`).join(" ")}`}>
+        {r.cells.map((c) => {
+          const hasImg = c.items.some((i: any) => i.kind === "i");
+          const right = r.cells.length === 1 && c.x0 > (xmin + xmax) / 2 + 40;
+          return (
+            <div class:list={["cell", { card: hasImg, right }]}>
+              {c.items.map((i: any) => i.kind === "i"
+                ? <img class:list={["shot", { wide: i.w > i.h }]} src={i.src} alt={i.alt ?? ""} loading="lazy" />
+                : <p class:list={[cls(i), { li: i.marker }]} data-marker={i.marker}>{i.text}{i.suffix && <b class="suf">{i.suffix}</b>}</p>)}
+            </div>
+          );
+        })}
+      </div>
+    );
+  })}
+</div>
+<style>
+  .hero { display: flex; align-items: flex-end; justify-content: center; gap: 14px; background: var(--card); border: 1px solid var(--card-line); border-radius: 14px; padding: 36px 20px 0; overflow: hidden; margin-bottom: 40px; }
+  .hero.banner { padding: 0; display: block; }
+  .hero.banner img { width: 100%; max-width: 100%; height: auto; border-radius: 14px; display: block; }
+  .hero img { width: auto; max-width: 30%; object-fit: cover; object-position: top; border-radius: 18px 18px 0 0; }
+  .row { display: grid; grid-template-columns: var(--cols); gap: 24px; align-items: start; }
+  .row.sect { border-top: 1px solid var(--line); padding-top: 44px; margin-top: 64px !important; }
+  .row.flow { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+  .row.flow .cell { flex-direction: row; align-items: center; border: 1px solid var(--line); background: var(--card); border-radius: 50px; padding: 6px 14px; }
+  .row.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .row.chips .cell { border: 1px solid var(--line); border-radius: 50px; padding: 4px 12px; }
+  .row.chips .tiny, .row.chips .small { color: var(--fg); }
+  .row.flow .cell:not(:last-child)::after { content: "→"; color: var(--pa-text, var(--pa)); margin-left: 12px; }
+  .cell { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .cell.right { text-align: right; }
+  /* screens sit straight on the page: no box, full column width, text left-aligned underneath */
+  .cell.card { gap: 8px; align-items: stretch; text-align: left; }
+  .cell.card > .strong { margin-top: 14px; font-size: 18px; }
+  .cell.card > .small { font-size: 15px; line-height: 1.6; }
+  .shot { display: block; width: 100%; height: auto; }
+  .cell.card .shot:not(.wide) { filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.35)); }
+  .shot.wide { border-radius: 14px; }
+  p { margin: 0; }
+  .display { font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 5vw, 44px); line-height: 1.1; color: var(--pa-text, var(--pa)); }
+  .h3 { font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 3vw, 26px); line-height: 1.2; }
+  .label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .strong { font-size: 16px; font-weight: 600; line-height: 1.4; }
+  .lead { font-size: 15.5px; line-height: 1.7; color: color-mix(in srgb, var(--fg) 80%, transparent); }
+  .small { font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+  .tiny { font-size: 11.5px; line-height: 1.5; color: var(--muted); }
+  .cell > .display + .small, .cell > .display + .tiny { margin-top: 2px; }
+  .li { position: relative; padding-left: 22px; }
+  .li::before { content: attr(data-marker); position: absolute; left: 0; color: var(--pa-text, var(--pa)); font-weight: 700; }
+  .suf { color: var(--pa-text, var(--pa)); margin-left: 4px; font-weight: 600; }
+  @media (max-width: 760px) { .row:not(.flow) { grid-template-columns: 1fr; } .hero img { max-width: 32%; } }
+</style>

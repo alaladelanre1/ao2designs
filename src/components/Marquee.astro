@@ -1,0 +1,23 @@
+---
+const { items, size = 128, speed = 40, reverse = false, fill = true } = Astro.props;
+import Sparkle from "./Sparkle.astro";
+---
+<div class="marquee" style={`--size:${size}px;--speed:${speed}s;--dir:${reverse ? "reverse" : "normal"}`} aria-hidden="true">
+  <div class="track">
+    {[0, 1].map(() => (
+      <ul>
+        {items.map((t) => (
+          <li><span>{t}</span><Sparkle size={32} /></li>
+        ))}
+      </ul>
+    ))}
+  </div>
+</div>
+<style>
+  .marquee { overflow: hidden; color: var(--accent-text); font-family: var(--font-display); font-weight: 900; font-size: var(--size); line-height: 1.1; text-transform: uppercase; }
+  .track { display: flex; width: max-content; animation: scroll var(--speed) linear infinite; animation-direction: var(--dir); }
+  ul { display: flex; list-style: none; align-items: center; }
+  li { display: flex; align-items: center; gap: 22px; padding-right: 22px; white-space: nowrap; }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+  @media (max-width: 900px) { .marquee { font-size: calc(var(--size) * 0.5); } }
+</style>

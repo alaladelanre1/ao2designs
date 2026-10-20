@@ -1,0 +1,76 @@
+---
+import { projectIndex } from "../data/projects";
+const { current } = Astro.props; // slug of the case study being viewed
+
+// Numbering runs continuously across groups (01–06), as in the design.
+let n = 0;
+const groups = projectIndex.map((g) => ({
+  ...g,
+  items: g.items.map((c) => {
+    const first = c.slug ?? c.projects.find((p) => p.slug)?.slug;
+    return {
+      ...c,
+      num: String(++n).padStart(2, "0"),
+      active: c.slug === current || c.projects.some((p) => p.slug === current),
+      href: first ? `/projects/${first}` : undefined,
+    };
+  }),
+}));
+---
+<nav class="pnav" aria-label="Projects">
+  {groups.map((g) => (
+    <section>
+      <h2>{g.group}</h2>
+      <ul>
+        {g.items.map((c) => (
+          <li>
+            {c.href ? <a class:list={["company", { active: c.active }]} href={c.href} aria-current={c.active ? "true" : undefined}>
+              <span class="num">{c.num}</span>
+              <span class="ico">{c.logo ? <img src={c.logo} alt="" class={c.crop ?? "full"} /> : <svg viewBox="0 0 12.8 12.8" aria-hidden="true"><path d="M6.4 1.6l1.39 3.15 3.41.32-2.56 2.19.8 3.3-3.04-1.55-3.04 1.55.8-3.3L1.6 5.07l3.41-.32z" fill="none" stroke="currentColor" stroke-width=".85" /></svg>}</span>
+              <span class="name">{c.company}</span>
+            </a> : <span class="company">
+              <span class="num">{c.num}</span>
+              <span class="ico">{c.logo ? <img src={c.logo} alt="" class={c.crop ?? "full"} /> : <svg viewBox="0 0 12.8 12.8" aria-hidden="true"><path d="M6.4 1.6l1.39 3.15 3.41.32-2.56 2.19.8 3.3-3.04-1.55-3.04 1.55.8-3.3L1.6 5.07l3.41-.32z" fill="none" stroke="currentColor" stroke-width=".85" /></svg>}</span>
+              <span class="name">{c.company}</span>
+            </span>}
+            {c.active && c.projects.length > 0 && (
+              <ul class="sub">
+                {c.projects.map((p, i) => {
+                  const inner = <><small>Project {i + 1}</small><span>{p.name}</span></>;
+                  return <li>{p.slug
+                    ? <a href={`/projects/${p.slug}`} class:list={{ on: p.slug === current }} aria-current={p.slug === current ? "page" : undefined}>{inner}</a>
+                    : <span class="off">{inner}</span>}</li>;
+                })}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</nav>
+<style>
+  .pnav { background: var(--card); border: 1px solid var(--card-line); border-radius: 24px; box-shadow: var(--card-shadow); padding: 22px 0 28px; width: 100%; max-width: 278px; overflow: hidden; position: sticky; top: 110px; align-self: start; font-size: 13px; margin-left: -19px; }
+  section + section { margin-top: 22px; }
+  h2 { font-size: 9px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); padding: 0 20px; margin-bottom: 4px; line-height: 15px; }
+  ul { list-style: none; }
+  .company { display: flex; align-items: center; height: 35px; padding: 0 20px; color: color-mix(in srgb, var(--fg) 72%, transparent); letter-spacing: -0.006em; }
+  a.company:hover, .company.active { color: var(--fg); }
+  .num { font-size: 9px; letter-spacing: 0.08em; color: var(--muted); width: 28px; flex: none; }
+  .active .num { color: var(--fg); }
+  .ico { width: 28px; height: 20px; margin-right: 12px; flex: none; display: flex; align-items: center; justify-content: center; color: color-mix(in srgb, var(--fg) 72%, transparent); }
+  .ico img.full { max-width: 28px; max-height: 20px; object-fit: contain; border-radius: 2px; }
+  .ico img.left, .ico img.right { width: 18px; height: 20px; object-fit: cover; }
+  .ico img.left { object-position: left center; }
+  .ico img.right { object-position: right center; }
+  .ico svg { width: 16px; height: 16px; opacity: 0.5; }
+  .sub { margin: 0 0 4px 44px; }
+  .sub li + li { margin-top: 1px; }
+  .sub a, .sub .off { display: flex; flex-direction: column; justify-content: center; height: 44px; padding: 0 10px; border-left: 2px solid transparent; }
+  .sub small { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); line-height: 15px; }
+  .sub span { font-size: 12px; line-height: 15px; color: color-mix(in srgb, var(--fg) 72%, transparent); }
+  .sub a:hover span { color: var(--fg); }
+  .sub a.on { background: var(--tint); border-left-color: var(--fg); }
+  .sub a.on small, .sub a.on span { color: var(--fg); }
+  @media (max-width: 900px) { .pnav { position: static; max-width: none; margin-left: 0; } }
+</style>

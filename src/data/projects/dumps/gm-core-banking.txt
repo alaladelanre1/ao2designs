@@ -1,0 +1,198 @@
+394|599|198|22|Bold|Grace & Mercy MFB
+401|946|80|13|Regular|Core banking
+401|1068|81|13|Regular|Web platform
+401|1191|63|13|Regular|Enterprise
+454|599|580|42|Bold|Rebuilding a bank's core, one department at a time
+572|599|640|16|Regular|Version 2 of Grace & Mercy's core banking system (CBS) takes the platform beyond accounts and loans into every department that keeps a microfinance bank running. As design lead, I designed eight epics — CRM, Risk, Finance, HR, Internal Audit, Admin, Reports and Bulk Fund Upload — on one shared shell, where every member of staff sees only what their permissions allow (RBAC).
+737|599|28|11|Regular|Role
+737|714|57|11|Regular|Duration
+737|811|54|11|Regular|Product
+737|930|38|11|Regular|Scope
+757|599|79|14|SemiBold|Design Lead
+757|714|61|14|SemiBold|2 months
+757|811|83|14|SemiBold|CBS v2 · Web
+757|930|142|14|SemiBold|8 epics · 260+ screens
+1357|599|70|12|Bold|Overview
+1387|599|672|25|Bold|One system, eight departments, one rule: access by permission
+1469|599|672|16|Regular|Version 1 built the core the branch runs on: clients, products, transactions, accounting and administration. Version 2 had to serve head office too — finance teams releasing payouts, HR running payroll, auditors chasing findings, risk officers working arrears. Rather than eight separate tools, everything sits in one product with one navigation model, and the role-based permissions decide which modules, actions and reports each person can reach.
+1653|618|17|30|Bold|8
+1653|790|72|30|Bold|260+
+1653|962|29|30|Bold|21
+1653|1134|12|30|Bold|1
+1699|618|118|12|Regular|Epics designed on one shared shell
+1699|790|118|12|Regular|Desktop screens across the epics
+1699|962|118|12|Regular|Reports in a single permissioned catalogue
+1699|1134|118|12|Regular|Navigation model for every role
+1882|599|111|12|Bold|The challenge
+1912|599|672|25|Bold|Head-office work lived outside the core
+1960|599|672|16|Regular|Departments like HR, Audit, Risk and Finance did much of their work around the CBS rather than in it — spreadsheets, email approvals and month-end reports rebuilt by hand. The same client, employee or payout could exist in several places, and nobody could see the full picture. v2 had to bring that work inside without turning the CBS into a maze.
+2103|616|198|13|Regular|Duplicate client and staff records
+2103|858|169|13|Regular|Approvals chased over email
+2155|616|217|13|Regular|Reports rebuilt by hand every month
+2155|877|177|13|Regular|Risky accounts with no owner
+2207|616|175|13|Regular|Payout failures found too late
+2207|835|242|13|Regular|Access tied to job titles, not permissions
+2343|599|76|12|Bold|The scope
+2373|599|672|25|Bold|Eight epics, one product
+2421|599|672|16|Regular|Each epic serves a different department, but all of them follow the same shell, the same hub-to-worklist pattern and the same component library.
+2524|620|62|17|Bold|01  CRM
+2524|964|60|17|Bold|02  Risk
+2530|837|69|11|Bold|22 screens
+2530|1188|62|11|Bold|8 screens
+2558|620|286|14|Regular|Individual, enterprise, union and guarantor clients in one searchable record, with follow-up worklists and open issues.
+2558|964|286|14|Regular|Portfolio-at-risk dashboard, DPD ageing and a risk worklist where every risky account has an owner.
+2683|620|89|17|Bold|03  Finance
+2683|964|52|17|Bold|04  HR
+2689|839|67|11|Bold|15 screens
+2689|1168|82|11|Bold|100+ screens
+2717|620|286|14|Regular|Journals with maker-checker approval, a transfer worklist, gateway exceptions and daily settlement.
+2717|964|286|14|Regular|Employee records, lifecycle events, performance cycles, leave and payroll — from hire to payslip.
+2842|620|135|17|Bold|05  Internal Audit
+2842|964|79|17|Bold|06  Admin
+2848|837|69|11|Bold|44 screens
+2848|1181|69|11|Bold|30 screens
+2876|620|286|14|Regular|Audit plans, engagements, findings, evidence and a searchable system audit trail.
+2876|964|286|14|Regular|Branch inventory: requisitions, receipts, transfers, bin cards and reorder alerts.
+2980|620|88|17|Bold|07  Reports
+2980|964|164|17|Bold|08  Bulk Fund Upload
+2986|839|67|11|Bold|17 screens
+2986|1181|69|11|Bold|22 screens
+3014|620|286|14|Regular|One catalogue of standard and statutory reports — PAR, loan ageing, financial statements, PAYE and pensions.
+3014|964|286|14|Regular|Batch disbursements and withdrawals from upload to settlement, with a recovery board for every exception.
+3205|599|132|12|Bold|The shared shell
+3235|599|672|25|Bold|Every department walks the same five steps
+3283|599|672|16|Regular|The sidebar is built from the user's permissions, so a head of audit and a finance officer open the same product and see different modules. Inside every epic, work follows one pattern — so learning one department teaches you all of them.
+3407|614|13|11|Bold|01
+3407|750|14|11|Bold|02
+3407|886|14|11|Bold|03
+3407|1022|14|11|Bold|04
+3407|1158|14|11|Bold|05
+3427|614|28|15|SemiBold|Hub
+3427|750|57|15|SemiBold|Worklist
+3427|886|48|15|SemiBold|Record
+3427|1022|45|15|SemiBold|Action
+3427|1158|31|15|SemiBold|Trail
+3455|614|98|12|Regular|What's waiting on me, counted
+3455|750|98|12|Regular|Filtered queue of items to act on
+3455|886|98|12|Regular|One complete view of the item
+3455|1022|98|12|Regular|Approve, decline, retry or escalate
+3455|1158|98|12|Regular|Every action logged for audit
+3611|599|125|12|Bold|Design strategy
+3641|599|672|25|Bold|Five principles behind every epic
+3724|599|23|22|Bold|01
+3724|646|230|16|SemiBold|Access by permission, not job title
+3724|900|371|13|Medium|Navigation, hubs, actions and reports render from permissions, so one product serves every department safely.
+3817|599|28|22|Bold|02
+3817|651|230|16|SemiBold|Start with what's waiting on me
+3817|905|366|13|Medium|Hubs lead with counts that need action — journals to approve, findings to validate, payouts to release.
+3902|599|27|22|Bold|03
+3902|650|230|16|SemiBold|Search before you create
+3902|904|367|13|Medium|Client and employee creation start with a live search across name, BVN and NIN, so duplicates surface first.
+3987|599|29|22|Bold|04
+3987|652|230|16|SemiBold|Name the failure precisely
+3987|906|365|13|Medium|Exceptions say exactly what broke — bank name mismatch, gateway failed, posting failed (not paid) — and the next step.
+4092|599|27|22|Bold|05
+4092|650|230|16|SemiBold|The module that owns the data owns the report
+4092|904|367|13|Medium|Each department produces its own figures; the Report Hub simply gathers them in one catalogue.
+4268|599|115|12|Bold|Epic deep dives
+4298|599|672|25|Bold|Six hard problems, six resolutions
+4381|622|116|11|Bold|Bulk Fund Upload
+4409|622|626|16|SemiBold|Money that looks paid but isn't
+4448|622|84|11|Bold|Challenge
+4448|722|526|14|Regular|A payment gateway can report success while the CBS fails to credit the account — the client hasn't received funds, but the batch looks done.
+4504|622|84|11|Bold|Solution
+4504|722|526|14|Regular|A Recovery Board groups every unresolved line by exception type and age. "Posting failed (NOT paid)" gets its own red banner and a CBS Action Required button, and every other type has a single next step: edit line, review mismatch, rework or retry payment.
+4650|622|51|11|Bold|Finance
+4678|622|626|16|SemiBold|Approvals without bottlenecks
+4717|622|84|11|Bold|Challenge
+4717|722|526|14|Regular|Journals, payouts and settlements need a second pair of eyes, but approvals chased over email stall for days.
+4773|622|84|11|Bold|Solution
+4773|722|526|14|Regular|The Finance Hub opens on what needs me: journals awaiting approval against an SLA, payouts awaiting my action, gateway failures, and today's settlement split into paid, failed and unsettled.
+4898|622|27|11|Bold|Risk
+4926|622|626|16|SemiBold|Every risky account needs an owner
+4965|622|84|11|Bold|Challenge
+4965|722|526|14|Regular|Arrears were visible in reports, but nobody was clearly accountable for chasing each account.
+5021|622|84|11|Bold|Solution
+5021|722|526|14|Regular|The Risk dashboard pairs DPD ageing and risk-level breakdowns with a worklist where each account carries an owner — and unassigned accounts are flagged in red until someone takes them.
+5146|622|16|11|Bold|HR
+5174|622|626|16|SemiBold|From hire to payslip in one system
+5213|622|84|11|Bold|Challenge
+5213|722|526|14|Regular|Employee records, appraisals, leave and payroll lived in different places, so the same person existed several times.
+5269|622|84|11|Bold|Solution
+5269|722|526|14|Regular|Over 100 screens cover the full lifecycle: search before you create, lifecycle events that sync to the CBS, performance cycles, leave approval inboxes, and payroll periods with pay setup.
+5394|622|96|11|Bold|Internal Audit
+5422|622|626|16|SemiBold|Audit that follows the evidence
+5461|622|84|11|Bold|Challenge
+5461|722|526|14|Regular|Findings, evidence and remediation were tracked in spreadsheets that drifted out of date.
+5517|622|84|11|Bold|Solution
+5517|722|526|14|Regular|Auditors plan engagements, raise findings with risk and due dates, attach evidence, track remediation by owner, and search the system audit trail — all from the dashboard.
+5642|622|54|11|Bold|Reports
+5670|622|626|16|SemiBold|21 reports, one catalogue
+5709|622|84|11|Bold|Challenge
+5709|722|526|14|Regular|Month-end figures were rebuilt by hand, and staff couldn't tell which reports they were allowed to run.
+5765|622|84|11|Bold|Solution
+5765|722|526|14|Regular|The Report Hub filters by module, class (standard or statutory) and availability, shows recently run reports, and keeps not-yet-available reports visible but disabled, so the roadmap is clear.
+5956|599|139|12|Bold|Design highlights
+5986|599|672|25|Bold|A tour of the departments
+6034|599|672|16|Regular|Eight screens, one from each epic, showing how the same shell bends to very different work.
+6339|599|328|16|Bold|Duplicate check
+6339|943|328|16|Bold|Finance Hub
+6371|599|328|13|Regular|CRM · a likely duplicate is caught before a new client is created.
+6371|943|328|13|Regular|Finance · the day's approvals, failures and settlement.
+6664|599|328|16|Bold|Bulk exceptions
+6664|943|328|16|Bold|Report Hub
+6696|599|328|13|Regular|Bulk Fund Upload · the recovery board.
+6696|943|328|13|Regular|Reports · one permissioned catalogue.
+6969|599|328|16|Bold|Employee overview
+6969|943|328|16|Bold|Payroll workspace
+7001|599|328|13|Regular|HR · lifecycle activity and records due for action.
+7001|943|328|13|Regular|HR · running a payroll period.
+7274|599|328|16|Bold|Internal Audit dashboard
+7274|943|328|16|Bold|Stock Hub
+7306|599|328|13|Regular|Internal Audit · findings and engagements.
+7306|943|328|13|Regular|Admin · branch inventory and reorder alerts.
+7431|599|88|12|Bold|Style guide
+7461|599|672|25|Bold|Dense data, calm surfaces
+7509|599|672|16|Regular|White and near-white surfaces keep tables readable for a full working day. Orange marks the primary action on each screen; blue, green, amber and red are reserved for status — approval steps, risk levels and exceptions — so the meaning of a colour never changes between departments.
+7705|599|41|12|Medium|Primary
+7705|697|59|12|Medium|Brand navy
+7705|795|21|12|Medium|Info
+7705|893|46|12|Medium|Success
+7705|991|44|12|Medium|Warning
+7705|1089|39|12|Medium|Danger
+7705|1187|42|12|Medium|Surface
+7728|599|47|11|Regular|#FF6600
+7728|697|44|11|Regular|#1F2A55
+7728|795|46|11|Regular|#1D4ED8
+7728|893|46|11|Regular|#16A34A
+7728|991|47|11|Regular|#D97706
+7728|1089|50|11|Regular|#DC2626
+7728|1187|46|11|Regular|#F9FAFB
+7758|599|672|12|Regular|Colours sampled from the shipped screens.
+7882|599|114|12|Bold|What I learned
+7912|599|672|25|Bold|Permissions are a design material
+7960|599|672|16|Regular|With eight departments in one product, the biggest lever wasn't any single screen — it was deciding what each person should never see. Designing the navigation and hubs from permissions up meant every new epic slotted into a structure people already understood. And designing the exception states with the same care as the happy paths — especially where money could look paid but not be — is what made finance and operations teams trust the system with real payouts.
+8231|599|672|22|Bold|Eight departments, one core. CBS v2 turns head-office work from spreadsheets and email into worklists everyone can trust.
+8323|599|58|11|Regular|Designer
+8323|770|30|11|Regular|Role
+8323|897|57|11|Regular|Product
+8323|1028|58|11|Regular|Industry
+8346|599|123|14|Regular|Olanrewaju Alalade
+8346|770|79|14|Regular|Design Lead
+8346|897|83|14|Regular|CBS v2 · Web
+8346|1028|145|14|Regular|Microfinance / FinTech
+8407|616|82|13|Regular|Enterprise UX
+8407|740|115|13|Regular|Role-based access
+8407|897|147|13|Regular|Information architecture
+8407|1086|99|13|Regular|Workflow design
+8457|616|115|13|Regular|Exception handling
+8457|773|80|13|Regular|Core banking
+IMG|884|580|732|475|/img/assets/mockup-g-m-core-banking-v2-hero.jpg|Hero mockup
+IMG|6130|599|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-duplicate-check.webp|Duplicate check
+IMG|6130|943|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-finance-hub.webp|Finance Hub
+IMG|6455|599|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-bulk-exceptions.webp|Bulk exceptions
+IMG|6455|943|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-report-hub.webp|Report Hub
+IMG|6760|599|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-employee-overview.webp|Employee overview
+IMG|6760|943|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-payroll-workspace.webp|Payroll workspace
+IMG|7065|599|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-internal-audit-dashboard.webp|Internal Audit dashboard
+IMG|7065|943|328|201|/img/assets/mockup-g-m-core-banking-v2-highlight-stock-hub.webp|Stock Hub

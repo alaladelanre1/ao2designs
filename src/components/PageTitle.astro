@@ -1,0 +1,7 @@
+---
+const { text } = Astro.props;
+---
+<h1 class="page-title">{text}</h1>
+<style>
+  .page-title { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; color: var(--fg); font-size: clamp(56px, 8.33vw, 120px); line-height: 1.1; text-align: center; padding: 60px 20px 80px; }
+</style>

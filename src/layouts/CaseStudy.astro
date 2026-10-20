@@ -1,0 +1,176 @@
+---
+import Base from "./Base.astro";
+import PageTitle from "../components/PageTitle.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+const { p } = Astro.props;
+---
+<Base title={`${p.title} — Olanrewaju Alalade`} description={p.summary}>
+  <PageTitle text="Projects" />
+  <div class="container wrap" style={`--pa:${p.accent};--pa-text:color-mix(in srgb, ${p.accent} 62%, var(--fg))`}>
+    <ProjectNav current={p.slug} />
+
+    <article>
+      <header>
+        <div class="top"><h1>{p.title}</h1><span>{p.year}</span></div>
+        <p class="meta">{p.meta.map((m, i) => <><span>{m}</span>{i < p.meta.length - 1 && <i>·</i>}</>)}</p>
+        <p class="summary">{p.summary}</p>
+      </header>
+      <img class="hero" src={p.hero} alt={p.heroAlt} />
+
+      {p.problem && <section class="block"><h3 class="label">Problem statement</h3><p class="body">{p.problem}</p></section>}
+
+      {p.outcome && (
+        <section class="block">
+          <h3 class="label">Outcome</h3>
+          <p class="big">{p.outcome.text}</p>
+          <dl class="stats">{p.outcome.stats.map((s) => <div><dt>{s.value}</dt><dd>{s.label}</dd></div>)}</dl>
+        </section>
+      )}
+
+      {p.worked && (
+        <section class="block">
+          <h3 class="label">Stuff I worked on</h3>
+          <ul class="worked">{p.worked.map((w) => <li><span>—</span>{w}</li>)}</ul>
+        </section>
+      )}
+
+      {p.screens && (
+        <section class="block screens">
+          {p.screens.map((s) => (
+            <figure>
+              <figcaption>{s.title}</figcaption>
+              <p>{s.text}</p>
+              <img src={s.image} alt={`${s.title} screen`} loading="lazy" />
+            </figure>
+          ))}
+        </section>
+      )}
+
+      {p.personas && (
+        <section class="block">
+          <h3 class="label">Primary personas</h3>
+          <div class="personas">
+            {p.personas.map((x) => (
+              <div class="card">
+                <h4>{x.name}</h4>
+                <p class="sub">{x.meta[0]}<br />{x.meta[1]}</p>
+                <h5>Goals</h5><p>{x.goals}</p>
+                <h5>Challenges</h5><p>{x.challenges}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {p.process && (
+        <section class="block">
+          <h3 class="label">The process</h3>
+          <ol class="process">
+            {p.process.map((s, i) => (
+              <li><span>Step<br />{String(i + 1).padStart(2, "0")}</span><div><h4>{s.title}</h4><p>{s.text}</p></div></li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {p.review && (
+        <section class="block">
+          <h3 class="label">App review — what users wanted</h3>
+          <p class="body">{p.review.text}</p>
+          <dl class="stats three">{p.review.stats.map((s) => <div><dt>{s.value}</dt><dd>{s.label}</dd></div>)}</dl>
+        </section>
+      )}
+
+      {p.styleGuide && (
+        <section class="block">
+          <h3 class="label">Style guide</h3>
+          <h5>Colors</h5>
+          <ul class="swatches">{p.styleGuide.colors.map((c) => <li><i style={`background:${c.hex}`}></i><code>{c.hex}</code><small>{c.name}</small></li>)}</ul>
+          <h5>Typography</h5>
+          {p.styleGuide.type.map((t) => <div class="type"><small>{t.label}</small><p>{t.sample}</p></div>)}
+        </section>
+      )}
+
+      {p.conclusion && (
+        <section class="block">
+          <h3 class="label">Conclusion</h3>
+          {p.conclusion.map((c) => <p class="body">{c}</p>)}
+          {p.links && (
+            <div class="links">
+              {p.links.map((l) => l.href ? <a href={l.href} target="_blank" rel="noopener">{l.label} ↗</a> : <span aria-disabled="true">{l.label}</span>)}
+            </div>
+          )}
+        </section>
+      )}
+
+      {p.credits && (
+        <section class="block">
+          <h3 class="label">Credits</h3>
+          <dl class="credits">{p.credits.map((c) => <div><dt>{c.label}</dt><dd>{c.value}</dd></div>)}</dl>
+        </section>
+      )}
+      {p.footnote && <p class="foot">{p.footnote}</p>}
+    </article>
+  </div>
+</Base>
+
+<style>
+  .wrap { display: grid; grid-template-columns: 278px minmax(0, 730px); gap: 40px; justify-content: space-between; margin-bottom: 120px; }
+
+  /* main */
+  article { font-size: 15px; }
+  .top { display: flex; justify-content: space-between; align-items: baseline; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 41.6px; line-height: 1.15; }
+  .top span { font-size: 12px; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--muted); margin: 8px 0 28px; }
+  .summary { font-size: 16px; line-height: 1.6; margin-bottom: 40px; }
+  .hero { width: 100%; aspect-ratio: 732/286; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); margin-bottom: 70px; }
+  .block { border-top: 1px solid var(--line); padding: 50px 0; }
+  .label { font-size: 11.2px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 28px; }
+  .body { font-size: 15.2px; line-height: 1.7; color: var(--muted); margin-bottom: 1em; }
+  .big { font-size: 17.6px; line-height: 1.6; margin-bottom: 40px; }
+  dl.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 20px; }
+  dl.stats.three { grid-template-columns: repeat(3, 1fr); }
+  dt { font-family: var(--font-display); font-weight: 700; font-size: 38.4px; line-height: 1.1; color: var(--pa); }
+  dd { font-size: 11px; color: var(--muted); margin-top: 8px; }
+  .worked { list-style: none; }
+  .worked li { display: flex; gap: 16px; padding: 18px 0; border-top: 1px solid var(--line); color: var(--muted); line-height: 1.6; }
+  .worked li:last-child { border-bottom: 1px solid var(--line); }
+  .worked span { color: var(--line); }
+  .screens { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; border-top: 0; padding-top: 0; }
+  figure { background: var(--card); border: 1px solid var(--card-line); border-radius: 12px; overflow: hidden; }
+  figcaption { background: var(--pa); color: #121212; font-size: 10.4px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 12px; }
+  figure p { font-size: 12px; padding: 14px 10px 0; line-height: 1.35; }
+  figure img { display: block; margin: 12px auto 0; width: 62%; border-radius: 10px 10px 0 0; }
+  .personas { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--card-line); border-radius: 10px; padding: 24px; }
+  .card h4 { font-size: 16px; font-weight: 500; }
+  .card .sub { font-size: 12px; color: var(--muted); margin: 6px 0 20px; line-height: 1.5; }
+  h5 { font-size: 10.4px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 14px 0 6px; }
+  .card p:not(.sub) { font-size: 12.8px; line-height: 1.6; color: var(--muted); }
+  .process { list-style: none; }
+  .process li { display: flex; gap: 40px; padding: 22px 0; border-top: 1px solid var(--line); }
+  .process li:last-child { border-bottom: 1px solid var(--line); }
+  .process span { font-size: 11.2px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pa); min-width: 28px; }
+  .process h4 { font-size: 15.2px; font-weight: 500; margin-bottom: 6px; }
+  .process p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .swatches { list-style: none; display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+  .swatches li { display: flex; flex-direction: column; gap: 4px; }
+  .swatches i { width: 48px; height: 48px; border-radius: 8px; border: 1px solid var(--line); }
+  code { font-size: 10px; }
+  .type { margin-bottom: 16px; }
+  .type p { font-size: 22px; }
+  .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .links a, .links span { border: 1px solid var(--line); border-radius: 50px; padding: 10px 22px; font-size: 13px; }
+  .links a { background: var(--pa); color: #121212; border-color: var(--pa); }
+  .links span { color: var(--muted); }
+  .credits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 20px; }
+  .credits dt { font-family: var(--font-body); font-size: 10.4px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  .credits dd { font-size: 17.6px; color: var(--fg); margin-top: 6px; }
+  .foot { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 24px; }
+
+  @media (max-width: 900px) {
+    .wrap { grid-template-columns: 1fr; margin-bottom: 80px; }
+        .screens, .personas, dl.stats, dl.stats.three, .credits { grid-template-columns: 1fr; }
+  }
+</style>

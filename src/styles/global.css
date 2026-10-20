@@ -1,0 +1,65 @@
+:root {
+  --bg: #121212;
+  --fg: #f0f0f0;
+  --muted: rgba(240, 240, 240, 0.5);
+  --line: rgba(240, 240, 240, 0.1);
+  --field: rgba(240, 240, 240, 0.1);
+  --accent: #e0f11f;       /* fills */
+  --accent-text: #e0f11f;  /* text on bg */
+  --on-accent: #121212;
+  --card: #1a1a1a;
+  --card-line: #2a2a2a;
+  --card-shadow: none;
+  --tint: rgba(255, 255, 255, 0.05);
+  --pill-bg: #f0f0f0;
+  --pill-fg: #121212;
+  --font-display: "Big Shoulders", "Big Shoulders Display", Impact, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --gutter: clamp(20px, 17.8vw, 256px);
+}
+:root[data-theme="light"] {
+  --bg: #f4f4ef;
+  --fg: #121212;
+  --muted: rgba(18, 18, 18, 0.55);
+  --line: rgba(18, 18, 18, 0.12);
+  --field: rgba(18, 18, 18, 0.06);
+  --accent-text: #4f5a00;
+  --pill-bg: #121212;
+  --pill-fg: #f4f4ef;
+  --card: #ffffff;
+  --card-line: rgba(18, 18, 18, 0.16);
+  --card-shadow: 0 8px 30px rgba(18, 18, 18, 0.08);
+  --tint: rgba(18, 18, 18, 0.05);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.container { padding-inline: var(--gutter); max-width: 1440px; margin-inline: auto; }
+
+/* Section title with rule */
+.title-sep { display: flex; align-items: center; gap: 40px; margin-bottom: 48px; }
+.title-sep h2 {
+  font-family: var(--font-display); font-weight: 700; font-size: 32px;
+  letter-spacing: 0.04em; color: var(--accent-text); text-transform: uppercase; line-height: 1.4;
+}
+.title-sep .rule { flex: 1; height: 4px; background: var(--line); position: relative; }
+.title-sep .rule::after { content: ""; position: absolute; right: 0; top: 0; width: 40px; height: 4px; background: var(--accent-text); }
+
+/* Page-level responsive */
+@media (max-width: 900px) {
+  body { font-size: 16px; }
+  .title-sep { gap: 20px; margin-bottom: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; scroll-behavior: auto !important; }
+}

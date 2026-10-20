@@ -1,0 +1,79 @@
+---
+const links = [
+  ["Home", "/"], ["About", "/about"], ["Projects", "/projects"],
+  ["Experience", "/experience"], ["Education", "/education"], ["Contact", "/contact"],
+];
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+<header class="nav">
+  <div class="inner">
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <a class="logo" href="/" aria-label="Olanrewaju Alalade, home">AO2</a>
+    <div class="right">
+      <button class="theme" id="theme-toggle" role="switch" aria-checked="true" aria-label="Dark mode"><i></i></button>
+      <a class="pill" href="/resume.pdf">My Resume</a>
+    </div>
+  </div>
+  <nav id="menu" class="menu" hidden aria-label="Main">
+    <div class="menu-inner">
+      <ol>
+        {links.map(([l, h], i) => (
+          <li><span>{String(i + 1).padStart(2, "0")}</span><a href={h} class:list={{ current: h === path }}>{l}</a></li>
+        ))}
+      </ol>
+      <aside>
+        <h4>Get in touch</h4>
+        <a href="mailto:alaladelanre1@gmail.com">alaladelanre1@gmail.com</a>
+        <a href="tel:+2348163525515">+234 816 352 5515</a>
+        <h4>Based in</h4>
+        <p>Lagos, Nigeria</p>
+      </aside>
+    </div>
+  </nav>
+</header>
+<style>
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); }
+  .inner { display: flex; align-items: center; justify-content: space-between; height: 90px; max-width: 950px; margin-inline: auto; padding-inline: 20px; position: relative; }
+  .logo { position: absolute; left: 50%; transform: translateX(-50%); font-family: "Mrs Saint Delafield", cursive; font-size: 44px; line-height: 1; color: var(--fg); }
+  .burger { background: none; border: 0; width: 40px; height: 50px; display: flex; flex-direction: column; justify-content: center; gap: 8px; cursor: pointer; }
+  .burger span { display: block; height: 2px; border-radius: 10px; background: var(--fg); width: 34px; }
+  .burger span:nth-child(2) { width: 19px; }
+  .burger span:nth-child(3) { width: 26px; }
+  .right { display: flex; align-items: center; gap: 24px; }
+  .theme { width: 65px; height: 34px; border-radius: 43px; border: 0; background: var(--field); position: relative; cursor: pointer; }
+  .theme i { position: absolute; top: 4px; right: 4px; width: 27px; height: 27px; border-radius: 50%; background: var(--bg); transition: right 0.25s; }
+  .theme[aria-checked="false"] i { right: 34px; background: var(--fg); }
+  .pill { background: var(--pill-bg); color: var(--pill-fg); border-radius: 50px; padding: 8px 20px; font-weight: 500; font-size: 16px; }
+  .menu { position: fixed; inset: 90px 0 0 0; background: var(--bg); overflow-y: auto; }
+  .menu[hidden] { display: none; }
+  .menu-inner { max-width: 950px; margin: 40px auto 0; padding-inline: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  ol { list-style: none; border-right: 1px solid var(--line); padding-right: 30px; }
+  ol li { display: flex; align-items: baseline; gap: 36px; }
+  ol span { font-size: 14px; color: var(--muted); min-width: 24px; }
+  ol a { font-family: var(--font-display); font-weight: 900; font-size: clamp(48px, 7vw, 72px); text-transform: uppercase; line-height: 1.15; }
+  ol a:hover, ol a.current { color: var(--accent-text); }
+  ol a.current::after { content: " ·"; }
+  aside { padding-left: 30px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; }
+  aside h4 { font-size: 14px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 24px; }
+  aside h4:first-child { margin-top: 0; }
+  @media (max-width: 700px) { .menu-inner { grid-template-columns: 1fr; gap: 40px; } ol { border: 0; padding: 0; } aside { padding: 0; } }
+  @media (max-width: 600px) { .pill { padding: 8px 14px; } }
+</style>
+<script>
+  const root = document.documentElement;
+  const t = document.getElementById("theme-toggle")!;
+  const sync = () => t.setAttribute("aria-checked", String(root.dataset.theme !== "light"));
+  sync();
+  t.addEventListener("click", () => {
+    const next = root.dataset.theme === "light" ? "dark" : "light";
+    root.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch {}
+    sync();
+  });
+  const b = document.querySelector<HTMLButtonElement>(".burger")!;
+  const m = document.getElementById("menu")!;
+  const toggle = (open: boolean) => { m.hidden = !open; b.setAttribute("aria-expanded", String(open)); document.body.style.overflow = open ? "hidden" : ""; };
+  b.addEventListener("click", () => toggle(m.hidden));
+  m.addEventListener("click", (e) => { if ((e.target as HTMLElement).closest("a")) toggle(false); });
+  addEventListener("keydown", (e) => { if (e.key === "Escape") toggle(false); });
+</script>

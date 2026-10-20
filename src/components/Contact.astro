@@ -1,0 +1,46 @@
+---
+const { id = "contact" } = Astro.props;
+---
+<section class="container" id={id}>
+  <div class="title-sep"><h2>Contact</h2><span class="rule"></span></div>
+  <div class="cols">
+    <div>
+      <p class="lead">Looking to start a project or you need consultation? Feel free to contact me.</p>
+      <p class="details">Lagos, Nigeria<br /><a href="mailto:alaladelanre1@gmail.com">alaladelanre1@gmail.com</a><br /><a href="tel:+2348163525515">+234 816 352 5515</a></p>
+    </div>
+    <form class="contact-form">
+      <div class="row">
+        <input name="name" placeholder="Your name" required aria-label="Name" />
+        <input name="email" type="email" placeholder="Your email" required aria-label="Email" />
+      </div>
+      <textarea name="message" placeholder="Message..." required aria-label="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+<style>
+  section { margin-bottom: 120px; }
+  .cols { display: grid; grid-template-columns: 1fr 430px; gap: 68px; }
+  .lead { font-size: 22px; line-height: 1.7; max-width: 414px; }
+  .details { margin-top: 40px; }
+  .details a { color: var(--accent-text); }
+  form { display: flex; flex-direction: column; gap: 20px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  input, textarea { background: var(--field); color: var(--fg); border: 1px solid transparent; border-radius: 8px; padding: 12px; font: inherit; font-size: 16px; width: 100%; }
+  textarea { height: 150px; resize: vertical; }
+  input:focus, textarea:focus { outline: 2px solid var(--accent-text); outline-offset: 1px; }
+  ::placeholder { color: var(--muted); }
+  button { background: var(--accent); color: var(--on-accent); border: 0; border-radius: 8px; height: 55px; font: 500 16px var(--font-body); cursor: pointer; }
+  button:hover { filter: brightness(0.95); }
+  @media (max-width: 900px) { section { margin-bottom: 80px; } .cols { grid-template-columns: 1fr; gap: 40px; } .row { grid-template-columns: 1fr; } }
+</style>
+<script>
+  document.querySelectorAll<HTMLFormElement>(".contact-form").forEach((f) =>
+    f.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const d = new FormData(f);
+      const body = `${d.get("message")}\n\n— ${d.get("name")} (${d.get("email")})`;
+      location.href = `mailto:alaladelanre1@gmail.com?subject=${encodeURIComponent("Portfolio enquiry from " + d.get("name"))}&body=${encodeURIComponent(body)}`;
+    })
+  );
+</script>

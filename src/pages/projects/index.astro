@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import { allProjects } from "../../data/projects/list";
+---
+<Base title="Projects — Olanrewaju Alalade">
+  <PageTitle text="Projects" />
+  <section class="container">
+    <ul class="grid">
+      {allProjects.map((p, i) => (
+        <li>
+          <a href={`/projects/${p.slug}`} style={`--pa:${p.accent ?? "var(--accent-text)"}`} class:list={{ soon: p.soon }}>
+            <span class="n">{String(i + 1).padStart(2, "0")}</span>
+            <small>{p.group}</small>
+            <h2>{p.title}</h2>
+            <p>{p.blurb}</p>
+            <i aria-hidden="true">↗</i>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>
+<style>
+  section { margin-bottom: 120px; }
+  .grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  a { position: relative; display: flex; flex-direction: column; gap: 8px; height: 100%; min-height: 200px; padding: 24px; background: var(--card); border: 1px solid var(--card-line); border-radius: 16px; border-top: 3px solid var(--pa); transition: transform 0.2s, border-color 0.2s; }
+  a:hover { transform: translateY(-3px); }
+  .n { font-family: var(--font-display); font-weight: 700; color: var(--pa); }
+  small { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  h2 { font-family: var(--font-display); font-weight: 700; font-size: 26px; line-height: 1.15; }
+  p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+  i { position: absolute; right: 20px; bottom: 18px; font-style: normal; color: var(--pa); }
+  .soon { opacity: 0.7; }
+  @media (max-width: 900px) { section { margin-bottom: 80px; } }
+</style>

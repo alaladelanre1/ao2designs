@@ -1,0 +1,21 @@
+---
+const { items } = Astro.props;
+---
+<section class="container">
+  <div class="title-sep"><h2>Experience</h2><span class="rule"></span></div>
+  {items.map((e) => (
+    <article>
+      <div class="head"><h3>{e.role}</h3><p>{e.company}<br />{e.dates}</p></div>
+      <p set:html={e.body} />
+    </article>
+  ))}
+</section>
+<style>
+  section { margin-bottom: 120px; }
+  article { border-bottom: 1px solid var(--line); padding: 10px 0 28px; margin-bottom: 36px; }
+  .head { margin-bottom: 20px; }
+  h3 { font-size: 20px; font-weight: 600; line-height: 1.4; }
+  .head p { font-size: 16px; font-weight: 500; color: var(--muted); line-height: 1.7; }
+  article :global(b) { font-weight: 700; }
+  @media (max-width: 900px) { section { margin-bottom: 80px; } }
+</style>

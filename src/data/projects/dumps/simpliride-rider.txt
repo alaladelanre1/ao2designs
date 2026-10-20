@@ -1,0 +1,346 @@
+397|989|42|12|Regular|Mobility
+397|1065|41|12|Regular|FinTech
+397|1139|125|12|Regular|Two-Sided Marketplace
+448|605|525|42|Bold|Giving riders the same price\ncertainty drivers get.
+559|605|618|17|Regular|SimpliRide's rider app starts from one idea — fare control: take the recommended fare, or make your own offer and let nearby drivers accept or counter it. Around that core it grew into a multi-service app: rides, package delivery, insurance and, soon, ambulance requests, all from one home screen. This case study covers booking and Offer Fare, matching, live trips, the Safety Toolkit and payments.
+716|605|29|11|Regular|Role
+716|787|58|11|Regular|Duration
+716|880|59|11|Regular|Platform
+716|998|38|11|Regular|Tools
+738|605|146|14|SemiBold|Lead Product Designer
+738|787|33|14|SemiBold|2026
+738|880|82|14|SemiBold|Android · iOS
+738|998|172|14|SemiBold|Figma · FigJam · Miro · Maze
+1384|605|72|12|Bold|Overview
+1414|605|670|25|Bold|A two-sided fare model needs a rider who trusts the price as\nmuch as the driver trusts the payout.
+1507|605|642|16|Regular|SimpliRide's driver app runs on subscription instead of commission. That only works as a marketplace if riders have a reason to prefer it too — so the rider app is built around fare transparency and choice: a standard dynamic fare for riders who want speed, or Offer Fare for riders who'd rather name a price and let nearby drivers accept it. Everything else — matching, live trip tracking, safety tooling, payments — was designed to make that choice feel safe to make.
+1721|624|17|30|Bold|2
+1721|796|18|30|Bold|6
+1721|968|19|30|Bold|4
+1721|1140|71|30|Bold|360+
+1774|624|118|12|Regular|Fare modes —\nStandard & Offer Fare
+1774|796|118|12|Regular|Payment options — Cash, Wallet, Card, Apple Pay, Google Pay, PayPal
+1774|968|118|12|Regular|Services — Rides, Delivery, Insurance, Ambulance
+1774|1140|118|12|Regular|Rider screens designed end to end
+1971|605|113|12|Bold|The Challenge
+2001|605|665|25|Bold|Riders don't trust a fare they can't question, or a driver they\ncan't verify.
+2083|605|654|15|Regular|The same research that shaped the driver app surfaced the rider side of the same distrust: unclear\npricing, drivers who cancel after acceptance, and safety concerns that keep riders — especially at\nnight — choosing whichever app feels safest that day, not the cheapest one.
+2188|622|190|13|Regular|Opaque, non-negotiable pricing
+2188|856|184|13|Regular|Long, unpredictable wait times
+2238|622|224|13|Regular|Driver cancellations after acceptance
+2238|889|156|13|Regular|Limited payment flexibility
+2288|622|213|13|Regular|Safety concerns, especially at night
+2288|879|221|13|Regular|No way to plan ahead for regular trips
+2338|622|218|13|Regular|Low trust between riders and drivers
+2469|605|118|12|Bold|Product Vision
+2496|605|649|25|Bold|A rider experience that earns trust before it earns the fare
+2542|605|658|15|Regular|Give riders control over price, visibility into every step of the match, and safety tools they don't have\nto go looking for — so choosing SimpliRide is about more than which app happened to have a driver\nnearby.
+2647|622|105|13|Regular|Set your own fare
+2647|770|153|13|Regular|See exactly who's coming
+2647|967|132|13|Regular|Pay however you want
+2698|622|140|13|Regular|Plan trips ahead of time
+2698|806|118|13|Regular|Feel safe, every ride
+2698|967|130|13|Regular|Split cost with friends
+2748|622|196|13|Regular|Get help in seconds, not minutes
+2879|605|59|12|Bold|My Role
+2906|605|404|25|Bold|Lead Product Designer — end to end
+2974|605|111|11|Bold|Responsibilities
+2974|961|138|11|Bold|Business Objectives
+3006|605|11|14|Bold|—
+3006|628|275|14|Regular|Product discovery & UX research alongside\nthe driver-app workstream
+3006|961|11|14|Bold|—
+3006|984|267|14|Regular|Increase completed bookings per session
+3040|961|11|14|Bold|—
+3040|984|257|14|Regular|Reduce cancellations after driver match
+3062|605|11|14|Bold|—
+3062|628|217|14|Regular|Competitive analysis of rider-side\nexperiences across the category
+3074|961|11|14|Bold|—
+3074|984|290|14|Regular|Grow Offer Fare adoption as a margin-healthy\nalternative to discounting
+3117|605|11|14|Bold|—
+3117|628|260|14|Regular|Information architecture & user flows for\nbooking, trips, and payments
+3129|961|11|14|Bold|—
+3129|984|280|14|Regular|Increase wallet-funded (vs. cash) trip share
+3163|961|11|14|Bold|—
+3163|984|196|14|Regular|Improve repeat-rider retention
+3173|605|11|14|Bold|—
+3173|628|272|14|Regular|Wireframes, design system extension, and\nhigh-fidelity UI
+3228|605|11|14|Bold|—
+3228|628|271|14|Regular|Interactive prototypes, developer handoff,\nand UX writing
+3298|605|159|11|Bold|Success Metrics (KPIs)
+3338|620|134|12|Regular|Booking completion rate
+3338|794|108|12|Regular|Avg. time-to-match
+3338|941|161|12|Regular|Post-match cancellation rate
+3338|1142|106|12|Regular|Offer Fare adoption
+3385|620|120|12|Regular|Wallet payment share
+3385|780|96|12|Regular|Repeat-rider rate
+3385|915|54|12|Regular|Rider NPS
+3385|1009|182|12|Regular|SOS/safety-feature engagement
+3515|605|173|12|Bold|Understanding Riders
+3541|605|200|25|Bold|Primary personas
+3641|692|55|17|Bold|Amara
+3641|1040|27|17|Bold|Efe
+3668|692|192|13|Regular|Age 29 · Daily Commuter · Books 2\ntrips/day, budget-conscious
+3668|1040|187|13|Regular|Age 22 · University Student ·\nFrequent night rides, safety-first
+3722|632|41|11|Bold|Goals
+3722|980|41|11|Bold|Goals
+3748|650|209|14|Regular|Keep a predictable daily transport\nbudget
+3748|998|182|14|Regular|Feel safe riding alone at night
+3774|998|222|14|Regular|Keep family updated on her location\nduring a trip
+3795|650|186|14|Regular|Get a fair price without feeling\novercharged at peak hours
+3821|998|252|14|Regular|Split fares easily when riding with friends
+3842|650|236|14|Regular|Save frequent pickup/dropoff spots to\nbook faster
+3857|980|77|11|Bold|Pain Points
+3883|998|245|14|Regular|Anxious about getting into a car with an\nunverified driver
+3899|632|77|11|Bold|Pain Points
+3925|650|211|14|Regular|Surge pricing makes her daily cost\nunpredictable
+3930|998|185|14|Regular|Wants a fast way to get help if\nsomething feels wrong
+3972|650|246|14|Regular|No way to negotiate when a quoted fare\nfeels too high
+3977|998|208|14|Regular|Splitting cash fares with friends is\nalways awkward
+4019|650|217|14|Regular|Re-typing the same two addresses\nevery morning and evening
+4193|605|143|12|Bold|Research Process
+4220|605|366|25|Bold|Discovery & competitive analysis
+4312|628|69|15|Bold|Discovery
+4312|980|145|15|Bold|Competitive Analysis
+4348|628|260|14|Regular|Extended the same stakeholder discovery\nused for the driver app — Product,\nOperations, Engineering, Customer\nSupport, and Marketing — with a rider-\nspecific lens on:
+4348|980|254|14|Regular|Reviewed Uber, Bolt, inDrive, and LagRide\nacross booking, fare display, matching,\nsafety, and payments.
+4444|999|235|14|Regular|Key insight — inDrive was the only\ncompetitor letting riders name a price,\nand only as its entire model. No one\npaired rider-side fare negotiation with\na subscription-backed driver\neconomy. Combining both became\nSimpliRide's wedge.
+4463|646|230|14|Regular|Why riders abandon a booking before\nconfirming
+4511|646|244|14|Regular|What makes a rider cancel after a driver\nis matched
+4558|646|251|14|Regular|Where safety concerns actually show up\nin the journey
+4730|605|127|12|Bold|Design Strategy
+4757|605|389|25|Bold|Five principles behind every screen
+4852|919|353|14|Regular|Show the fare basis clearly — standard dynamic pricing or\na rider's own offer — with a breakdown, not just a total.
+4853|689|135|16|SemiBold|Price Transparency
+4854|605|23|22|Bold|01
+4880|689|161|12|Medium|Before the driver ever accepts
+4943|919|352|14|Regular|Photo, plate, rating, and a pickup verification code before\na rider ever gets in the car.
+4944|689|125|16|SemiBold|Verified Matching
+4945|605|27|22|Bold|02
+4971|689|124|12|Medium|Every driver, every time
+5034|919|315|14|Regular|Share Trip and SOS are one tap from the active-trip\nscreen, not buried three menus deep.
+5035|689|123|16|SemiBold|Safety by Default
+5036|605|27|22|Bold|03
+5062|689|144|12|Medium|Not an opt-in afterthought
+5112|919|299|14|Regular|Cash, wallet, card, Apple Pay, Google Pay and PayPal all supported, with split fare built into the core flow.
+5125|689|134|16|SemiBold|Payment Flexibility
+5126|605|28|22|Bold|04
+5152|689|144|12|Medium|Meet riders where they are
+5215|919|352|14|Regular|Scheduled rides, saved places, and priority pickup for the\ntrips riders already know they'll take.
+5216|689|80|16|SemiBold|Plan Ahead
+5217|605|27|22|Bold|05
+5243|689|158|12|Medium|Not every trip is spontaneous
+5385|605|205|12|Bold|Information Architecture
+5412|605|153|25|Bold|Twelve pillars
+5494|624|115|14|SemiBold|Onboarding & KYC
+5494|787|100|14|SemiBold|Home & services
+5494|935|128|14|SemiBold|Booking & Offer Fare
+5494|1111|100|14|SemiBold|Driver matching
+5550|624|64|14|SemiBold|Active trip
+5550|736|124|14|SemiBold|Safety Toolkit & SOS
+5550|908|112|14|SemiBold|Payments & wallet
+5550|1068|157|14|SemiBold|Schedule & ride for others
+5605|624|86|14|SemiBold|Send Package
+5605|758|60|14|SemiBold|Insurance
+5605|866|104|14|SemiBold|Activity & history
+5605|1018|90|14|SemiBold|Account & help
+5743|605|176|12|Bold|Key Design Challenges
+5770|605|398|25|Bold|Five hard problems, five resolutions
+5862|632|265|16|SemiBold|1. Two Fare Modes, One Clear Choice
+5900|734|488|14|Regular|Offering both a standard dynamic fare and a rider-set Offer Fare risks confusing\nriders about which one to use, or making the "real" price feel hidden.
+5901|632|67|11|Bold|Challenge
+5937|734|505|14|Regular|Booking always opens on a recommended fare the rider can book straight away. Offer Fare adjusts it on a keypad; while drivers respond, a ± stepper raises or lowers the offer, auto-accept confirms the first driver who meets it, and counter-offers arrive as cards with rating, car, ETA and price.
+5951|632|58|11|Bold|Solution
+6080|632|230|16|SemiBold|2. Trust at the Point of Matching
+6118|734|493|14|Regular|The highest-anxiety moment in the whole app is the gap between "driver found"\nand "driver arrived" — riders have no way to verify who's actually coming.
+6119|632|67|11|Bold|Challenge
+6155|734|506|14|Regular|The arriving sheet leads with what a rider needs to recognise the car: the plate number in large type, photos of the actual vehicle, the driver's rating and trips, and a 4-digit verification code. Call, Chat, Share Ride and Emergency sit in one row, and pickup notes can be typed or dictated.
+6169|632|58|11|Bold|Solution
+6298|632|291|16|SemiBold|3. Safety Tools Riders Actually Reach For
+6336|734|507|14|Regular|A safety feature buried in settings doesn't help anyone in the moment they need it\n— especially riders like Efe who ride alone at night.
+6337|632|67|11|Bold|Challenge
+6373|734|505|14|Regular|A Safety Toolkit sits one tap away on every trip: Get Emergency Help, PIN verification, Record My Ride, Share ride details and Report a crash. Quiet Call connects SimpliRide Emergency Support for riders who can't speak freely — they answer with the keypad: 1 unsafe, 2 threatened, 3 police, 4 medical, 5 can't talk.
+6387|632|58|11|Bold|Solution
+6516|632|367|16|SemiBold|4. Splitting a Fare Without the Awkward Cash Math
+6554|734|507|14|Regular|Group rides usually end with someone doing mental math over cash — friction that\ndiscourages riders from splitting fares at all.
+6555|632|67|11|Bold|Challenge
+6604|734|516|14|Regular|Split Fare is built into the trip flow itself: select riders, the app calculates each share\n(plus a small flat split fee), and each rider confirms and pays their portion directly —\nno cash handoff required.
+6605|632|58|11|Bold|Solution
+6731|632|404|16|SemiBold|5. Designing for the Trip You Already Know You're Taking
+6769|734|515|14|Regular|Every booking flow in the category assumes a spontaneous trip, which underserves\nriders who know their schedule — a recurring school run or an early flight.
+6770|632|67|11|Bold|Challenge
+6807|734|514|14|Regular|Schedule a ride sets a date and time up front, saved places cut repeat bookings to a couple of taps, and Send a ride to friends books a trip for someone else, sharing the driver and pickup details straight to their SimpliRide app.
+6820|632|58|11|Bold|Solution
+6994|605|163|12|Bold|End-to-End Journeys
+7021|605|289|25|Bold|Four flows, mapped in full
+7088|605|115|15|Bold|Booking Journey
+7135|620|59|12|Regular|Set Pickup
+7135|702|14|14|Regular|→
+7135|739|64|12|Regular|Set Dropoff
+7135|825|14|14|Regular|→
+7135|862|103|12|Regular|Choose Fare Mode
+7135|988|14|14|Regular|→
+7135|1025|121|12|Regular|Standard or Offer Fare
+7135|1169|14|14|Regular|→
+7135|1206|45|12|Regular|Confirm
+7173|613|14|14|Regular|→
+7189|649|64|12|Regular|Find Drivers
+7230|605|185|15|Bold|Matching & Pickup Journey
+7277|748|14|14|Regular|→
+7277|896|14|14|Regular|→
+7277|1033|14|14|Regular|→
+7277|1196|14|14|Regular|→
+7278|620|105|12|Regular|Looking for a Driver
+7278|785|88|12|Regular|Driver Accepted
+7278|933|77|12|Regular|Driver Arriving
+7278|1070|103|12|Regular|Verify Pickup Code
+7327|620|65|12|Regular|Trip Started
+7373|605|194|15|Bold|Active Trip & Safety Journey
+7419|701|14|14|Regular|→
+7419|874|14|14|Regular|→
+7419|1022|14|14|Regular|→
+7419|1171|14|14|Regular|→
+7420|620|58|12|Regular|Live Route
+7420|738|114|12|Regular|Share Trip (optional)
+7420|911|88|12|Regular|SOS (if needed)
+7420|1059|90|12|Regular|Arrive at Dropoff
+7468|620|61|12|Regular|Rate Driver
+7515|605|181|15|Bold|Payment & Wallet Journey
+7562|620|51|12|Regular|Trip Ends
+7562|694|14|14|Regular|→
+7562|731|88|12|Regular|Fare Breakdown
+7562|841|14|14|Regular|→
+7562|878|140|12|Regular|Choose Payment Method
+7562|1041|14|14|Regular|→
+7562|1078|137|12|Regular|Apply Voucher (optional)
+7562|1238|14|14|Regular|→
+7611|620|20|12|Regular|Pay
+7611|663|14|14|Regular|→
+7611|700|43|12|Regular|Receipt
+7732|605|141|12|Bold|Design Highlights
+7758|605|489|25|Bold|The flows riders use every day
+7802|605|628|15|Regular|From setting a price to getting home safely — nine screens across booking, matching, safety and payment.
+8346|605|210|16|Bold|Recommended fare
+8346|836|210|16|Bold|Waiting for replies
+8346|1067|210|16|Bold|Driver offers
+8381|605|210|13|Regular|Book straight away, or adjust the fare on a keypad.
+8381|836|210|13|Regular|A ± stepper and auto-accept while drivers view the offer.
+8381|1067|210|13|Regular|Counter-offers with rating, car, ETA and price.
+8922|605|210|16|Bold|Driver arriving
+8922|836|210|16|Bold|Safety Toolkit
+8922|1067|210|16|Bold|Quiet Call
+8957|605|210|13|Regular|Plate, car photos, verification code and one-row actions.
+8957|836|210|13|Regular|Emergency help, PIN check, recording, sharing and crash reports.
+8957|1067|210|13|Regular|Answer emergency support with the keypad when you can't talk.
+9518|605|210|16|Bold|Split fare
+9518|836|210|16|Bold|Trip ended
+9518|1067|210|16|Bold|E-Wallet
+9553|605|210|13|Regular|Share the fare with contacts, each paying their part.
+9553|836|210|13|Regular|Rating, lost-item contact and trip details in one sheet.
+9553|1067|210|13|Regular|Balance and top-ups alongside cash and cards.
+9697|605|99|12|Bold|Beyond rides
+9729|605|672|25|Bold|One home screen, four services
+9782|605|672|16|Regular|The home screen leads with Rides, Ambulance and Delivery, with Offer Fare, live tracking and wallet top-up a tap away. Each new service reuses the booking, tracking and payment patterns riders already know, so growing the product never meant learning a new app.
+9912|626|54|11|Bold|Delivery
+9912|970|72|11|Bold|NEM Health
+9936|626|286|17|Bold|Send Package
+9936|970|286|17|Bold|Insurance
+9970|626|286|14|Regular|Sending or receiving, three package sizes with price multipliers, package type, handle-with-care, a declared value with an insurance threshold, and prohibited items confirmed before pickup.
+9970|970|286|14|Regular|Health, trip and life cover inside the app: policy details, eligibility and monthly cost, member benefits, and partner hospitals and providers.
+10137|626|84|11|Bold|Coming soon
+10137|970|83|11|Bold|Switch rider
+10161|626|286|17|Bold|Ambulance
+10161|970|286|17|Bold|Ride for someone else
+10195|626|286|14|Regular|An honest coming-soon state instead of a booking it can't fulfil — what to expect, a one-tap call to 112 now, and a notify-me option for launch.
+10195|970|286|14|Regular|Book a trip for a friend or family member and send them the pickup, ride and driver details in their own SimpliRide app — or schedule it for later.
+10910|605|105|12|Bold|Accessibility
+10937|605|460|25|Bold|Designed for one-handed, on-the-go use
+11005|605|11|14|Bold|✓
+11005|625|123|14|Regular|Large touch targets
+11005|957|11|14|Bold|✓
+11005|977|103|14|Regular|High-contrast UI
+11038|605|11|14|Bold|✓
+11038|625|138|14|Regular|Minimal cognitive load
+11038|957|11|14|Bold|✓
+11038|977|129|14|Regular|Clear color hierarchy
+11071|605|11|14|Bold|✓
+11071|625|109|14|Regular|Large typography
+11071|957|11|14|Bold|✓
+11071|977|103|14|Regular|Simple language
+11104|605|11|14|Bold|✓
+11104|625|141|14|Regular|Progressive disclosure
+11104|957|11|14|Bold|✓
+11104|977|156|14|Regular|Persistent safety actions
+11225|605|198|12|Bold|Expected Product Impact
+11252|605|312|25|Bold|Business, riders, and drivers
+11346|628|59|15|Bold|Business
+11346|860|44|15|Bold|Riders
+11346|1092|51|15|Bold|Drivers
+11384|646|95|13|Regular|Higher booking\ncompletion rate
+11384|878|131|13|Regular|Real price control, not\njust a fixed quote
+11384|1110|144|13|Regular|Access to riders willing\nto negotiate up, not just\ndown
+11432|646|110|13|Regular|Lower post-match\ncancellation
+11432|878|142|13|Regular|Faster trust at the point\nof matching
+11452|1110|111|13|Regular|Fewer no-show\ncancellations from\nmismatched fare\nexpectations
+11479|646|125|13|Regular|Healthier margins via\nOffer Fare vs. blanket\ndiscounting
+11479|878|127|13|Regular|Safety tools available\nwithout hunting for\nthem
+11539|1110|102|13|Regular|More predictable\ndemand from\nscheduled rides
+11546|646|127|13|Regular|Higher wallet-funded\ntrip share
+11546|878|111|13|Regular|Easier planning for\nrecurring trips
+11731|605|115|12|Bold|What I Learned
+11757|605|436|25|Bold|Trust is a rider feature, not a driver one
+11819|605|661|16|Regular|Designing the rider side after the driver side made one thing obvious: a subscription model that makes driver economics fairer doesn't mean anything to a rider unless the app also gives them something they didn't have before — real say over price, and safety tools they don't have to dig for. The Offer Fare mechanic turned out to be less about undercutting the standard fare and more about giving riders a sense of urgency in a transaction that usually feels like it's happening to them. Designing both sides of the same marketplace also made the trade-offs sharper — every feature that builds rider trust (verification, live tracking, SOS) has a direct mirror on the driver side, and getting the two to feel like one coherent system, not two separate apps, was the real work.
+12186|605|90|12|Bold|Style Guide
+12213|605|83|25|Bold|System
+12284|961|180|15|Regular|Heading — Outfit SemiBold
+12311|961|143|26|SemiBold|Find Drivers
+12337|605|88|11|SemiBold|Purple (Brand Primary)
+12346|703|88|11|SemiBold|Deep Purple (Banners)
+12347|801|64|11|SemiBold|Navy (Brand\nDark)
+12368|961|238|15|Regular|Body — Outfit Regular / Medium
+12380|605|45|11|Regular|#7567F5
+12380|703|46|11|Regular|#3F3694
+12380|801|46|11|Regular|#0B215D
+12396|961|300|16|Regular|The recommended fare is always shown first — Offer Fare is an adjustment on top of it, never a hidden "real" price underneath.
+12472|605|45|11|SemiBold|Success
+12472|703|44|11|SemiBold|Warning
+12472|801|26|11|SemiBold|Alert
+12489|605|46|11|Regular|#2ECC71
+12489|703|46|11|Regular|#F2B84B
+12489|801|48|11|Regular|#FF5C5C
+12581|605|41|11|SemiBold|Asphalt
+12581|703|31|11|SemiBold|Paper
+12599|605|46|11|Regular|#0A1220
+12599|703|44|11|Regular|#F3F1EC
+12623|605|315|13|Regular|Purple carries every primary action — Find driver, Accept, Continue, Done. Red is reserved for emergency and cancel actions, green for success and verification codes, so colour always means the same thing mid-trip.
+12842|605|649|19|Medium|A subscription makes driver economics predictable. Offer Fare does the same thing for riders, from the other side of the same trip — one price model, two people who both got a say in it.
+12957|605|59|11|Regular|Designer
+12957|731|31|11|Regular|Role
+12957|926|62|11|Regular|Platform
+12957|1060|59|11|Regular|Industry
+12981|605|78|14|Regular|Olanrewaju Alalade
+12981|731|147|14|Regular|Lead Product Designer
+12981|926|87|14|Regular|Android & iOS
+12981|1060|112|14|Regular|Mobility / FinTech
+13050|605|40|11|Regular|Tools
+13074|605|220|14|Regular|Figma · FigJam · Miro · Google Docs\n· Maze · Notion
+13151|622|121|13|Regular|Booking & Offer Fare
+13151|784|95|13|Regular|Driver matching
+13151|920|99|13|Regular|Live trip tracking
+13151|1061|78|13|Regular|Safety & SOS
+13200|622|111|13|Regular|Wallet & payments
+13200|775|54|13|Regular|Split fare
+13200|870|97|13|Regular|Scheduled rides
+13200|1009|102|13|Regular|Ratings & history
+IMG|855|580|732|458|/img/assets/mockup-simpliride-rider-hero.jpg|Hero mockup
+IMG|7899|613|194|420|/img/assets/phone-recommended-fare.webp|Recommended fare
+IMG|7899|844|194|420|/img/assets/phone-waiting-for-replies.webp|Waiting for replies
+IMG|7899|1075|194|420|/img/assets/phone-driver-offers.webp|Driver offers
+IMG|8475|613|194|420|/img/assets/mockup-simpliride-rider-highlight-driver-arriving.webp|Driver arriving
+IMG|8475|844|194|420|/img/assets/phone-safety-toolkit.webp|Safety Toolkit
+IMG|8475|1075|194|420|/img/assets/phone-quiet-call.webp|Quiet Call
+IMG|9071|613|194|420|/img/assets/mockup-simpliride-rider-highlight-split-fare.webp|Split fare
+IMG|9071|844|194|420|/img/assets/phone-trip-ended.webp|Trip ended
+IMG|9071|1075|194|420|/img/assets/mockup-simpliride-rider-highlight-e-wallet.webp|E-Wallet
+IMG|10395|650|158|342|/img/assets/phone-package-details.webp|Rider app
+IMG|10352|849|184|398|/img/assets/phone-insurance.webp|Rider app
+IMG|10395|1074|158|342|/img/assets/phone-ambulance-coming-soon.webp|Rider app

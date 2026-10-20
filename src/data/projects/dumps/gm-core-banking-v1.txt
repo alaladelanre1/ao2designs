@@ -1,0 +1,172 @@
+394|599|198|22|Bold|Grace & Mercy MFB
+401|975|80|13|Regular|Core banking
+401|1097|27|13|Regular|MVP
+401|1166|88|13|Regular|Design system
+454|599|580|42|Bold|Designing a core banking system from the ground up
+572|599|640|16|Regular|Version 1 was the MVP of Grace & Mercy's core banking system (CBS): the platform the bank runs on every day. It had to model how a microfinance bank actually lends — through branches, credit officers and market unions — and let the bank configure its own loan and savings products, chart of accounts and permissions without waiting on developers. I designed the MVP and the design system that every later version, including v2 and the Field App, is built on.
+764|599|28|11|Regular|Role
+764|781|54|11|Regular|Product
+764|897|58|11|Regular|Platform
+764|991|38|11|Regular|Scope
+784|599|146|14|SemiBold|Lead Product Designer
+784|781|80|14|SemiBold|CBS v1 · MVP
+784|897|29|14|SemiBold|Web
+784|991|87|14|SemiBold|450+ screens
+1384|599|70|12|Bold|Overview
+1414|599|672|25|Bold|The foundation everything else stands on
+1462|599|672|16|Regular|A core banking system is where every naira is recorded. For the MVP, the goal was a complete, configurable core: client records, loan and savings products, transactions, accounting and administration — with the bank's own structure and rules built in rather than bolted on. Getting the foundations right in v1 is what allowed v2 to add eight new departments without redesigning the shell.
+1646|618|72|30|Bold|450+
+1646|790|54|30|Bold|20+
+1646|962|17|30|Bold|5
+1646|1134|29|30|Bold|16
+1692|618|118|12|Regular|Desktop screens in the MVP
+1692|790|118|12|Regular|Modules from clients to campaigns
+1692|962|118|12|Regular|Levels in the organisation structure
+1692|1134|118|12|Regular|Permission areas per user group
+1875|599|111|12|Bold|The challenge
+1905|599|672|25|Bold|Microfinance doesn't fit a generic banking template
+1953|599|672|16|Regular|Grace & Mercy lends to traders through unions that meet weekly, managed by credit officers across areas and branches. Loan products differ in schedules, grace periods, penalties and top-ups. A generic core banking interface would force the bank's process into someone else's model — so the MVP had to make the bank's own structure, products and rules first-class, while staying usable for staff who are not system administrators.
+2123|616|163|13|Regular|Union-based group lending
+2123|823|194|13|Regular|Dozens of rules per loan product
+2175|616|233|13|Regular|Weekly collections across many clients
+2175|893|209|13|Regular|Branch, area and head-office views
+2227|616|189|13|Regular|Granular, auditable permissions
+2227|849|202|13|Regular|Configuration without developers
+2363|599|76|12|Bold|The scope
+2393|599|672|25|Bold|Eight areas, one core
+2441|599|672|16|Regular|The MVP's 450+ screens group into eight areas, each designed around the job the bank needed done.
+2544|620|74|16|Bold|01  Clients
+2544|964|92|16|Bold|02  Products
+2550|837|69|11|Bold|70 screens
+2550|1174|76|11|Bold|40+ screens
+2578|620|286|14|Regular|Individual, corporate, union and guarantor records, with loan and deposit accounts, documents and next of kin.
+2578|964|286|14|Regular|Loan, savings and fee products, plus penalties, interest rates, conversions and debt types.
+2703|620|165|16|Bold|03  Batch transactions
+2703|964|109|16|Bold|04  Accounting
+2709|837|69|11|Bold|22 screens
+2709|1175|75|11|Bold|25+ screens
+2737|620|286|14|Regular|Repayment, deposit and withdrawal collection sheets, combined sheets, loan creation, approval and disbursement.
+2737|964|286|14|Regular|Chart of accounts, manual and standard journal entries, trial balance, balance sheet, income and provisioning.
+2862|620|124|16|Bold|05  Organisation
+2862|964|172|16|Bold|06  Users & permissions
+2868|837|69|11|Bold|46 screens
+2868|1174|76|11|Bold|20+ screens
+2896|620|286|14|Regular|Head office, PGAs, areas, branches and centres/unions, with status changes at every level.
+2896|964|286|14|Regular|Users, password policy, user groups and permissions across 16 areas, plus activity log and audit trail.
+3021|620|128|16|Bold|07  Configuration
+3021|964|227|16|Bold|08  Engagement & integrations
+3027|825|81|11|Bold|140+ screens
+3027|1191|74|11|Bold|15+ screens
+3055|620|286|14|Regular|General settings, membership policy, transaction templates, field configuration and data import.
+3055|964|286|14|Regular|Messaging, recurring messages and campaigns, interbank transfers and repayment schedule adjustments.
+3246|599|125|12|Bold|Design strategy
+3276|599|672|25|Bold|Five principles for a configurable core
+3359|599|23|22|Bold|01
+3359|646|230|16|SemiBold|Model the bank, not a template
+3359|900|371|13|Medium|Head office → PGA → area → branch → centre/union is built into navigation, filters and permissions.
+3444|599|28|22|Bold|02
+3444|651|230|16|SemiBold|Configuration is a product
+3444|905|366|13|Medium|Products, fields, templates and policies are set up in the UI, so operations can change rules without a release.
+3529|599|27|22|Bold|03
+3529|650|230|16|SemiBold|Long forms, clearly sectioned
+3529|904|367|13|Medium|The loan product form spans 20+ sections — from validity and schedules to GL mapping — each titled and self-contained.
+3634|599|29|22|Bold|04
+3634|652|230|16|SemiBold|Work in batches, like the field does
+3634|906|365|13|Medium|Collection sheets let staff record a whole union's repayments, deposits and withdrawals in one pass.
+3727|599|27|22|Bold|05
+3727|650|230|16|SemiBold|Permission every action
+3727|904|367|13|Medium|User groups grant access area by area — loans, savings, accounting, transfers — and every change lands in the audit trail.
+3915|599|174|12|Bold|Key design challenges
+3945|599|672|25|Bold|Five hard problems, five resolutions
+4028|622|65|11|Bold|Products
+4056|622|626|16|SemiBold|A loan product with dozens of rules
+4095|622|84|11|Bold|Challenge
+4095|722|526|14|Regular|Each loan product controls validity, repayment schedule, instalments, interest, grace, arrears classification, penalties, top-ups, fees and GL accounts — far too much for one undifferentiated form.
+4172|622|84|11|Bold|Solution
+4172|722|526|14|Regular|One long, sectioned form with a numbered heading per rule group, sensible defaults, min/default/max fields side by side, and accounting mapping at the end — so a product can be read top to bottom like a policy.
+4297|622|135|11|Bold|Batch transactions
+4325|622|626|16|SemiBold|Collecting from a whole union at once
+4364|622|84|11|Bold|Challenge
+4364|722|526|14|Regular|Union meetings produce dozens of repayments, deposits and withdrawals that staff had to post one account at a time.
+4420|622|84|11|Bold|Solution
+4420|722|526|14|Regular|Collection sheets filter by date, branch, credit officer, union, account type and product, expand each client to show penalty, fee, overdue and outstanding balance, and summarise expected vs overdue vs paid before posting. This pattern later became the Field App's batch posting.
+4566|622|89|11|Bold|Organisation
+4594|622|626|16|SemiBold|Five levels of structure
+4633|622|84|11|Bold|Challenge
+4633|722|526|14|Regular|Staff, clients and reports roll up through head office, PGAs, areas, branches and centres/unions — and every level can be active or inactive.
+4689|622|84|11|Bold|Solution
+4689|722|526|14|Regular|An Organisation Structure hub with a card per level showing totals and status, drilling into each level's list and status-change flows.
+4793|622|81|11|Bold|Permissions
+4821|622|626|16|SemiBold|Access that auditors can trust
+4860|622|84|11|Bold|Challenge
+4860|722|526|14|Regular|Different staff need very different powers, and a bank must be able to prove who could do what.
+4916|622|84|11|Bold|Solution
+4916|722|526|14|Regular|User groups with permissions grouped into 16 areas — from global module access to interbank transfers — alongside password policy, an activity log and a full audit trail.
+5020|622|97|11|Bold|Configuration
+5048|622|626|16|SemiBold|Changing rules without a release
+5087|622|84|11|Bold|Challenge
+5087|722|526|14|Regular|Membership rules, transaction templates and required fields change as the bank grows.
+5143|622|84|11|Bold|Solution
+5143|722|526|14|Regular|Field configuration for clients, accounts and products, plus membership policy, transaction templates and data import — so operations can adapt the system themselves.
+5334|599|139|12|Bold|Design highlights
+5364|599|672|25|Bold|A tour of the MVP
+5412|599|672|16|Regular|Eight screens across the core — the ones staff open every day and the ones that shape how the bank is set up.
+5717|599|328|16|Bold|Client details
+5717|943|328|16|Bold|Combined collection sheet
+5749|599|328|13|Regular|Clients · KYC, business info and next of kin in one record.
+5749|943|328|13|Regular|Batch transactions · a union's repayments and savings at once.
+6042|599|328|16|Bold|Create loan product
+6042|943|328|16|Bold|Organisation structure
+6074|599|328|13|Regular|Products · every lending rule in one sectioned form.
+6074|943|328|13|Regular|Administration · five levels at a glance.
+6347|599|328|16|Bold|Chart of accounts
+6347|943|328|16|Bold|User group permissions
+6379|599|328|13|Regular|Accounting · the general ledger behind every product.
+6379|943|328|13|Regular|Administration · access granted area by area.
+6652|599|328|16|Bold|Loan calculator
+6652|943|328|16|Bold|Campaigns
+6684|599|328|13|Regular|Accounts · repayment schedules before a loan is booked.
+6684|943|328|13|Regular|Messaging · reaching clients by SMS and campaigns.
+6829|599|109|12|Bold|Design system
+6859|599|672|25|Bold|A system built to outlast the MVP
+6907|599|672|16|Regular|Alongside the screens, I set up the design system in Figma: colour variables in 11-step ramps, a typography scale from SM to XL plus five heading levels, and usage guidelines. Bright orange carries the primary action, while status colours stay reserved for meaning. v2 and the Field App were built on these same foundations.
+7103|599|41|12|Medium|Primary
+7103|697|56|12|Medium|Indigo 500
+7103|795|64|12|Medium|Fuchsia 500
+7103|893|48|12|Medium|Lime 500
+7103|991|45|12|Medium|Teal 500
+7103|1089|42|12|Medium|Surface
+7126|599|47|11|Regular|#FF6600
+7126|697|47|11|Regular|#363463
+7126|795|47|11|Regular|#633458
+7126|893|47|11|Regular|#456334
+7126|991|48|11|Regular|#34635C
+7126|1089|46|11|Regular|#F9F9F9
+7156|599|672|12|Regular|Ramps and primary colour taken from the CBS v1 design system page.
+7280|599|114|12|Bold|What I learned
+7310|599|672|25|Bold|The MVP decides what version 2 can be
+7358|599|672|16|Regular|The most valuable v1 decisions weren't visible on any single screen: modelling the bank's organisation structure, making products and fields configurable, and setting up a real design system. Because those foundations held, v2 could add HR, Finance, Audit, Risk and more on the same shell, and the batch collection sheet became the blueprint for the Field App. Designing an MVP is less about doing less, and more about choosing which foundations must be right first.
+7629|599|672|22|Bold|v1 gave Grace & Mercy a core that fits how it lends — and the foundation for every version that followed.
+7721|599|58|11|Regular|Designer
+7721|770|30|11|Regular|Role
+7721|965|57|11|Regular|Product
+7721|1094|58|11|Regular|Industry
+7744|599|123|14|Regular|Olanrewaju Alalade
+7744|770|147|14|Regular|Lead Product Designer
+7744|965|81|14|Regular|CBS v1 · MVP
+7744|1094|145|14|Regular|Microfinance / FinTech
+7805|616|70|13|Regular|MVP design
+7805|728|82|13|Regular|Enterprise UX
+7805|852|103|13|Regular|Configuration UX
+7805|997|95|13|Regular|Design systems
+7855|616|147|13|Regular|Information architecture
+7855|805|80|13|Regular|Core banking
+IMG|911|580|732|475|/img/assets/mockup-g-m-core-banking-v1-hero.jpg|Hero mockup
+IMG|5508|599|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-client-details.webp|Client details
+IMG|5508|943|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-combined-collection-sheet.webp|Combined collection sheet
+IMG|5833|599|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-create-loan-product.webp|Create loan product
+IMG|5833|943|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-organisation-structure.webp|Organisation structure
+IMG|6138|599|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-chart-of-accounts.webp|Chart of accounts
+IMG|6138|943|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-user-group-permissions.webp|User group permissions
+IMG|6443|599|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-loan-calculator.webp|Loan calculator
+IMG|6443|943|328|201|/img/assets/mockup-g-m-core-banking-v1-highlight-campaigns.webp|Campaigns

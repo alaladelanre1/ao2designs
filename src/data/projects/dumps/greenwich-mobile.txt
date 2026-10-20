@@ -1,0 +1,205 @@
+401|931|85|13|Regular|Retail banking
+401|1058|66|13|Regular|Mobile app
+401|1166|88|13|Regular|Design system
+454|599|600|42|Bold|One app for banking, investing and trading
+572|599|640|16|Regular|Greenwich Merchant Bank runs three businesses: banking, asset management and stockbroking through Greenwich Securities (GSL). Instead of three separate apps, customers download one. They choose the service they want at the door and sign in to it with that business's own login, then open an account with their BVN or NIN, move money and pay bills, grow savings in a money market fund, or buy and sell Nigerian stocks. I designed the customer experience end to end, including a round of updates to onboarding and security, and the component library it's built on.
+791|599|28|11|Regular|Role
+791|781|54|11|Regular|Product
+791|941|58|11|Regular|Platform
+791|1059|38|11|Regular|Scope
+811|599|146|14|SemiBold|Lead Product Designer
+811|781|124|14|SemiBold|Bank · MMF · Stocks
+811|941|82|14|SemiBold|iOS · Android
+811|1059|171|14|SemiBold|240+ screens + style guide
+1395|599|70|12|Bold|Overview
+1425|599|672|25|Bold|Three businesses, one customer
+1473|599|672|16|Regular|A Greenwich customer might save, pay bills, earn returns on idle cash and trade shares in the same week. Each of those belongs to a different regulated business with its own balances and rules, but the customer shouldn't have to care. The app had to keep each product clearly separate while making moving between them feel like one experience, and meet Nigeria's KYC rules by starting customers on a basic account and unlocking higher limits as they verify more.
+1684|618|73|30|Bold|240+
+1684|790|18|30|Bold|9
+1684|962|17|30|Bold|3
+1684|1134|17|30|Bold|3
+1730|618|118|12|Regular|Mobile screens and states
+1730|790|118|12|Regular|Feature areas from onboarding to settings
+1730|962|118|12|Regular|Businesses in one app: bank, MMF and GSL
+1730|1134|118|12|Regular|Account tiers with rising limits
+1913|599|200|12|Bold|One app, three businesses
+1943|599|672|25|Bold|One app, three separate logins
+1991|599|672|16|Regular|The app opens on a simple choice: Banking Services, Asset Management or Greenwich Securities. Each is a separately regulated business, so each has its own login and account, and customers sign in only to the service they need. Once inside, the balance card, actions and bottom navigation belong to that business alone, so a stock portfolio is never confused with a savings balance — while the brand, components and patterns stay the same across all three.
+2202|620|171|11|Bold|Greenwich Merchant Bank
+2202|849|171|11|Bold|Money Market Fund
+2202|1079|171|11|Bold|Greenwich Securities (GSL)
+2224|620|68|18|Bold|Banking
+2224|849|161|18|Bold|Asset Management
+2224|1079|111|18|Bold|Stockbroking
+2258|620|171|13|Regular|Account balance, transfers, funding, bills, cards and a monthly transfer analysis.
+2258|849|171|13|Regular|Total portfolio in naira, top-up and withdraw from wallet, principal vs interest, days to maturity and interest earned over time.
+2258|1079|171|13|Regular|Portfolio value and cash available to trade, analytics by sector, today's biggest movers, and fund or withdraw from the trading account.
+2326|620|171|12|Medium|Home · Bills · Card · Transactions · More
+2366|849|171|12|Medium|Home · Wallet · More
+2386|1079|171|12|Medium|Home · Portfolio · Wallet · More
+3035|599|111|12|Bold|The challenge
+3065|599|672|25|Bold|Fast to start, safe to grow
+3113|599|672|16|Regular|Regulation and fraud risk pull against convenience, and three businesses multiply the problem. Customers expect to open an account in minutes, but KYC requires identity checks and higher limits require more proof. Money in a fund, a trading account and a bank account must never be confused, yet moving between them has to feel easy. The design had to keep every step short and explain why each piece of information was needed.
+3283|616|154|13|Regular|Long, form-heavy sign-up
+3283|814|154|13|Regular|Unclear transaction limits
+3335|616|256|13|Regular|KYC upgrades customers don't understand
+3335|916|156|13|Regular|Account recovery vs fraud
+3387|616|146|13|Regular|Fees discovered too late
+3387|806|162|13|Regular|Many bill types, many flows
+3387|1012|189|13|Regular|Three products, three balances
+3523|599|76|12|Bold|The scope
+3553|599|672|25|Bold|Nine feature areas, one bottom bar
+3601|599|672|16|Regular|Home, Bills, Cards, Transactions and More anchor navigation; everything else is one or two taps away.
+3704|620|13|11|Bold|01
+3704|849|14|11|Bold|02
+3704|1078|14|11|Bold|03
+3726|620|171|16|Bold|Onboarding
+3726|849|171|16|Bold|Security
+3726|1078|171|16|Bold|Account tiers
+3758|620|171|13|Regular|Sign up with BVN or NIN, verify your phone, create a login and choose a savings or current account.
+3758|849|171|13|Regular|Security questions, OTP, password change and recovery, authentication options and privacy settings.
+3758|1078|171|13|Regular|Account limits by tier and upgrade forms for selfie, ID, proof of address and next of kin.
+3896|620|14|11|Bold|04
+3896|849|14|11|Bold|05
+3896|1078|15|11|Bold|06
+3918|620|171|16|Bold|Transfers
+3918|849|171|16|Bold|Fund account
+3918|1078|171|16|Bold|Bills
+3950|620|171|13|Regular|Send to saved beneficiaries or any bank, confirm, authorise with OTP and share the receipt.
+3950|849|171|13|Regular|Receive by account number, fund via USSD or from another bank, with fees shown up front.
+3950|1078|171|13|Regular|Airtime, data, cable, electricity, betting and education through one provider-and-confirm flow.
+4088|620|14|11|Bold|07
+4088|849|14|11|Bold|08
+4088|1078|15|11|Bold|09
+4110|620|171|16|Bold|Transactions
+4110|849|171|16|Bold|Home
+4110|1078|171|16|Bold|More
+4142|620|171|13|Regular|History, transaction details, receipts and statements to download or share.
+4142|849|171|13|Regular|Balance, quick actions, transfer analysis, and Stocks and Money Market entry points.
+4142|1078|171|13|Regular|Profile, notifications, documents, limits, settings and support.
+4346|599|125|12|Bold|Design strategy
+4376|599|672|25|Bold|Five principles behind every screen
+4459|599|23|22|Bold|01
+4459|646|230|16|SemiBold|One question per screen
+4459|900|371|13|Medium|Onboarding asks for one thing at a time — ID type, number, phone, login — so progress always feels close.
+4544|599|28|22|Bold|02
+4544|651|230|16|SemiBold|Show the limit, then the path
+4544|905|366|13|Medium|Account Limits shows each tier's limits and exactly which checks unlock the next one.
+4629|599|27|22|Bold|03
+4629|650|230|16|SemiBold|No surprise fees
+4629|904|367|13|Medium|Funding by USSD shows the fee percentage and lets customers choose to include it in the amount.
+4714|599|29|22|Bold|04
+4714|652|230|16|SemiBold|One pattern for every bill
+4714|906|365|13|Medium|Category → provider → details → confirm → OTP → success, whether it's airtime or school fees.
+4799|599|27|22|Bold|05
+4799|650|230|16|SemiBold|Confirm before money moves
+4799|904|367|13|Medium|Every transfer and payment ends on a confirmation screen, OTP, and a shareable receipt.
+4967|599|174|12|Bold|Key design challenges
+4997|599|672|25|Bold|Five hard problems, five resolutions
+5080|622|626|16|SemiBold|1. Opening an account in minutes
+5119|622|84|11|Bold|Challenge
+5119|722|526|14|Regular|Long sign-up forms lose customers before their account exists.
+5154|622|84|11|Bold|Solution
+5154|722|526|14|Regular|A short sequence: choose BVN or NIN (with the USSD code to look up your BVN inline), verify your phone, create a login, then pick a savings or current account with a plain-language description of each.
+5279|622|626|16|SemiBold|2. Making KYC tiers understandable
+5318|622|84|11|Bold|Challenge
+5318|722|526|14|Regular|Customers hit transaction limits without knowing why or how to raise them.
+5353|622|84|11|Bold|Solution
+5353|722|526|14|Regular|An Account Limits screen shows every tier as a card — what's completed, what's pending, and the single, daily and balance limits it unlocks — with an upgrade button per tier and an upgrade prompt on Home.
+5478|622|626|16|SemiBold|3. Recovery that resists fraud
+5517|622|84|11|Bold|Challenge
+5517|722|526|14|Regular|Password resets are the easiest way into someone else's account.
+5552|622|84|11|Bold|Solution
+5552|722|526|14|Regular|Security questions sit alongside OTP in recovery and sensitive changes, and a Privacy & Security area lets customers manage passwords, authentication options and limits in one place.
+5677|622|626|16|SemiBold|4. Fees and funding without surprises
+5716|622|84|11|Bold|Challenge
+5716|722|526|14|Regular|Customers often discover fees only after money has moved.
+5751|622|84|11|Bold|Solution
+5751|722|526|14|Regular|Funding via USSD shows the fee rate next to the amount and a toggle to include it, so the customer sees exactly what will arrive before choosing their bank.
+5855|622|626|16|SemiBold|5. Three balances that must never blur
+5894|622|84|11|Bold|Challenge
+5894|722|526|14|Regular|A bank balance, a fund portfolio and a stock portfolio look alike as numbers, but mean very different things — and one is available to spend while the others are not.
+5950|622|84|11|Bold|Solution
+5950|722|526|14|Regular|Separate logins keep each business's money in its own space. Each has its own home with a clearly labelled balance (Account Balance, Total Portfolio, Portfolio Value), its own primary actions and its own bottom navigation. The shared design system makes all three feel like one Greenwich, and the bank's Home promotes Stocks and Money Market as clear entry points rather than mixing balances.
+6183|599|139|12|Bold|Design highlights
+6213|599|672|25|Bold|The flows customers use every day
+6742|599|210|16|Bold|Choose account type
+6742|830|210|16|Bold|Forgot password
+6742|1061|210|16|Bold|Upgrade to Tier 3
+6776|599|210|13|Regular|Savings or current, explained in one line each.
+6776|830|210|13|Regular|Recovery that starts simple and adds checks.
+6776|1061|210|13|Regular|What to submit, and what it unlocks.
+7317|599|210|16|Bold|Transfer
+7317|830|210|16|Bold|Fund via USSD
+7317|1061|210|16|Bold|Bills
+7351|599|210|13|Regular|Beneficiaries first, any bank second.
+7351|830|210|13|Regular|Fee rate and include-fee toggle up front.
+7351|1061|210|13|Regular|Six categories, one flow.
+7892|599|210|16|Bold|Payment success
+7892|830|210|16|Bold|Transactions
+7892|1061|210|16|Bold|Privacy & security
+7926|599|210|13|Regular|Clear confirmation and a shareable receipt.
+7926|830|210|13|Regular|History with details and receipts.
+7926|1061|210|13|Regular|Passwords, authentication and limits in one place.
+8071|599|109|12|Bold|Design system
+8101|599|672|25|Bold|A component library in Greenwich green
+8149|599|672|16|Regular|The app is built from a style guide with typography, spacing and full colour ramps, and a component set covering buttons, inputs, toggles, tabs, checkboxes, radios, dialogs, toasts, alerts, tooltips, badges, a calendar, progress, loading and empty states. Deep Greenwich green carries primary actions; the brighter lime marks upgrades and highlights, so the two never compete.
+8372|599|84|12|Medium|Primary green
+8372|697|84|12|Medium|Lime
+8372|795|84|12|Medium|Teal
+8372|893|84|12|Medium|Success
+8372|991|84|12|Medium|Warning
+8372|1089|84|12|Medium|Danger
+8372|1187|84|12|Medium|Surface
+8395|599|47|11|Regular|#006527
+8395|697|48|11|Regular|#85CA23
+8395|795|48|11|Regular|#009289
+8395|893|48|11|Regular|#9AE6A7
+8395|991|46|11|Regular|#C18222
+8395|1089|49|11|Regular|#CE4444
+8395|1187|42|11|Regular|#F7F7F7
+8442|616|48|13|Regular|Buttons
+8442|708|39|13|Regular|Inputs
+8442|791|88|13|Regular|Toggles & tabs
+8442|923|105|13|Regular|Checkbox & radio
+8442|1072|97|13|Regular|Dialogs & toasts
+8494|616|96|13|Regular|Alerts & tooltips
+8494|756|46|13|Regular|Badges
+8494|846|55|13|Regular|Calendar
+8494|945|112|13|Regular|Progress & loading
+8494|1101|80|13|Regular|Empty states
+8546|616|33|13|Regular|Icons
+8591|599|672|12|Regular|Colours sampled from the shipped screens.
+8715|599|114|12|Bold|What I learned
+8745|599|672|25|Bold|Explain the rule, and people will follow it
+8793|599|672|16|Regular|Customers didn't resist KYC — they resisted not knowing why it mattered. Once each tier showed exactly what it unlocked and what was still pending, upgrading became a goal rather than a hurdle. The same was true of fees and security questions: friction that is explained, and placed at the right moment, feels like protection instead of bureaucracy.
+9010|599|672|22|Bold|Save, pay, invest and trade from one Greenwich app — with every balance in its place.
+9102|599|58|11|Regular|Designer
+9102|770|30|11|Regular|Role
+9102|965|62|11|Regular|Platform
+9102|1095|58|11|Regular|Industry
+9125|599|123|14|Regular|Olanrewaju Alalade
+9125|770|147|14|Regular|Lead Product Designer
+9125|965|82|14|Regular|iOS · Android
+9125|1095|91|14|Regular|Retail banking
+9186|616|91|13|Regular|Mobile banking
+9186|749|108|13|Regular|Onboarding & KYC
+9186|899|60|13|Regular|Payments
+9186|1001|70|13|Regular|Security UX
+9186|1113|95|13|Regular|Design systems
+9236|616|45|13|Regular|Fintech
+9236|703|56|13|Regular|Investing
+9236|801|80|13|Regular|Stockbroking
+IMG|920|580|732|458|/img/assets/mockup-greenwich-mobile-hero.jpg|Hero mockup
+IMG|2476|843|184|399|/img/assets/phone-choose-a-service.webp|Greenwich app
+IMG|2519|644|158|342|/img/assets/phone-money-market-fund.webp|Greenwich app
+IMG|2519|1068|158|342|/img/assets/phone-gsl-portfolio.webp|Greenwich app
+IMG|6294|607|194|420|/img/assets/phone-choose-account-type.webp|Choose account type
+IMG|6294|838|194|420|/img/assets/phone-forgot-password.webp|Forgot password
+IMG|6294|1069|194|420|/img/assets/phone-upgrade-to-tier-3.webp|Upgrade to Tier 3
+IMG|6869|607|194|420|/img/assets/phone-transfer.webp|Transfer
+IMG|6869|838|194|420|/img/assets/phone-fund-via-ussd.webp|Fund via USSD
+IMG|6869|1069|194|420|/img/assets/phone-bills.webp|Bills
+IMG|7444|607|194|420|/img/assets/phone-payment-success.webp|Payment success
+IMG|7444|838|194|420|/img/assets/phone-transactions-1.webp|Transactions
+IMG|7444|1069|194|420|/img/assets/phone-privacy-security.webp|Privacy & security

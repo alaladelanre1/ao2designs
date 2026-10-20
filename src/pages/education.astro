@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import PageTitle from "../components/PageTitle.astro";
+import Marquee from "../components/Marquee.astro";
+import Contact from "../components/Contact.astro";
+import { education, skills, toolChips, marquee } from "../data/content";
+---
+<Base title="Education — Olanrewaju Alalade">
+  <PageTitle text="Education" />
+  <section class="container">
+    <div class="title-sep"><h2>Education</h2><span class="rule"></span></div>
+    <div class="edu">
+      {education.map((e) => (
+        <article><h3>{e.title}</h3><p class="meta">{e.meta[0]}<br />{e.meta[1]}</p><p>{e.body}</p></article>
+      ))}
+    </div>
+  </section>
+  <section class="container">
+    <div class="title-sep"><h2>Skills &amp; Tools</h2><span class="rule"></span></div>
+    <h3>Skills</h3>
+    <ul class="chips">{skills.map((s) => <li>{s}</li>)}</ul>
+    <h3>Tools</h3>
+    <ul class="chips">{toolChips.map((s) => <li>{s}</li>)}</ul>
+  </section>
+  <section class="marquees" aria-hidden="true">
+    <Marquee items={marquee} size={128} speed={45} />
+    <Marquee items={marquee} size={128} speed={45} reverse />
+  </section>
+  <Contact />
+</Base>
+<style>
+  section { margin-bottom: 120px; }
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 68px; }
+  article { border-bottom: 1px solid var(--line); padding-bottom: 28px; }
+  h3 { font-size: 20px; font-weight: 600; line-height: 1.4; }
+  .meta { font-size: 16px; font-weight: 500; color: var(--muted); margin-bottom: 20px; }
+  .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 40px; }
+  .chips li { border: 1px solid var(--line); background: var(--field); border-radius: 50px; padding: 8px 22px; font-size: 16px; }
+  .marquees { display: flex; flex-direction: column; gap: 20px; overflow: hidden; }
+  @media (max-width: 900px) { section { margin-bottom: 80px; } .edu { grid-template-columns: 1fr; gap: 40px; } }
+</style>

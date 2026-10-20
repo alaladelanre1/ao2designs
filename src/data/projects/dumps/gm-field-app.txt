@@ -1,0 +1,195 @@
+394|599|198|22|Bold|Grace & Mercy MFB
+401|917|79|13|Regular|Microfinance
+401|1038|80|13|Regular|Core banking
+401|1160|94|13|Regular|Mobile field app
+454|599|560|42|Bold|Bringing the core banking system to the market stall
+572|599|640|16|Regular|Grace & Mercy is a microfinance bank that lends to traders through market unions. Its loan officers spend their days in markets, not branches — collecting repayments, onboarding clients and verifying KYC, often without a reliable signal. For version 2 of the bank's core banking system (CBS), I led the design of the Field App: an offline-first mobile companion that every member of staff uses, with what they see shaped by their role (RBAC).
+764|599|28|11|Regular|Role
+764|714|57|11|Regular|Duration
+764|811|54|11|Regular|Product
+764|960|36|11|Regular|Users
+784|599|79|14|SemiBold|Design Lead
+784|714|61|14|SemiBold|2 months
+784|811|113|14|SemiBold|CBS v2 · Field App
+784|960|128|14|SemiBold|All staff · role-based
+1368|599|70|12|Bold|Overview
+1398|599|672|25|Bold|A banking system that works where the bank actually works
+1480|599|672|16|Regular|The CBS already handled accounts, loans and approvals inside the branch. The gap was everything that happened outside it: repayments collected at union meetings, clients onboarded at their shops, and loan requests that waited for the officer to come back before anyone could act on them. The Field App closes that gap — one app, one login, and a sync queue that makes sure nothing captured in the field is lost or posted twice.
+1664|618|18|30|Bold|6
+1664|790|16|30|Bold|7
+1664|962|23|30|Bold|11
+1664|1134|17|30|Bold|3
+1710|618|118|12|Regular|Sync states, visible to officers and supervisors
+1710|790|118|12|Regular|Failure and recovery states designed up front
+1710|962|118|12|Regular|Field actions reachable from one menu
+1710|1134|118|12|Regular|Role views from a single app and login
+1893|599|111|12|Bold|The challenge
+1923|599|672|25|Bold|Field work runs on weak signal and weekly deadlines
+1971|599|672|16|Regular|Loans go to traders through unions that meet on fixed days. One officer can carry several unions and well over a hundred clients, and every meeting produces a stack of repayments that each have to land in the right account — exactly once. Before the Field App, that work lived on paper and in the officer's memory until they got back to a desk.
+2114|616|217|13|Regular|Patchy or no connectivity in markets
+2114|877|207|13|Regular|Collections re-keyed at the branch
+2166|616|203|13|Regular|Duplicate and missed repayments
+2166|863|236|13|Regular|Approvals stuck until the officer returns
+2218|616|223|13|Regular|No live view of what officers are doing
+2218|883|233|13|Regular|Sensitive client data on shared devices
+2354|599|58|12|Bold|My role
+2384|599|672|25|Bold|Design lead — from field workflows to developer hand-off
+2432|599|672|16|Regular|I owned the Field App's design end to end over two months, working with the product owner, the CBS engineering team and the bank's operations staff.
+2512|599|111|11|Bold|Responsibilities
+2512|955|138|11|Bold|Business objectives
+2539|599|11|14|Bold|—
+2539|620|295|14|Regular|Mapped field workflows with operations and branch staff
+2539|955|11|14|Bold|—
+2539|976|295|14|Regular|Capture every collection at the source, once
+2573|955|11|14|Bold|—
+2573|976|295|14|Regular|Shorten the wait for loan and withdrawal approvals
+2595|599|11|14|Bold|—
+2595|620|295|14|Regular|Defined the role model (RBAC) with product and engineering
+2629|955|11|14|Bold|—
+2629|976|295|14|Regular|Give branch managers a live view of field teams
+2651|599|11|14|Bold|—
+2651|620|295|14|Regular|Designed the offline sync model and every failure state
+2685|955|11|14|Bold|—
+2685|976|295|14|Regular|Keep client data secure on shared devices
+2707|599|11|14|Bold|—
+2707|620|295|14|Regular|Designed end-to-end flows across 10+ modules
+2763|599|11|14|Bold|—
+2763|620|295|14|Regular|Prototyped, documented and handed off to the mobile team
+2912|599|93|12|Bold|Who it's for
+2942|599|672|25|Bold|One app, three jobs — shaped by role
+2990|599|672|16|Regular|Staff sign in with their CBS work account or Azure AD, and their role decides what the app shows them. Between client visits the session stays open behind a 4-digit device PIN or Face ID, so a shared phone never exposes another officer's portfolio.
+3120|620|16|15|Bold|01
+3120|849|19|15|Bold|02
+3120|1079|19|15|Bold|03
+3149|620|94|17|Bold|Field officer
+3149|849|131|17|Bold|Branch manager
+3149|1079|85|17|Bold|Supervisor
+3185|620|171|14|Regular|Onboards clients and guarantors, opens loan and savings accounts, logs collections and batch-posts whole union meetings.
+3185|849|171|14|Regular|Works an approval queue for loan applications and withdrawals — approving, or declining with a reason the officer can act on.
+3185|1079|171|14|Regular|Monitors every officer's tasks and sync status, resolves escalated failures, and exports the day's activity to CSV.
+3439|599|125|12|Bold|Design strategy
+3469|599|672|25|Bold|Five principles behind every screen
+3552|599|23|22|Bold|01
+3552|646|210|16|SemiBold|Offline is the default
+3552|880|391|13|Medium|Every action saves on the device first. The network is a delivery detail, not a dependency.
+3637|599|28|22|Bold|02
+3637|651|210|16|SemiBold|Status is never hidden
+3637|885|386|13|Medium|Each item carries its sync state from Draft to Synced — for the officer and for their supervisor.
+3722|599|27|22|Bold|03
+3722|650|210|16|SemiBold|Every failure has an owner
+3722|884|387|13|Medium|Retryable errors stay with the officer; branch-side rejections escalate to a named supervisor.
+3807|599|29|22|Bold|04
+3807|652|210|16|SemiBold|Work the way unions meet
+3807|886|385|13|Medium|Batch posting records a whole meeting in one pass instead of client by client.
+3892|599|27|22|Bold|05
+3892|650|210|16|SemiBold|Role first, not menu first
+3892|884|387|13|Medium|Home, tasks and the More menu are arranged around what each role does most often.
+4060|599|118|12|Bold|The sync model
+4090|599|672|25|Bold|Six states that make offline work trustworthy
+4138|599|672|16|Regular|The hardest design problem wasn't a screen — it was a shared vocabulary. Officers, supervisors and engineers needed to mean the same thing by "sent". I defined six states that appear identically on the officer's queue, the supervisor's monitor and in support conversations.
+4307|612|54|14|SemiBold|Not sent
+4307|725|36|14|SemiBold|Draft
+4307|839|50|14|SemiBold|Queued
+4307|952|50|14|SemiBold|Syncing
+4307|1065|46|14|SemiBold|Synced
+4307|1179|39|14|SemiBold|Failed
+4335|612|79|12|Regular|Nothing submitted from the phone yet
+4335|725|79|12|Regular|Saved on the phone, not submitted
+4335|839|79|12|Regular|Submitted and waiting for signal
+4335|952|79|12|Regular|Uploading to the branch system
+4335|1065|79|12|Regular|Received by the CBS — nothing more to do
+4335|1179|79|12|Regular|Rejected — fix and resend, or escalate
+4525|599|174|12|Bold|Key design challenges
+4555|599|672|25|Bold|Five hard problems, five resolutions
+4638|622|626|16|SemiBold|1. Capturing money without a connection
+4677|622|84|11|Bold|Challenge
+4677|722|526|14|Regular|Repayments are taken in markets with patchy signal. A failed request can't mean a lost ₦25,000.
+4733|622|84|11|Bold|Solution
+4733|722|526|14|Regular|Every save goes to a local queue first. Receipts are issued at sync, and Sync status shows what's queued, syncing, synced or needs attention — with one Sync now button.
+4858|622|626|16|SemiBold|2. Stopping double posting
+4897|622|84|11|Bold|Challenge
+4897|722|526|14|Regular|Unsure whether a save went through, officers retry — and the same instalment lands twice.
+4953|622|84|11|Bold|Solution
+4953|722|526|14|Regular|The app flags duplicates before they post ("Already submitted — no action needed") and blocks an instalment already recorded for the cycle.
+5057|622|626|16|SemiBold|3. Failures the officer can't fix
+5096|622|84|11|Bold|Challenge
+5096|722|526|14|Regular|Some rejections, like an invalid guarantor BVN, can only be resolved at the branch.
+5131|622|84|11|Bold|Solution
+5131|722|526|14|Regular|Retry and Escalate are separate paths. Non-retryable items go to a named supervisor with context and urgency, and stay in the queue marked escalated until cleared.
+5235|622|626|16|SemiBold|4. Recording a whole union meeting
+5274|622|84|11|Bold|Challenge
+5274|722|526|14|Regular|Posting thirty repayments one client at a time is slow and error-prone.
+5309|622|84|11|Bold|Solution
+5309|722|526|14|Regular|Batch posting: filter by collection date, officer, union and product, select every client due, enter amounts and submit once — saved locally, synced as one batch.
+5413|622|626|16|SemiBold|5. Approvals without a trip to the branch
+5452|622|84|11|Bold|Challenge
+5452|722|526|14|Regular|Loans and withdrawals sat waiting until the officer returned to the branch.
+5487|622|84|11|Bold|Solution
+5487|722|526|14|Regular|Branch managers work a mobile approval queue with a progress tracker, and decline with one-tap reasons that tell the officer exactly what to fix.
+5657|599|139|12|Bold|Design highlights
+5687|599|672|25|Bold|The flows that carry a field day
+5735|599|672|16|Regular|From the morning portfolio check to the last escalation, these are the screens officers and managers live in.
+6284|599|210|16|Bold|Portfolio by union
+6284|830|210|16|Bold|Batch posting
+6284|1061|210|16|Bold|Payments submitted
+6318|599|210|13|Regular|Balances, savings and arrears per union, with a six-month trend.
+6318|830|210|13|Regular|A whole union meeting recorded in one pass.
+6318|1061|210|13|Regular|Saved locally; receipts issued when the batch syncs.
+6859|599|210|16|Bold|Escalate to supervisor
+6859|830|210|16|Bold|Approval queue
+6859|1061|210|16|Bold|Loan application review
+6893|599|210|13|Regular|Non-retryable failures handed to a named person with context.
+6893|830|210|13|Regular|Pending, approved and declined requests for the branch manager.
+6893|1061|210|13|Regular|Request details, progress tracker and approve or decline.
+7434|599|210|16|Bold|Team monitoring
+7434|830|210|16|Bold|Client profile
+7434|1061|210|16|Bold|More
+7468|599|210|13|Regular|Every officer's tasks with progress and sync state, exportable to CSV.
+7468|830|210|13|Regular|KYC, accounts, documents and complaints in one record.
+7468|1061|210|13|Regular|Every field action, ordered by how often it's used.
+7613|599|88|12|Bold|Style guide
+7643|599|672|25|Bold|A calm, light system where colour means status
+7691|599|672|16|Regular|Orange is reserved for primary actions and the active tab. Red, amber and green only ever describe the state of money or a submission — never decoration — so officers can scan a queue in a second.
+7860|599|41|12|Medium|Primary
+7860|697|26|12|Medium|Navy
+7860|795|46|12|Medium|Success
+7860|893|44|12|Medium|Warning
+7860|991|39|12|Medium|Danger
+7860|1089|42|12|Medium|Surface
+7860|1187|16|12|Medium|Ink
+7883|599|45|11|Regular|#D9541F
+7883|697|44|11|Regular|#1F2A55
+7883|795|45|11|Regular|#0F7B4F
+7883|893|46|11|Regular|#A15C07
+7883|991|47|11|Regular|#E7000B
+7883|1089|46|11|Regular|#F9FAFB
+7883|1187|46|11|Regular|#282828
+7913|599|672|12|Regular|Colours sampled from the shipped screens.
+8037|599|114|12|Bold|What I learned
+8067|599|672|25|Bold|Design the failure states first
+8115|599|672|16|Regular|On a field app, the happy path is the easy part. The decisions that earned staff trust were the unhappy ones: what a queued payment looks like, who owns a rejected one, and how a supervisor sees the same problem the officer does. Defining the sync states and the seven failure screens before polishing the main flows gave engineering a contract to build against, and gave the bank confidence that offline work wouldn't turn into missing money. I'd bring that order — states, then failures, then screens — to any product where trust is the feature.
+8386|599|672|22|Bold|A core banking system is only as good as the data that reaches it. The Field App makes the market the first place that data is captured — correctly, once.
+8510|599|58|11|Regular|Designer
+8510|770|30|11|Regular|Role
+8510|897|57|11|Regular|Product
+8510|1058|58|11|Regular|Industry
+8533|599|123|14|Regular|Olanrewaju Alalade
+8533|770|79|14|Regular|Design Lead
+8533|897|113|14|Regular|CBS v2 · Field App
+8533|1058|145|14|Regular|Microfinance / FinTech
+8594|616|90|13|Regular|Offline-first UX
+8594|748|115|13|Regular|Role-based access
+8594|905|99|13|Regular|Workflow design
+8594|1046|136|13|Regular|Error & recovery states
+8644|616|40|13|Regular|Mobile
+8644|698|80|13|Regular|Core banking
+IMG|893|580|732|458|/img/assets/mockup-g-m-field-app-hero.jpg|Hero mockup
+IMG|5836|607|194|420|/img/assets/phone-portfolio-by-union.webp|Portfolio by union
+IMG|5836|838|194|420|/img/assets/phone-batch-posting.webp|Batch posting
+IMG|5836|1069|194|420|/img/assets/phone-payments-submitted.webp|Payments submitted
+IMG|6411|607|194|420|/img/assets/phone-escalate-to-supervisor.webp|Escalate to supervisor
+IMG|6411|838|194|420|/img/assets/phone-approval-queue.webp|Approval queue
+IMG|6411|1069|194|420|/img/assets/phone-loan-application-review.webp|Loan application review
+IMG|6986|607|194|420|/img/assets/phone-team-monitoring.webp|Team monitoring
+IMG|6986|838|194|420|/img/assets/phone-client-profile.webp|Client profile
+IMG|6986|1069|194|420|/img/assets/phone-more.webp|More

@@ -1,0 +1,179 @@
+400|784|38|13|Medium|2023
+449|598|46|11|Medium|FinTech
+449|681|67|11|Medium|Mobile App
+449|786|76|11|Medium|UX Research
+449|899|57|11|Medium|UI Design
+449|994|110|11|Medium|Financial Inclusion
+478|583|632|15|Regular|ReadyCash by Parkway is an agent banking app that lets 20,000+ agents move money, pay bills, run USSD cashouts, open bank accounts for customers and sell services like WAEC and JAMB pins — across Android, iOS and POS. This case study covers the 2.0 redesign.
+1176|583|158|10|Bold|Problem Statement
+1219|583|542|15|Italic|In many regions, access to traditional banking services remains limited, creating a significant gap in financial inclusion — and the tools agents rely on are making it worse.
+1303|583|686|15|Regular|Agents operating in underserved areas face real challenges: managing high transaction\nvolumes with fragmented tools, no unified dashboard, and no reliable fallback for low-\nconnectivity situations. Customers need a dependable platform for cash deposits, withdrawals,\nand bill payments. The absence of a single secure, accessible platform was stalling the growth\nof financial inclusion across Nigeria. ReadyCash was built to fix that — end to end.
+1542|620|86|42|Regular|15%
+1542|971|85|42|Regular|10%
+1596|620|190|12|Regular|Increase in adoption rate within\nthe first quarter post-launch
+1596|971|178|12|Regular|Increase in user retention\nacross active agent accounts
+1703|620|84|42|Regular|20K
+1703|971|128|42|Regular|60.2%
+1757|620|169|12|Regular|Agents spread across cities\nfacilitating financial access
+1757|971|171|12|Regular|Increase in user satisfaction\nscores after design iteration
+1901|583|146|10|Bold|What I Worked On
+1960|583|15|15|Bold|—
+1962|614|653|15|Regular|Contributed to the overall design process covering product scoping, user flows, wireframes,\nrapid prototyping, and usability testing
+2045|583|15|15|Bold|—
+2047|614|667|15|Regular|Led the UX research plan including a competitive audit (SWOT) against Moniepoint, Opay, and\nKuda to identify key differentiating feature opportunities
+2130|583|15|15|Bold|—
+2132|614|637|15|Regular|Conducted user surveys among target agents on current transaction methods, challenges\nfaced, and desired features
+2215|583|15|15|Bold|—
+2217|614|671|15|Regular|Developed user stories, information architecture, and complete user flows focused on the core\nSend and Receive Money journey
+2300|583|15|15|Bold|—
+2302|614|594|15|Regular|Defined the UI design system: PP Right Gothic + Manrope typography, color tokens,\ncomponent library, and all interaction states
+2385|583|15|15|Bold|—
+2387|614|668|15|Regular|Ran moderated and unmoderated usability tests — identified that 70% of users couldn't locate\nthe deposit option — resolved it in the next iteration, achieving a 60.2% jump in satisfaction
+2602|583|104|10|Bold|Key Screens
+2634|583|716|15|Regular|The 2.0 flows agents use every day — nine screens from the dashboard to the dispute desk.
+3155|605|210|15|Semi Bold|Dashboard
+3155|836|210|15|Semi Bold|Send money
+3155|1067|210|15|Semi Bold|Transfer to bank
+3187|605|210|13|Regular|Most-used apps and bills up top, four core actions below.
+3187|836|210|13|Regular|To an agent, to any bank, or to a customer's wallet.
+3187|1067|210|13|Regular|Inline errors for wrong numbers and low balance, plus the agent fee.
+3748|605|210|15|Semi Bold|Pay bills
+3748|836|210|15|Semi Bold|USSD cashout
+3748|1067|210|15|Semi Bold|Transactions
+3780|605|210|13|Regular|Nine categories, from electricity to government collections.
+3780|836|210|13|Regular|A generated code with a live countdown for the customer to dial.
+3780|1067|210|13|Regular|Wallet balance, filters and disputes in one list.
+4341|605|210|15|Semi Bold|Dispute details
+4341|836|210|15|Semi Bold|Account opening
+4341|1067|210|15|Semi Bold|ReadyCash Appstore
+4373|605|210|13|Regular|Verifier and approver comments on every dispute.
+4373|836|210|13|Regular|Open partner-bank accounts for customers and track status.
+4373|1067|210|13|Regular|Activate services like WAEC, JAMB and school fees.
+4533|583|114|10|Bold|What 2.0 Added
+4559|583|716|15|Regular|Version 2.0 turned a transfer app into a full agent toolkit, released across four sprints: payments and transfers, an apps marketplace with deposits and account opening, then account, security and printer support.
+4674|604|75|10|Bold|Commission
+4674|970|117|10|Bold|Receipts & printer
+4694|604|308|22|Regular|Move to wallet
+4694|970|308|22|Regular|Proof for every customer
+4730|604|308|14|Regular|Agents see commission earned separately and move it into their wallet in one step.
+4730|970|308|14|Regular|Branded receipts for USSD, bills and JAMB, printed over a paired Bluetooth printer.
+4830|604|115|10|Bold|Business services
+4830|970|105|10|Bold|Hospital wallet
+4850|604|308|22|Regular|CAC registration
+4850|970|308|22|Regular|Healthcare payments
+4886|604|308|14|Regular|Register a customer's business with CAC through the agent, with the fee and requirements shown up front.
+4886|970|308|14|Regular|Create, link or reactivate a hospital wallet, with liveness checks and recharges.
+5614|583|148|10|Bold|Primary Personas
+5744|612|113|16|Bold|Amina Yusuf
+5744|972|122|16|Bold|Emeka Okafor
+5771|612|263|12|Regular|Mobile Money Agent, 32 · Lagos · High Tech\nProficiency
+5771|972|247|12|Regular|Mobile Money Agent, 40 · Moderate Tech\nProficiency
+5845|612|81|10|Bold|Narrative
+5845|972|81|10|Bold|Narrative
+5873|612|297|13|Regular|Five-year veteran running a busy market kiosk\nin Lagos. Her services span cash deposits,\nwithdrawals, utility payments, and MMO\ntransactions. She's built a loyal base through\nreliability — but is hitting throughput limits\nwith current tools.
+5873|972|297|13|Regular|A dedicated agent seeking to grow his\nbusiness through efficient, secure, and user-\nfriendly tools. ReadyCash offers the perfect\nsolution to address operational inefficiencies\nand continue providing excellent service to his\ncommunity.
+6009|612|53|10|Bold|Goals
+6009|972|53|10|Bold|Goals
+6037|626|260|13|Regular|Streamline operations to handle more\ntransactions without compromising quality
+6037|986|251|13|Regular|Attract more customers and increase the\nnumber of daily transactions
+6038|612|6|10|Regular|•
+6038|972|6|10|Regular|•
+6084|626|249|13|Regular|Boost income by offering additional\nfinancial services to a growing customer\nbase
+6084|986|223|13|Regular|Reduce manual errors and speed up\ntransaction confirmation time
+6085|612|6|10|Regular|•
+6085|972|6|10|Regular|•
+6131|986|227|13|Regular|Build customer trust through reliable,\nreceipt-backed transactions
+6132|972|6|10|Regular|•
+6151|626|256|13|Regular|Help unbanked community members gain\naccess to essential financial services
+6152|612|6|10|Regular|•
+6206|612|92|10|Bold|Challenges
+6186|972|92|10|Bold|Challenges
+6214|986|269|13|Regular|Limited technological resources make high-\nvolume management difficult
+6215|972|6|10|Regular|•
+6234|626|273|13|Regular|Needs intuitive tools — can't afford time lost\nlearning complex new systems
+6235|612|6|10|Regular|•
+6261|986|257|13|Regular|Moderate tech proficiency means UI must\nbe self-explanatory at all times
+6262|972|6|10|Regular|•
+6281|626|251|13|Regular|High transaction volume demands speed\nand near-zero error tolerance
+6282|612|6|10|Regular|•
+6427|583|104|10|Bold|The Process
+6495|583|51|10|Bold|Step 01
+6495|683|485|16|Bold|Project initiation with PMs, stakeholders, and potential users
+6515|583|64|13|Bold|Validation
+6527|683|594|14|Regular|Ran a project initiation session with the product manager, company stakeholders, and a\nsample of potential users to surface the core pain points before any design work began.\nThis early alignment session shaped the scope and prevented costly assumptions from\nmaking it into wireframes.
+6679|583|53|10|Bold|Step 02
+6679|683|526|16|Bold|Survey across target agents on transaction habits and pain points
+6701|583|60|13|Bold|User\nResearch
+6711|683|610|14|Regular|Conducted a structured survey among our target audience of mobile money agents —\ncovering current transaction methods, challenges faced, desired features, and satisfaction\nwith existing solutions. Key finding: agents cited "slow confirmation" and "unclear error\nstates" as their top two frustrations with competing products.
+6862|583|53|10|Bold|Step 03
+6862|683|464|16|Bold|SWOT benchmarking against Moniepoint, Opay, and Kuda
+6885|583|78|13|Bold|Competitive\nAnalysis
+6895|683|592|14|Regular|Compared rival products against a structured benchmark to drive product decisions.\nCombined the SWOT analysis with user survey insights and stakeholder interviews to\nidentify four primary features that would grant a distinct competitive advantage: Send &\nReceive Money, USSD Cashout, Business Registration, and Bills Payment.
+7046|583|53|10|Bold|Step 04
+7046|683|505|16|Bold|User stories, information architecture, and complete user flows
+7066|583|67|13|Bold|UX Design
+7079|683|600|14|Regular|Developed user stories, created the information architecture, and drew full user flows for\nthe primary goal — Send and Receive Money. Constructing the end-to-end flow exposed\nkey navigation gaps that weren't visible in the brief, especially around the deposit\ndiscovery problem that later surfaced in testing.
+7230|583|65|10|Bold|Step 05
+7230|683|503|16|Bold|Prototyped designs, tested, and iterated based on real findings
+7253|583|89|13|Bold|UI &\nInteractions
+7262|683|608|14|Regular|Built high-fidelity prototypes in Figma, prepared survey questions, and ran participants\nthrough multiple scenarios — both moderated and unmoderated. The most critical finding:\n70% of users could not find the deposit option. The resulting layout overhaul drove a\n60.2% jump in satisfaction scores in the follow-up test round.
+7465|583|321|10|Bold|App Review · Usability Testing Outcomes
+7509|583|644|15|Regular|After creating prototyped wireframes, we prepared survey questions and ran participants\nthrough different scenarios in our prototype — gathering enough structured feedback to\nfuel the next set of design iterations. We then listened, rebuilt, and tested again.
+7663|583|98|46|Regular|70%
+7663|842|138|46|Regular|60.2%
+7663|1076|62|46|Regular|2×
+7721|583|212|13|Regular|Of users reported it took several\nminutes to find the deposit option\n— it was buried in the transaction\nhistory view
+7721|842|183|13|Regular|Increase in user satisfaction\nscores after the redesign,\nmeasured in a fresh round of\ninterviews on the updated\nprototype
+7721|1076|191|13|Regular|Rounds of usability testing —\nbefore and after iteration — to\nvalidate every layout and\nnavigation decision made
+7931|583|100|10|Bold|Style Guide
+8047|583|51|11|Medium|Primary
+8047|661|78|11|Medium|Primary Dark
+8047|739|74|11|Medium|Primary Tint
+8047|817|67|11|Medium|Secondary
+8047|895|55|11|Medium|Success
+8047|973|37|11|Medium|Error
+8047|1051|54|11|Medium|Warning
+8072|583|56|10|Regular|#F9956B
+8072|661|57|10|Regular|#C05A25
+8072|739|59|10|Regular|#FFCAAC
+8072|817|50|10|Regular|#121212
+8072|895|55|10|Regular|#2ECC71
+8072|973|58|10|Regular|#FF4D4D
+8072|1051|58|10|Regular|#F2C94C
+8160|583|221|10|Bold|Heading Font · PP Right Gothic
+8186|583|187|36|Regular|ReadyCash
+8239|583|63|14|Regular|Regular
+8239|657|66|14|Medium|Medium
+8239|735|80|14|Semi Bold|Semi Bold
+8239|827|43|14|Bold|Bold
+8310|583|153|10|Bold|Body Font · Manrope
+8339|583|663|15|Regular|Empowering agents and customers with secure, accessible financial tools built for everyday Nigerians.
+8394|583|63|14|Regular|Regular
+8394|657|66|14|Medium|Medium
+8394|735|80|14|Semi Bold|Semi Bold
+8394|827|43|14|Bold|Bold
+8466|583|122|10|Bold|Labels & UI Copy
+8494|583|493|11|Bold|SEND MONEY · BILLS PAYMENT · USSD CASHOUT · AGENT · WITHDRAW
+8618|583|677|16|Regular|ReadyCash is driving financial inclusion and empowering agents and customers alike. Its successful implementation and positive impact underscore the potential of digital solutions in transforming financial services for the 20,000+ agents who depend on it daily. The 60.2% increase in satisfaction scores after design iteration is proof that listening to users — truly listening — is the most powerful design tool available.
+8805|635|68|14|Semi Bold|App Store
+8805|792|81|14|Semi Bold|Google Play
+8805|938|110|14|Semi Bold|View Website →
+8952|583|72|10|Bold|Designer
+8952|826|47|10|Bold|Team
+8952|1068|52|10|Bold|Tools
+8974|583|143|14|Semi Bold|Olanrewaju Alalade
+8974|1068|200|14|Semi Bold|Figma · Google Doc · Teams
+8977|826|166|14|Semi Bold|Product · Engineering ·\nStakeholders
+IMG|707|580|732|429|/img/assets/mockup-readycash-hero.jpg|Hero mockup
+IMG|2708|616|188|418|/img/assets/phone-dashboard.webp|Dashboard
+IMG|2708|847|188|418|/img/assets/phone-send-money.webp|Send money
+IMG|2708|1078|188|418|/img/assets/phone-transfer-to-bank.webp|Transfer to bank
+IMG|3301|616|188|418|/img/assets/phone-pay-bills.webp|Pay bills
+IMG|3301|847|188|418|/img/assets/phone-ussd-cashout.webp|USSD cashout
+IMG|3301|1078|188|418|/img/assets/phone-transactions.webp|Transactions
+IMG|3894|616|188|418|/img/assets/phone-dispute-details.webp|Dispute details
+IMG|3894|847|188|418|/img/assets/phone-account-opening.webp|Account opening
+IMG|3894|1078|188|418|/img/assets/phone-readycash-appstore.webp|ReadyCash Appstore
+IMG|5018|851|180|400|/img/assets/phone-move-to-wallet.webp|ReadyCash app screen
+IMG|5061|650|158|351|/img/assets/phone-cac-registration.webp|ReadyCash app screen
+IMG|5061|1074|158|351|/img/assets/phone-hospital-wallet.webp|ReadyCash app screen

@@ -1,0 +1,387 @@
+397|989|42|12|Regular|Mobility
+397|1065|41|12|Regular|FinTech
+397|1139|119|12|Regular|Subscription Economy
+448|599|683|42|Bold|Designing a driver-first ride-hailing\nplatform for Africa.
+546|599|630|17|Regular|SimpliRide replaces per-trip commission with one flat daily fee: drivers go online for free and pay ₦1,500 only on days they complete a trip, keeping 100% of every fare. This case study covers the end-to-end design of the driver app — onboarding, the trip lifecycle, the daily-fee model, earnings and cashout, safety, and a benefits ecosystem that reaches beyond ride-hailing.
+699|599|41|11|Regular|Role
+699|781|70|11|Regular|Duration
+699|874|71|11|Regular|Platform
+699|992|50|11|Regular|Tools
+720|599|158|14|SemiBold|Lead Product Designer
+720|781|45|14|SemiBold|2026
+720|874|94|14|SemiBold|Android · iOS
+720|992|184|14|SemiBold|Figma · FigJam · Miro · Maze
+1359|599|84|12|Bold|Overview
+1389|599|658|25|Bold|Commission models make a driver's income unpredictable\nby design.
+1491|599|683|16|Regular|SimpliRide is a ride-hailing platform built for emerging African markets. Instead of taking 20–40% of every trip like Uber, Bolt and inDrive, it charges a flat ₦1,500 for each day a driver completes at least one trip — no trips, no charge. The Driver app was designed to simplify onboarding, make that fee feel fair, improve safety, and extend the platform into insurance, pensions, learning and payouts — a livelihood platform, not just a dispatch tool.
+1723|618|72|30|Bold|420+
+1723|790|41|30|Bold|12
+1723|962|29|30|Bold|5
+1723|1134|31|30|Bold|4
+1773|618|110|12|Regular|Screens across\nonboarding, trips,\nwallet & benefits
+1773|790|116|12|Regular|Information-\narchitecture pillars
+1773|962|115|12|Regular|Core design-\nstrategy principles
+1773|1134|127|12|Regular|End-to-end journeys\nmapped
+1952|599|125|12|Bold|The Challenge
+1982|599|633|25|Bold|Every competitor monetized through commission. None\noffered predictable pricing.
+2063|599|661|15|Regular|Research showed Nigerian drivers constantly switched between Uber, Bolt, and inDrive depending\non earnings that week — the opportunity wasn't another ride-hailing app, it was the most driver-\nfriendly platform in Africa.
+2169|616|131|13|Regular|High commission fees
+2169|791|137|13|Regular|Slow driver onboarding
+2169|971|100|13|Regular|Delayed payouts
+2169|1115|123|13|Regular|Complex verification
+2219|616|131|13|Regular|Poor support systems
+2219|791|128|13|Regular|Limited driver welfare
+2219|962|128|13|Regular|Low rider–driver trust
+2219|1134|102|13|Regular|High driver churn
+2350|599|130|12|Bold|Product Vision
+2377|599|483|25|Bold|Africa's most rewarding mobility platform
+2422|599|649|15|Regular|Enabling drivers to earn more, spend less, get verified faster, access insurance, manage\nsubscriptions easily, get paid faster, feel safer, and grow beyond ride-hailing — into food delivery,\nparcels, financial products, driver loans, and fleet management.
+2528|616|61|13|Regular|Earn more
+2528|720|66|13|Regular|Spend less
+2528|830|108|13|Regular|Get verified faster
+2528|982|106|13|Regular|Access insurance
+2578|616|170|13|Regular|Manage subscriptions easily
+2578|830|89|13|Regular|Faster payouts
+2578|963|58|13|Regular|Feel safer
+2578|1065|149|13|Regular|Grow beyond ride-hailing
+2709|599|71|12|Bold|My Role
+2736|599|416|25|Bold|Lead Product Designer — end to end
+2805|599|123|11|Bold|Responsibilities
+2805|955|150|11|Bold|Business Objectives
+2837|599|11|14|Bold|—
+2837|622|210|14|Regular|Product discovery & UX research
+2837|955|11|14|Bold|—
+2837|978|220|14|Regular|Reduce onboarding abandonment
+2870|599|11|14|Bold|—
+2870|622|248|14|Regular|Competitive analysis & user interviews
+2870|955|11|14|Bold|—
+2870|978|253|14|Regular|Increase completed driver registrations
+2904|599|11|14|Bold|—
+2904|622|239|14|Regular|Information architecture & user flows
+2904|955|11|14|Bold|—
+2904|978|154|14|Regular|Improve driver retention
+2938|599|11|14|Bold|—
+2938|622|183|14|Regular|Wireframes & design system
+2938|955|11|14|Bold|—
+2938|978|165|14|Regular|Reduce operational costs
+2971|599|11|14|Bold|—
+2971|622|254|14|Regular|High-fidelity UI & interactive prototypes
+2971|955|11|14|Bold|—
+2971|978|201|14|Regular|Increase on-time fee payments
+3005|599|11|14|Bold|—
+3005|622|270|14|Regular|Developer handoff, UX writing & design QA
+3005|955|11|14|Bold|—
+3005|978|185|14|Regular|Improve trip acceptance rate
+3054|599|171|11|Bold|Success Metrics (KPIs)
+3094|614|115|12|Regular|Driver activation rate
+3094|769|128|12|Regular|Verification completion
+3094|937|117|12|Regular|Avg. onboarding time
+3094|1093|118|12|Regular|Ride acceptance rate
+3140|614|111|12|Regular|Trip completion rate
+3140|764|141|12|Regular|Subscription renewal rate
+3140|945|87|12|Regular|Driver retention
+3140|1072|90|12|Regular|Earnings growth
+3187|614|58|12|Regular|Driver NPS
+3317|599|194|12|Bold|Understanding Drivers
+3343|599|212|25|Bold|Primary personas
+3443|686|54|17|Bold|Musa
+3443|1034|77|17|Bold|Chinedu
+3470|1034|213|13|Regular|Part-Time Driver · Owns one vehicle
+3471|686|211|13|Regular|Age 34 · Professional Driver · Drives\nfor multiple platforms
+3505|974|53|11|Bold|Goals
+3524|626|53|11|Bold|Goals
+3531|992|96|14|Regular|Flexible income
+3550|644|108|14|Regular|Earn more money
+3557|992|103|14|Regular|Weekend driving
+3576|644|154|14|Regular|Receive faster payments
+3583|992|105|14|Regular|Easy registration
+3602|644|171|14|Regular|Spend less on commissions
+3609|992|118|14|Regular|Reliable navigation
+3628|644|146|14|Regular|Find more ride requests
+3645|974|89|11|Bold|Pain Points
+3664|626|89|11|Bold|Pain Points
+3671|992|128|14|Regular|Complex verification
+3690|644|180|14|Regular|High commission deductions
+3697|992|152|14|Regular|Slow document approval
+3716|644|90|14|Regular|Expensive fuel
+3723|992|105|14|Regular|Unclear earnings
+3742|644|105|14|Regular|Long onboarding
+3748|992|109|14|Regular|Lack of insurance
+3768|644|193|14|Regular|Frequent account suspensions
+3794|644|144|14|Regular|Poor customer support
+3948|599|155|12|Bold|Research Process
+3974|599|378|25|Bold|Discovery & competitive analysis
+4066|622|81|15|Bold|Discovery
+4066|974|157|15|Bold|Competitive Analysis
+4102|622|269|14|Regular|Interviewed stakeholders across Product,\nOperations, Engineering, Customer\nSupport, and Marketing to understand:
+4102|974|272|14|Regular|Reviewed Uber, Bolt, inDrive, and LagRide\nacross onboarding, wallet, earnings,\nnavigation, subscription models, benefits,\nsafety, ratings, and identity verification.
+4175|640|160|14|Regular|Existing driver complaints
+4202|640|150|14|Regular|Operational bottlenecks
+4219|993|220|14|Regular|Key insight — every competitor\nmonetized through commission. No\nplatform offered predictable\nsubscription pricing. This became\nSimpliRide's biggest differentiator.
+4229|640|93|14|Regular|Business goals
+4256|640|155|14|Regular|Regulatory requirements
+4463|599|139|12|Bold|Design Strategy
+4490|599|401|25|Bold|Five principles behind every screen
+4584|913|359|14|Regular|Simplify every onboarding step — progressive disclosure\nover one long form.
+4585|683|109|16|SemiBold|Reduce Friction
+4586|599|23|22|Bold|01
+4612|683|132|12|Medium|Onboarding & daily flows
+4675|913|344|14|Regular|Identity verification, ride verification, SOS, and secure\nOTP throughout.
+4676|683|99|16|SemiBold|Increase Trust
+4677|599|27|22|Bold|02
+4703|683|119|12|Medium|Verification & security
+4764|913|337|14|Regular|One flat fee per active day instead of commission — a fixed cost of doing business, not a shrinking cut.
+4767|683|132|16|SemiBold|Maximize Earnings
+4768|599|27|22|Bold|03
+4792|683|112|12|Medium|The daily-fee bet
+4857|913|362|14|Regular|Benefits, a learning hub, and goal tracking that support a\ndriver's whole livelihood.
+4858|683|152|16|SemiBold|Driver Empowerment
+4859|599|28|22|Bold|04
+4885|683|85|12|Medium|Beyond the ride
+4948|913|368|14|Regular|Emergency sharing, trip verification, and insurance woven\ninto the core flow, not bolted on.
+4949|683|82|16|SemiBold|Safety First
+4950|599|27|22|Bold|05
+4976|683|112|12|Medium|Every trip, every time
+5117|599|217|12|Bold|Information Architecture
+5144|599|165|25|Bold|Twelve pillars
+5227|618|74|14|SemiBold|Onboarding
+5227|740|108|14|SemiBold|Home Dashboard
+5227|896|84|14|SemiBold|Ride Lifecycle
+5227|1028|54|14|SemiBold|Earnings
+5227|1130|40|14|SemiBold|Wallet
+5284|618|76|14|SemiBold|Daily fee
+5284|742|50|14|SemiBold|Benefits
+5284|840|77|14|SemiBold|Ride Activity
+5284|965|50|14|SemiBold|Vehicles
+5284|1062|69|14|SemiBold|Documents
+5284|1179|49|14|SemiBold|Settings
+5341|618|50|14|SemiBold|Support
+5476|599|188|12|Bold|Key Design Challenges
+5503|599|410|25|Bold|Five hard problems, five resolutions
+5594|626|199|16|SemiBold|1. Onboarding Complexity
+5632|728|501|14|Regular|Regulatory compliance required multiple verification steps — OTP, NIN, liveness,\ndriver details, vehicle upload, documents, profile photo.
+5633|626|79|11|Bold|Challenge
+5682|728|514|14|Regular|A progressive onboarding experience where each step clearly indicates progress,\nso no single screen feels like a wall.
+5683|626|70|11|Bold|Solution
+5789|626|231|16|SemiBold|2. Pay-per-day, not commission
+5825|728|480|14|Regular|A flat fee only feels fair if it never ambushes a driver mid-shift, or locks them out without warning.
+5828|626|79|11|Bold|Challenge
+5864|728|519|14|Regular|Going online is free; ₦1,500 is owed only for days with a completed trip. One owed day: keep working. Two: requests stay visible but can't be accepted until paid. Home shows the state in plain words, the top-up adds owed days with a 'How it works' explainer, and paying unlocks trips within 30 seconds.
+5878|626|70|11|Bold|Solution
+6007|626|199|16|SemiBold|3. Fast-Track Registration
+6045|728|506|14|Regular|Many drivers already drive for Bolt or Uber; forcing full re-registration wastes the\nspeed advantage of a driver who's already vetted elsewhere.
+6046|626|79|11|Bold|Challenge
+6093|728|521|14|Regular|Drivers already on Bolt or Uber upload a screenshot of their active driver dashboard to fast-track sign-up, skipping steps a vetted driver has already passed — while NIN, licence and vehicle checks still complete before they drive.
+6096|626|70|11|Bold|Solution
+6222|626|149|16|SemiBold|4. Ride Verification
+6260|728|482|14|Regular|Riders and drivers need to trust each other's identity in a market where trust\nbetween the two has historically been low.
+6261|626|79|11|Bold|Challenge
+6310|728|517|14|Regular|OTP login, a ride verification code at pickup, live GPS, rider confirmation, SOS, and\nemergency sharing layered together rather than relying on any single mechanism.
+6311|626|70|11|Bold|Solution
+6417|626|168|16|SemiBold|5. Benefits Ecosystem
+6455|728|500|14|Regular|Treating drivers as contractors with no safety net is exactly what fuels churn to\nwhichever platform pays best that week.
+6456|626|79|11|Bold|Challenge
+6504|728|530|14|Regular|Health insurance, life insurance, pension, mortgage, and trip insurance — with policy\nenrollment, dependant management, payment, activation, and a digital ID card\ndesigned end to end.
+6505|626|70|11|Bold|Solution
+6697|599|175|12|Bold|End-to-End Journeys
+6724|599|301|25|Bold|Four flows, mapped in full
+6791|599|145|15|Bold|Driver Registration
+6837|708|26|14|Regular|→
+6837|798|26|14|Regular|→
+6837|881|26|14|Regular|→
+6837|960|26|14|Regular|→
+6837|1068|26|14|Regular|→
+6837|1218|26|14|Regular|→
+6838|614|71|12|Regular|Walkthrough
+6838|745|31|12|Regular|Login
+6838|835|23|12|Regular|OTP
+6838|918|20|12|Regular|NIN
+6838|997|49|12|Regular|Liveness
+6838|1105|89|12|Regular|Personal Details
+6876|677|26|14|Regular|→
+6876|801|26|14|Regular|→
+6876|900|26|14|Regular|→
+6876|1031|26|14|Regular|→
+6877|614|40|12|Regular|Vehicle
+6877|714|65|12|Regular|Documents
+6877|838|40|12|Regular|Review
+6877|937|71|12|Regular|Profile Photo
+6877|1068|61|12|Regular|Dashboard
+6933|599|101|15|Bold|Ride Journey
+6980|614|54|12|Regular|Go Online
+6980|690|26|14|Regular|→
+6980|727|74|12|Regular|Ride Request
+6980|824|26|14|Regular|→
+6980|861|40|12|Regular|Accept
+6980|924|26|14|Regular|→
+6980|961|49|12|Regular|Navigate
+6980|1033|26|14|Regular|→
+6980|1070|37|12|Regular|Pickup
+6980|1129|26|14|Regular|→
+7018|732|26|14|Regular|→
+7018|813|26|14|Regular|→
+7018|921|26|14|Regular|→
+7018|1038|26|14|Regular|→
+7019|614|96|12|Regular|Verification Code
+7019|769|21|12|Regular|Trip
+7019|850|48|12|Regular|End Ride
+7019|958|57|12|Regular|Rate Rider
+7019|1075|49|12|Regular|Earnings
+7075|599|157|15|Bold|Daily Fee Journey
+7122|697|26|14|Regular|→
+7122|815|26|14|Regular|→
+7122|913|26|14|Regular|→
+7122|1038|26|14|Regular|→
+7122|1146|26|14|Regular|→
+7123|614|61|12|Regular|Dashboard
+7123|734|58|12|Regular|View Juice
+7123|852|39|12|Regular|Top Up
+7123|950|65|12|Regular|Select Days
+7123|1075|49|12|Regular|Payment
+7161|614|73|12|Regular|Confirmation
+7161|710|26|14|Regular|→
+7161|747|121|12|Regular|Updated Subscription
+7218|599|138|15|Bold|Insurance Journey
+7265|614|47|12|Regular|Benefits
+7265|684|26|14|Regular|→
+7265|721|94|12|Regular|Health Insurance
+7265|837|26|14|Regular|→
+7265|874|46|12|Regular|Provider
+7265|943|26|14|Regular|→
+7265|980|69|12|Regular|Registration
+7265|1071|26|14|Regular|→
+7265|1108|68|12|Regular|Dependants
+7265|1199|26|14|Regular|→
+7303|686|26|14|Regular|→
+7303|815|26|14|Regular|→
+7304|614|49|12|Regular|Payment
+7304|723|70|12|Regular|Active Policy
+7304|852|64|12|Regular|Digital Card
+7434|599|153|12|Bold|Design Highlights
+7461|599|507|25|Bold|The flows a driver lives in every day
+7505|599|670|15|Regular|From going online to cashing out — nine screens across the daily fee, requests, verification, earnings and benefits.
+8049|599|210|16|Bold|Go online for free
+8049|830|210|16|Bold|Payment required
+8049|1061|210|16|Bold|Top up
+8084|599|210|13|Regular|No upfront payment — pay only after a completed trip.
+8084|830|210|13|Regular|Two owed days: requests visible, accepting paused.
+8084|1061|210|13|Regular|Owed days, a day stepper and how the fee works.
+8625|599|210|16|Bold|Offer Fare request
+8625|830|210|16|Bold|Verify rider
+8625|1061|210|16|Bold|Ride completed
+8660|599|210|13|Regular|Accept the rider's offer or counter with your own fare.
+8660|830|210|13|Regular|4-digit PIN check alongside the rider's preferences.
+8660|1061|210|13|Regular|You kept 100% — set against what other platforms take.
+9201|599|210|16|Bold|Price breakdown
+9201|830|210|16|Bold|Cashout
+9201|1061|210|16|Bold|Member benefits
+9236|599|210|13|Regular|Fare, VAT and Lagos levy, with net take-home.
+9236|830|210|13|Regular|Withdraw now or on a weekly to quarterly schedule.
+9236|1061|210|13|Regular|Life, health, pension, mortgage and trip cover.
+9380|599|147|12|Bold|Earnings & growth
+9412|599|672|25|Bold|Making every naira visible
+9465|599|672|16|Regular|A flat fee is only convincing if drivers can see what they keep. Beyond the trip, the app shows exactly where money goes, when it can leave, and how to earn more.
+9568|620|110|11|Bold|Price breakdown
+9568|964|56|11|Bold|Cashout
+9592|620|286|17|Bold|Tax, shown honestly
+9592|964|286|17|Bold|Paid on the driver's terms
+9626|620|286|14|Regular|Total collected, VAT 7.5% and the Lagos State levy, with net take-home — and on cash trips, a clear note of what the driver owes the government.
+9626|964|286|14|Regular|Withdraw now or choose weekly, twice-monthly, monthly or quarterly payouts, protected by a transaction PIN and a visible ₦50 fee.
+9772|620|87|11|Bold|Driver promo
+9772|964|141|11|Bold|Leaderboard & alerts
+9796|620|286|17|Bold|Bonuses with clear rules
+9796|964|286|17|Bold|Recognition and reminders
+9830|620|286|14|Regular|A monthly bonus tracked as a streak calendar, with daily progress, validated trips and the exact requirements to qualify.
+9830|964|286|14|Regular|Leaderboards by country and city, a learning hub for better ratings, and document-expiry warnings before a licence lapses.
+10524|599|117|12|Bold|Accessibility
+10551|599|350|25|Bold|Designed for drivers in motion
+10619|599|23|14|Bold|✓
+10619|619|135|14|Regular|Large touch targets
+10619|951|23|14|Bold|✓
+10619|971|115|14|Regular|High-contrast UI
+10652|599|23|14|Bold|✓
+10652|619|150|14|Regular|Minimal cognitive load
+10652|951|23|14|Bold|✓
+10652|971|141|14|Regular|Clear color hierarchy
+10684|599|23|14|Bold|✓
+10684|619|121|14|Regular|Large typography
+10684|951|23|14|Bold|✓
+10684|971|115|14|Regular|Simple language
+10717|599|23|14|Bold|✓
+10717|619|153|14|Regular|Progressive disclosure
+10839|599|210|12|Bold|Expected Product Impact
+10866|599|324|25|Bold|Business, drivers, and riders
+10960|622|71|15|Bold|Business
+10960|854|63|15|Bold|Drivers
+10960|1086|56|15|Bold|Riders
+10998|640|111|13|Regular|Lower driver churn
+10998|872|108|13|Regular|Higher take-home\nearnings
+10998|1104|129|13|Regular|More available drivers
+11025|640|111|13|Regular|Higher onboarding\ncompletion
+11025|1104|87|13|Regular|Faster pickups
+11045|872|108|13|Regular|Faster verification
+11052|1104|87|13|Regular|Safer journeys
+11072|640|137|13|Regular|Predictable daily-fee revenue
+11073|872|78|13|Regular|Better safety
+11080|1104|104|13|Regular|Better trip quality
+11100|872|121|13|Regular|Access to insurance
+11120|640|115|13|Regular|Better marketplace\nliquidity
+11127|872|99|13|Regular|Greater financial\nstability
+11298|599|127|12|Bold|What I Learned
+11325|599|440|25|Bold|Designing for livelihoods, not just trips
+11387|599|684|16|Regular|Building SimpliRide reinforced that designing for emerging markets requires more than\nrecreating global products. Drivers needed predictable earnings, simpler onboarding, and\ntangible benefits that addressed everyday realities. By combining a subscription-based\nbusiness model with safety, financial services, and welfare features, the experience evolved\nfrom a ride-hailing application into a comprehensive platform supporting drivers' livelihoods.
+11642|599|102|12|Bold|Style Guide
+11668|599|95|25|Bold|System
+11739|955|192|15|Regular|Heading — Outfit SemiBold
+11766|955|129|26|SemiBold|Go Online
+11801|599|92|11|SemiBold|Purple (Brand Primary)
+11801|697|92|11|SemiBold|Deep Purple (Banners)
+11802|795|76|11|SemiBold|Navy (Brand\nDark)
+11824|955|250|15|Regular|Body — Outfit Regular / Medium
+11835|599|45|11|Regular|#7567F5
+11835|697|46|11|Regular|#3F3694
+11835|795|58|11|Regular|#0B215D
+11851|955|328|16|Regular|Each daily-fee state — free, fee due, payment required — gets its own colour and plain-language line, so status reads at a glance.
+11928|599|57|11|SemiBold|Success
+11928|697|56|11|SemiBold|Warning
+11928|795|38|11|SemiBold|Alert
+11945|599|58|11|Regular|#2ECC71
+11945|697|58|11|Regular|#F2B84B
+11945|795|60|11|Regular|#FF5C5C
+12037|599|53|11|SemiBold|Asphalt
+12037|697|43|11|SemiBold|Paper
+12054|599|58|11|Regular|#0A1220
+12054|697|56|11|Regular|#F3F1EC
+12087|599|326|13|Regular|Purple carries every primary action. The daily-fee banner shifts from neutral to orange to red as owed days build up, green marks verified codes and earnings, and red is kept for blocking and emergency states.
+12294|599|658|19|Medium|A flat fee only feels fair if a driver can see exactly where they stand — which is why the daily-fee banner, transparent price breakdowns and 'you kept 100%' earnings proof carry as much weight in this app as the ride itself. One price per day, not a cut of every trip.
+12441|599|71|11|Regular|Designer
+12441|725|43|11|Regular|Role
+12441|920|74|11|Regular|Platform
+12441|1054|71|11|Regular|Industry
+12463|599|123|14|Regular|Olanrewaju Alalade
+12465|725|159|14|Regular|Lead Product Designer
+12465|920|99|14|Regular|Android & iOS
+12465|1054|124|14|Regular|Mobility / FinTech
+12534|599|52|11|Regular|Tools
+12558|599|232|14|Regular|Figma · FigJam · Miro · Google Docs\n· Maze · Notion
+12635|616|144|13|Regular|Driver onboarding & KYC
+12635|802|79|13|Regular|Ride lifecycle
+12635|922|121|13|Regular|Subscription (Juice)
+12635|1085|102|13|Regular|Earnings & wallet
+12683|616|124|13|Regular|Benefits & insurance
+12683|781|78|13|Regular|Safety & SOS
+12683|902|126|13|Regular|Vehicle & documents
+12683|1069|112|13|Regular|Settings & support
+IMG|822|580|732|450|/img/assets/mockup-simpliride-driver-hero.jpg|Hero mockup
+IMG|7601|607|194|420|/img/assets/mockup-simpliride-driver-highlight-go-online-for-free.webp|Go online for free
+IMG|7601|838|194|420|/img/assets/mockup-simpliride-driver-highlight-payment-required.webp|Payment required
+IMG|7601|1069|194|420|/img/assets/mockup-simpliride-driver-highlight-top-up.webp|Top up
+IMG|8177|607|194|420|/img/assets/mockup-simpliride-driver-highlight-offer-fare-request.webp|Offer Fare request
+IMG|8177|838|194|420|/img/assets/mockup-simpliride-driver-highlight-verify-rider.webp|Verify rider
+IMG|8177|1069|194|420|/img/assets/mockup-simpliride-driver-highlight-ride-completed.webp|Ride completed
+IMG|8753|607|194|420|/img/assets/mockup-simpliride-driver-highlight-price-breakdown.webp|Price breakdown
+IMG|8753|838|194|420|/img/assets/mockup-simpliride-driver-highlight-cashout.webp|Cashout
+IMG|8753|1069|194|420|/img/assets/mockup-simpliride-driver-highlight-member-benefits.webp|Member benefits
+IMG|10009|644|158|342|/img/assets/phone-driver-promo.webp|SimpliRide driver app screen
+IMG|9966|843|184|398|/img/assets/phone-cashout.webp|SimpliRide driver app screen
+IMG|10009|1068|158|342|/img/assets/phone-leaderboard.webp|SimpliRide driver app screen

@@ -1,0 +1,17 @@
+---
+import { caseStudies, flowStudies, comingSoon } from "../../data/projects";
+import CaseStudyLayout from "../../layouts/CaseStudy.astro";
+import FlowStudy from "../../layouts/FlowStudy.astro";
+import ComingSoon from "../../layouts/ComingSoon.astro";
+const dumps = import.meta.glob("../../data/projects/dumps/*.txt", { query: "?raw", import: "default", eager: true }) as Record<string, string>;
+export function getStaticPaths() {
+  return [
+    ...caseStudies.map((p) => ({ params: { slug: p.slug }, props: { legacy: p } })),
+    ...flowStudies.map((p) => ({ params: { slug: p.slug }, props: { flow: p } })),
+    ...comingSoon.map((p) => ({ params: { slug: p.slug }, props: { soon: p } })),
+  ];
+}
+const { legacy, flow, soon } = Astro.props;
+const dump = flow ? dumps[`../../data/projects/dumps/${flow.dump}.txt`] : "";
+---
+{legacy ? <CaseStudyLayout p={legacy} /> : flow ? <FlowStudy p={flow} dump={dump} /> : <ComingSoon p={soon} />}

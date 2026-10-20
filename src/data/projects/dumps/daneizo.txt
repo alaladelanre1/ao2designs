@@ -1,0 +1,144 @@
+398|579|300|12|Regular|Contract · H2 2024 · www.daneizotradeafrica.com
+444|594|46|12|Medium|Fintech
+444|690|90|12|Medium|Credit Finance
+444|830|80|12|Medium|UX Research
+444|959|60|12|Medium|UI Design
+485|579|642|15|Regular|A secure, accessible credit platform connecting Nigerian SMEs to fast, flexible business loans — from UX research through production-ready UI.
+983|579|155|10|Bold|Problem Statement
+1022|579|664|16|Regular|In Nigeria, 7 in 10 SMEs are denied credit due to fragmented application processes, high collateral demands, opaque approval timelines, and no digital channel for end-to-end loan management.
+1110|579|689|16|Regular|Daneizo was built to close that gap — a mobile-first credit platform where small business owners apply, track, and repay loans entirely in-app, while credit analysts have the tools to assess, approve, and disburse with confidence. I led the UX research through to a production-ready UI, achieving strong engagement metrics within the first two months post-launch.
+1326|616|63|38|Regular|4.7
+1326|971|71|38|Regular|12K
+1351|671|30|17|Semi Bold|★
+1351|1040|27|18|Regular|↑
+1381|616|176|12|Regular|App store rating on both App\nStore and Google Play
+1381|971|185|12|Regular|Loan applications submitted in\nthe first two months
+1471|616|119|38|Regular|₦4.2B
+1471|971|118|38|Regular|68.4%
+1496|1086|27|18|Regular|↑
+1526|616|183|12|Regular|Total credit disbursed through\nthe platform
+1526|971|173|12|Regular|Drop in application\nabandonment rate vs legacy\nprocess
+1681|579|142|10|Bold|What I Worked On
+1736|579|15|15|Bold|—
+1737|610|659|15|Regular|Led the end-to-end UX research plan including competitive analysis (SWOT) against Carbon,\nFairmoney, QuickCredit, and Lidya
+1821|579|15|15|Bold|—
+1822|610|651|15|Regular|Designed user flows, information architecture, wireframes, and rapid prototypes in Figma —\ncovering borrower and analyst surfaces
+1906|579|15|15|Bold|—
+1907|610|681|15|Regular|Conducted usability testing — both moderated and unmoderated — and integrated findings into\nan iterated design before dev handoff
+1991|579|15|15|Bold|—
+1992|610|668|15|Regular|Defined the UI design system: typography (DM Serif Display + Inter), color palette, component\nlibrary, and interaction states
+2076|579|15|15|Bold|—
+2077|610|671|15|Regular|Introduced a streamlined loan application flow — reduced from 22 fields to 9 screens — based\non drop-off analysis and user interviews
+2161|579|15|15|Bold|—
+2162|610|651|15|Regular|Designed the credit analyst dashboard including borrower risk scoring UI, document review,\nand one-click disbursement approval flow
+2370|583|102|10|Bold|Key Screens
+2682|603|92|14|Semi Bold|Onboarding
+2682|971|152|14|Semi Bold|Borrower Dashboard
+2710|603|314|13|Regular|Streamlined sign-up flow — reduced from 22 fields\nto a guided 5-step process, cutting registration\ndrop-off by 41%.
+2710|971|314|13|Regular|Real-time credit limit, active loan status, and quick-\naction buttons — designed for clarity at a glance.
+3252|603|162|14|Semi Bold|Loan Application Flow
+3280|603|674|13|Regular|A guided, 5-step application — loan details, business verification, document upload, review, and confirmation —\neach screen designed to reduce cognitive load and drop-off.
+3633|603|141|14|Semi Bold|Analyst Dashboard
+3633|971|144|14|Semi Bold|Repayment Tracker
+3661|603|299|13|Regular|Risk scoring, borrower profile, document review,\nand approve/decline — all in a unified web panel\nbuilt for speed.
+3661|971|313|13|Regular|Transparent repayment schedule, payment history,\nand a single-tap repayment action — reducing\nmissed payments by design.
+3885|579|120|10|Bold|User Personas
+4010|608|144|16|Bold|Amaka Okonkwo
+4010|974|138|16|Bold|Emeka Chibuike
+4038|608|281|12|Regular|SME Owner · Bakery & Food Production · Lagos
+4038|974|277|12|Regular|Senior Credit Analyst · Daneizo Internal · Abuja
+4088|608|52|10|Bold|Goals
+4088|974|52|10|Bold|Goals
+4113|622|260|13|Regular|Access quick working capital to fulfil large\norders and grow her bakery
+4113|988|272|13|Regular|Review and approve viable loan applications\nefficiently without bottlenecks
+4115|608|6|10|Regular|•
+4115|974|6|10|Regular|•
+4159|622|272|13|Regular|Understand her loan terms in plain language\nwithout needing an accountant
+4159|988|273|13|Regular|Access a consolidated view of borrower risk\nsignals and business health
+4161|608|6|10|Regular|•
+4161|974|6|10|Regular|•
+4205|622|252|13|Regular|Manage repayments easily alongside her\nbusiness cash flow
+4205|988|267|13|Regular|Maintain audit trails and ensure compliance\nwith CBN lending guidelines
+4207|608|6|10|Regular|•
+4207|974|6|10|Regular|•
+4261|608|87|10|Bold|Pain Points
+4261|974|87|10|Bold|Pain Points
+4286|622|257|13|Regular|Banks require collateral she doesn't have;\napplications take weeks with no feedback
+4286|988|274|13|Regular|Fragmented tools require switching between\nspreadsheets, email, and CRM
+4288|608|6|10|Regular|•
+4288|974|6|10|Regular|•
+4332|622|258|13|Regular|Previous loan apps had confusing interest\nstructures and hidden fees
+4332|988|252|13|Regular|Inconsistent document submissions slow\ndown turnaround time significantly
+4334|608|6|10|Regular|•
+4334|974|6|10|Regular|•
+4378|622|262|13|Regular|Juggling paper documents across multiple\noffices is time-consuming
+4378|988|269|13|Regular|No in-platform communication channel with\napplicants creates confusion
+4380|608|6|10|Regular|•
+4380|974|6|10|Regular|•
+4525|579|95|10|Bold|UX Process
+4589|579|51|10|Bold|Step 01
+4589|679|443|16|Bold|Alignment sessions with stakeholders and target users
+4611|579|69|14|Bold|Validation
+4621|679|623|14|Regular|Ran discovery workshops with the product manager, credit lead, and six SME owners across\nLagos and Abuja to validate the problem space. Used the JTBD framework to map what\nbusiness owners were truly hiring a credit tool to do — not just borrow money, but secure\ncertainty, save time, and avoid humiliation.
+4770|579|53|10|Bold|Step 02
+4770|679|588|16|Bold|Benchmarked Daneizo against Carbon, Lidya, Fairmoney, and QuickCredit
+4792|579|84|14|Bold|Competitive\nAnalysis
+4802|679|619|14|Regular|Mapped each competitor against the SWOT framework — analysed application length,\ninterest transparency, repayment flexibility, and analyst tools. Identified a clear gap: none\noffered a dedicated credit analyst workspace integrated with the borrower-facing app. That\nbecame Daneizo's signature differentiator.
+4951|579|53|10|Bold|Step 03
+4951|679|552|16|Bold|Built information architecture and wireframes covering both surfaces
+4973|579|72|14|Bold|UX Design
+4983|679|620|14|Regular|Created user flows, sitemaps, and low-fidelity wireframes for the borrower mobile app\n(onboarding → application → dashboard → repayment) and the analyst web panel (queue →\nreview → approve/decline → disburse). Iterated across two rounds of wireframe feedback\nwith the engineering team before moving to high-fidelity.
+5132|579|65|10|Bold|Step 04
+5132|679|504|16|Bold|Built the full design system and interactive prototypes in Figma
+5154|579|95|14|Bold|UI &\nInteractions
+5164|679|602|14|Regular|Developed the complete visual design system — tokens, components, states, and motion\nguidelines — then produced the interactive prototype used for both the second round of\nusability testing and developer handoff. The design system shipped with 64 components\nacross 8 categories, covering mobile and web breakpoints.
+5364|579|295|10|Bold|Lab Testing · User Research Outcomes
+5403|579|613|15|Regular|After releasing the first high-fidelity prototype, we conducted two rounds of usability testing — one moderated (6 participants) and one unmoderated via Maze (42 participants) — to understand which flows created friction and which earned trust.
+5550|579|102|46|Regular|94%
+5550|840|98|46|Regular|87%
+5550|1078|99|46|Regular|76%
+5608|579|214|13|Regular|Task completion on the loan\napplication flow — up from 61% in\nthe first prototype round
+5608|840|198|13|Regular|Users said repayment terms\nwere "very clear" or "extremely\nclear" — the original design\nscored 43%
+5608|1078|214|13|Regular|Reported a strong sense of trust\nwith the platform after completing\nthe onboarding simulation
+5795|579|98|10|Bold|Style Guide
+5911|579|67|11|Medium|Brand Blue
+5911|661|67|11|Medium|Deep Navy
+5911|743|33|11|Medium|Teal
+5911|825|27|11|Medium|Ink
+5911|907|55|11|Medium|Success
+5911|989|49|11|Medium|Danger
+5911|1071|73|11|Medium|Background
+5936|579|57|10|Regular|#2B4FD4
+5936|661|55|10|Regular|#162B8C
+5936|743|57|10|Regular|#00C2B2
+5936|825|52|10|Regular|#101828
+5936|907|55|10|Regular|#27AE60
+5936|989|56|10|Regular|#E84040
+5936|1071|56|10|Regular|#F7F8FC
+6024|579|186|10|Bold|Display · DM Serif Display
+6043|579|305|36|Regular|Empowering SMEs
+6138|579|93|10|Bold|Body · Inter
+6162|579|701|15|Regular|Clear, accessible language that respects the intelligence of every business owner who opens this app.
+6224|579|45|14|Light|Light
+6224|635|63|14|Regular|Regular
+6224|709|66|14|Medium|Medium
+6224|787|80|14|Semi Bold|Semi Bold
+6224|879|43|14|Bold|Bold
+6294|579|182|10|Bold|Labels & Captions · Inter
+6317|579|264|11|Semi Bold|SECTION LABEL · STEP 01 · APPROVED
+6441|579|700|16|Regular|If you value seamlessness in financial tools, Daneizo is the credit platform Nigerian SMEs deserve — fast approvals, transparent terms, and a repayment experience that keeps owners in control rather than in the dark. The app achieved a 68.4% reduction in application abandonment and ₦4.2B in disbursements within the first two months of launch on both the App Store and Google Play.
+6629|629|68|14|Semi Bold|App Store
+6629|794|81|14|Semi Bold|Google Play
+6629|948|121|14|Semi Bold|View Prototype →
+6772|579|72|10|Bold|Designer
+6772|814|47|10|Bold|Team
+6772|1076|73|10|Bold|Company
+6796|579|149|14|Semi Bold|Olanrewaju Abiodun
+6796|814|158|14|Semi Bold|Product · Engineering
+6796|1076|113|14|Semi Bold|Uridium Works
+IMG|575|579|732|286|/img/assets/container.jpg|Daneizo
+IMG|2445|603|308|231|/img/assets/background.jpg|Onboarding
+IMG|2445|971|308|231|/img/assets/background-1.jpg|Borrower Dashboard
+IMG|2845|603|672|403|/img/assets/background-2.jpg|Loan Application Flow
+IMG|3378|603|308|231|/img/assets/background-3.jpg|Analyst Dashboard
+IMG|3378|971|308|231|/img/assets/background-4.jpg|Repayment Tracker

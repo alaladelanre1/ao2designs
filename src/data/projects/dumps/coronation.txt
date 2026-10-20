@@ -1,0 +1,185 @@
+394|599|183|22|Bold|Coronation Group
+401|925|106|13|Regular|Financial services
+401|1073|51|13|Regular|B2B web
+401|1166|88|13|Regular|Design system
+454|599|580|42|Bold|One ledger view for a group of five companies
+572|599|640|16|Regular|Coronation's subsidiaries — asset management, securities, trustees, capital and insurance — trade with each other constantly, and each keeps its books in a different accounting system. Every intercompany fee, transfer and charge has to appear on both sides and match before the group can consolidate. I designed the reconciliation platform that connects those systems, lets one company raise a transaction and the other accept it, and matches the results automatically — along with the B2B design system it is built on.
+791|599|28|11|Regular|Role
+791|781|39|11|Regular|Client
+791|933|58|11|Regular|Platform
+791|1032|38|11|Regular|Scope
+811|599|146|14|SemiBold|Lead Product Designer
+811|781|116|14|SemiBold|Coronation Group
+811|933|63|14|SemiBold|Web · B2B
+811|1032|184|14|SemiBold|100 screens + design system
+1411|599|70|12|Bold|Overview
+1441|599|672|25|Bold|Intercompany accounting, made a shared workflow
+1489|599|672|16|Regular|Before consolidation, the group's finance teams had to prove that every receivable in one company had a matching payable in another. With five companies on five different systems, that meant exports, spreadsheets and back-and-forth emails at every month-end. The platform turns it into one shared workflow: connect each company's ledger, raise transactions between entities, let the counterparty accept them, and reconcile the rest automatically — with every step in an audit trail.
+1700|618|17|30|Bold|5
+1700|790|17|30|Bold|5
+1700|962|18|30|Bold|9
+1700|1134|52|30|Bold|100
+1746|618|118|12|Regular|Subsidiaries on one platform
+1746|790|118|12|Regular|Accounting systems connected — SAP, Oracle, NetSuite, Sage, Xero
+1746|962|118|12|Regular|Modules from integrations to audit trail
+1746|1134|118|12|Regular|Screens designed for the platform
+1948|599|111|12|Bold|The challenge
+1978|599|672|25|Bold|Two sides of every transaction, in five different systems
+2026|599|672|16|Regular|An intercompany charge is income for one company and an expense for another. If the two entries don't match in amount, date or GL account, the group's consolidated accounts are wrong. The finance team needed to see, at any moment, which entries were matched, which were waiting on the other company, and which were broken — and why.
+2169|616|152|13|Regular|Five ledgers, five systems
+2169|812|223|13|Regular|Month-end matching by spreadsheet
+2221|616|191|13|Regular|One-sided entries nobody owns
+2221|851|168|13|Regular|Failed or delayed data syncs
+2221|1063|143|13|Regular|Unmapped GL accounts
+2273|616|115|13|Regular|No single audit trail
+2409|599|102|12|Bold|How it works
+2439|599|672|25|Bold|From one company's entry to a cleared balance
+2487|599|672|16|Regular|The core flow mirrors how intercompany accounting should work, so finance teams don't need to learn a new mental model.
+2584|614|13|11|Bold|01
+2584|750|14|11|Bold|02
+2584|886|14|11|Bold|03
+2584|1022|14|11|Bold|04
+2584|1158|14|11|Bold|05
+2604|614|57|15|SemiBold|Connect
+2604|750|37|15|SemiBold|Raise
+2604|886|30|15|SemiBold|Post
+2604|1022|48|15|SemiBold|Accept
+2604|1158|38|15|SemiBold|Clear
+2632|614|98|12|Regular|Each subsidiary's ledger syncs on a schedule
+2632|750|98|12|Regular|The seller creates a transaction to a buyer
+2632|886|98|12|Regular|Receivable and income entries are created
+2632|1022|98|12|Regular|The buyer confirms — or rejects with a reason
+2632|1158|98|12|Regular|Receivable and payable clear automatically
+2822|599|76|12|Bold|The scope
+2852|599|672|25|Bold|Nine modules around one job
+2935|620|13|11|Bold|01
+2935|849|14|11|Bold|02
+2935|1078|14|11|Bold|03
+2957|620|171|16|Bold|Dashboard
+2957|849|171|16|Bold|Integrations
+2957|1078|171|16|Bold|Transactions
+2989|620|171|13|Regular|Sync status, pending and unmatched items, API health and recent reconciliations.
+2989|849|171|13|Regular|API connections to each subsidiary's system, with sync now, retry and scheduled syncs.
+2989|1078|171|13|Regular|Intercompany receivables and payables — create, accept, reject and track.
+3127|620|14|11|Bold|04
+3127|849|14|11|Bold|05
+3127|1078|15|11|Bold|06
+3149|620|171|16|Bold|Reconciliation
+3149|849|171|16|Bold|Reporting
+3149|1078|171|16|Bold|Audit trail
+3181|620|171|13|Regular|Automated matching with manual override: matched, partial, unmatched and exemptions.
+3181|849|171|13|Regular|Reconciliation and transaction reports by entity and period.
+3181|1078|171|13|Regular|Every sync, transaction and override, with who did it and when.
+3319|620|14|11|Bold|07
+3319|849|14|11|Bold|08
+3319|1078|15|11|Bold|09
+3341|620|171|16|Bold|Entities
+3341|849|171|16|Bold|User management
+3341|1078|171|16|Bold|Settings
+3373|620|171|13|Regular|The group's subsidiaries, their systems, connection health and compliance.
+3373|849|171|13|Regular|Users, roles and access across the group's finance teams.
+3373|1078|171|13|Regular|GL mapping, sync schedules, notifications and platform configuration.
+3558|599|125|12|Bold|Design strategy
+3588|599|672|25|Bold|Five principles behind the platform
+3671|599|23|22|Bold|01
+3671|646|230|16|SemiBold|Lead with exceptions
+3671|900|371|13|Medium|The dashboard opens on what's broken — failed syncs, pending items, unmatched entries — before what's fine.
+3756|599|28|22|Bold|02
+3756|651|230|16|SemiBold|Explain the accounting before it happens
+3756|905|366|13|Medium|Creating a transaction spells out which entries it creates and when they clear, in plain language.
+3849|599|27|22|Bold|03
+3849|650|230|16|SemiBold|Automate, but allow override
+3849|904|367|13|Medium|Matching runs automatically; partial and unmatched items stay one click from manual reconciliation.
+3934|599|29|22|Bold|04
+3934|652|230|16|SemiBold|Make connection health visible
+3934|906|365|13|Medium|Every entity shows its system, last sync, next sync and status, with retry right where the failure appears.
+4019|599|27|22|Bold|05
+4019|650|230|16|SemiBold|Audit everything
+4019|904|367|13|Medium|Each action lands in the audit trail, so finance and external auditors see the same record.
+4187|599|174|12|Bold|Key design challenges
+4217|599|672|25|Bold|Four hard problems, four resolutions
+4300|622|626|16|SemiBold|1. Status you can trust at a glance
+4339|622|84|11|Bold|Challenge
+4339|722|526|14|Regular|Finance leads opened several systems to find out whether month-end was on track.
+4374|622|84|11|Bold|Solution
+4374|722|526|14|Regular|Four summary cards — data sync, pending transactions, reconciled items and unmatched entries — each coloured by state, with a GL-not-mapped banner and a one-click Map Now fix.
+4499|622|626|16|SemiBold|2. Two companies, one transaction
+4538|622|84|11|Bold|Challenge
+4538|722|526|14|Regular|Intercompany entries were raised on one side and forgotten on the other.
+4573|622|84|11|Bold|Solution
+4573|722|526|14|Regular|The seller raises a transaction to a named buyer; the buyer accepts or rejects it. Receivable and payable views are split into tabs, and rejected items stay visible with their status until resolved.
+4698|622|626|16|SemiBold|3. Matching across different systems
+4737|622|84|11|Bold|Challenge
+4737|722|526|14|Regular|Amounts, references and timing differ between SAP, Oracle, NetSuite, Sage and Xero.
+4772|622|84|11|Bold|Solution
+4772|722|526|14|Regular|Automated matching with four outcomes — matched, partial match, unmatched and exemption — and a Reconcile action only where a person is actually needed. Results can be filtered by entity and exported.
+4897|622|626|16|SemiBold|4. When a connection fails
+4936|622|84|11|Bold|Challenge
+4936|722|526|14|Regular|A failed sync silently leaves a subsidiary's numbers out of the group view.
+4971|622|84|11|Bold|Solution
+4971|722|526|14|Regular|Integrations list every connection with its system, last and next sync, and status. Failed and flagged connections show the reason and a Retry action, and failures surface on the dashboard and in notifications.
+5162|599|139|12|Bold|Design highlights
+5192|599|672|25|Bold|A tour of the platform
+5240|599|672|16|Regular|Six screens covering the full loop — from a connected ledger to a cleared balance.
+5538|599|328|16|Bold|Financial data integration
+5538|943|328|16|Bold|Entities
+5570|599|328|13|Regular|API connections to each subsidiary's system.
+5570|943|328|13|Regular|The group's companies, systems and connection health.
+5883|599|328|16|Bold|Intercompany transactions
+5883|943|328|16|Bold|Create transaction
+5915|599|328|13|Regular|Receivables and payables with status.
+5915|943|328|13|Regular|What the entry will do, explained before submit.
+6208|599|328|16|Bold|Reconciliation results
+6208|943|328|16|Bold|Reconciliation by entity
+6240|599|328|13|Regular|Matched, partial and unmatched, with manual reconcile.
+6240|943|328|13|Regular|Settled, unsettled, income, expense, receivable and payable per company.
+6385|599|109|12|Bold|Design system
+6415|599|672|25|Bold|A token-based B2B system in the Coronation brand
+6463|599|672|16|Regular|The platform is built on the Coronation B2B design system: full colour ramps from 50 to 900, semantic tokens for colour, alpha, background, icon, stroke and text, a Lato type scale, and a two-style icon library. Coronation red is the brand and primary action colour; error shares the red ramp, so destructive actions read as serious without introducing a new hue. The UI pairs a dark navigation rail with light working surfaces for long sessions in dense tables.
+6686|599|84|12|Medium|Brand / Red 300
+6686|697|84|12|Medium|Black
+6686|795|84|12|Medium|Neutral 1100
+6686|893|84|12|Medium|Warning 300
+6686|991|84|12|Medium|Success 300
+6686|1089|84|12|Medium|Neutral 25
+6686|1187|84|12|Medium|White
+6709|599|46|11|Regular|#FF0226
+6709|697|49|11|Regular|#000000
+6709|795|41|11|Regular|#141415
+6709|893|46|11|Regular|#FFDA25
+6709|991|48|11|Regular|#009439
+6709|1089|43|11|Regular|#F7F7F8
+6709|1187|42|11|Regular|#FFFFFF
+6756|616|84|13|Regular|Colour tokens
+6756|744|78|13|Regular|Alpha tokens
+6756|866|116|13|Regular|Background tokens
+6756|1026|69|13|Regular|Icon tokens
+6756|1139|83|13|Regular|Stroke tokens
+6808|616|70|13|Regular|Text tokens
+6808|730|91|13|Regular|Lato type scale
+6808|865|120|13|Regular|Solid + outline icons
+6944|599|114|12|Bold|What I learned
+6974|599|672|25|Bold|Design the accounting, not just the screens
+7022|599|672|16|Regular|The hardest part of this project was understanding what each click does to two companies' books. Once the double-entry logic was clear, the interface could explain it — the Important Notes panel on Create Transaction exists because finance users needed to know, before submitting, which entries would be posted and when they would clear. In financial tools, making the system's behaviour legible is the user experience.
+7266|599|672|22|Bold|Five companies, five systems, one reconciled view — so the group can close its books with confidence.
+7358|599|58|11|Regular|Designer
+7358|770|30|11|Regular|Role
+7358|965|41|11|Regular|Client
+7358|1129|58|11|Regular|Industry
+7381|599|123|14|Regular|Olanrewaju Alalade
+7381|770|147|14|Regular|Lead Product Designer
+7381|965|116|14|Regular|Coronation Group
+7381|1129|114|14|Regular|Financial services
+7442|616|57|13|Regular|B2B SaaS
+7442|715|116|13|Regular|Financial workflows
+7442|873|105|13|Regular|Reconciliation UX
+7442|1020|74|13|Regular|Integrations
+7442|1136|95|13|Regular|Design systems
+7492|616|86|13|Regular|Data-dense UI
+IMG|938|580|732|475|/img/assets/mockup-coronation-hero.jpg|Hero mockup
+IMG|5309|599|328|221|/img/assets/mockup-coronation-highlight-financial-data-integration.webp|Financial data integration
+IMG|5309|943|328|221|/img/assets/mockup-coronation-highlight-entities.webp|Entities
+IMG|5654|599|328|221|/img/assets/mockup-coronation-highlight-intercompany-transactions.webp|Intercompany transactions
+IMG|5654|943|328|221|/img/assets/mockup-coronation-highlight-create-transaction.webp|Create transaction
+IMG|5979|599|328|221|/img/assets/mockup-coronation-highlight-reconciliation-results.webp|Reconciliation results
+IMG|5979|943|328|221|/img/assets/mockup-coronation-highlight-reconciliation-by-entity.webp|Reconciliation by entity

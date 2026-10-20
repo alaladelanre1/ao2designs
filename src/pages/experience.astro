@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import PageTitle from "../components/PageTitle.astro";
+import JobList from "../components/JobList.astro";
+import Stats from "../components/Stats.astro";
+import Contact from "../components/Contact.astro";
+import { experienceFull } from "../data/content";
+---
+<Base title="Experience — Olanrewaju Alalade">
+  <PageTitle text="Experience" />
+  <JobList items={experienceFull} />
+  <Stats />
+  <Contact />
+</Base>

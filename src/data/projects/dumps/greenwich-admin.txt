@@ -1,0 +1,174 @@
+401|954|66|13|Regular|Back office
+401|1062|27|13|Regular|Web
+401|1131|123|13|Regular|Banking · GAML · GSL
+454|599|600|42|Bold|The back office behind three businesses' customers
+572|599|640|16|Regular|Every customer action in the Greenwich app — a tier upgrade, a transfer, a fund investment, a stock trade — eventually needs someone at the bank to see it, check it or approve it. I designed the admin portal staff use to manage customers and investors across Banking, Greenwich Asset Management (GAML) and Greenwich Securities (GSL), approve KYC upgrades, monitor transactions, run IPOs, publish content and control who can do what.
+764|599|28|11|Regular|Role
+764|781|54|11|Regular|Product
+764|900|58|11|Regular|Platform
+764|994|38|11|Regular|Scope
+784|599|146|14|SemiBold|Lead Product Designer
+784|781|83|14|SemiBold|Admin portal
+784|900|29|14|SemiBold|Web
+784|994|145|14|SemiBold|115+ approved screens
+1384|599|70|12|Bold|Overview
+1414|599|672|25|Bold|The other half of the mobile app
+1462|599|672|16|Regular|The mobile app gives customers three separate services under one brand. The admin portal mirrors that structure for staff: one sign-in through the bank's Active Directory, a shared dashboard and tools, and dedicated areas for each business's customers and investors. Its job is to make every customer action visible, every sensitive change reviewed by two people, and every admin action traceable.
+1646|618|17|30|Bold|3
+1646|790|29|30|Bold|13
+1646|962|17|30|Bold|2
+1646|1134|57|30|Bold|115+
+1692|618|118|12|Regular|Businesses managed from one portal
+1692|790|118|12|Regular|Modules from dashboard to reset PIN
+1692|962|118|12|Regular|People on every sensitive change: verifier and approver
+1692|1134|118|12|Regular|Approved desktop screens
+1875|599|111|12|Bold|The challenge
+1905|599|672|25|Bold|Oversight for three regulated businesses at once
+1953|599|672|16|Regular|A bank account, a money market investment and a stockbroking account each carry their own identifiers, transactions and compliance rules — account numbers for banking, GAML IDs for the fund, CSCS IDs for stocks. Staff needed to support customers across all three without mixing them up, while regulators expect strict separation of duties: the person who checks a document shouldn't be the one who approves it.
+2123|616|213|13|Regular|Three businesses, three ID systems
+2123|873|231|13|Regular|KYC upgrades need two-person review
+2175|616|248|13|Regular|Investments, redemptions, buys and sells
+2175|908|215|13|Regular|Content changes need approval too
+2227|616|180|13|Regular|Who changed what, and when
+2227|840|205|13|Regular|Staff access by role, not by person
+2363|599|76|12|Bold|The scope
+2393|599|672|25|Bold|Thirteen modules, grouped by job
+2476|620|13|11|Bold|01
+2476|849|14|11|Bold|02
+2476|1078|14|11|Bold|03
+2498|620|171|16|Bold|Dashboard
+2498|849|171|16|Bold|Customer management
+2498|1078|171|16|Bold|Transactions
+2530|620|171|13|Regular|Accounts, transaction counts and values, failed transfers and a daily overview by type.
+2530|849|171|13|Regular|Banking customers: details, documents, limits, upgrade requests, transactions and profile audit trail.
+2530|1078|171|13|Regular|Transfers and bill payments — data, electricity, airtime and cable TV.
+2692|620|14|11|Bold|04
+2692|849|14|11|Bold|05
+2692|1078|15|11|Bold|06
+2714|620|171|16|Bold|Tier upgrade requests
+2714|849|171|16|Bold|GAML
+2714|1078|171|16|Bold|GSL
+2746|620|171|13|Regular|KYC documents, verifier comments and approve or decline with a reason.
+2746|849|171|13|Regular|Fund investors: GAML ID, investments, redemptions, wallet deposits and withdrawals, portfolio.
+2746|1078|171|13|Regular|Stock investors: CSCS ID, buy and sell orders, wallet, portfolio by value and sector, all stocks.
+2884|620|14|11|Bold|07
+2884|849|14|11|Bold|08
+2884|1078|15|11|Bold|09
+2906|620|171|16|Bold|IPO
+2906|849|171|16|Bold|Admin management
+2906|1078|171|16|Bold|Audit trail
+2938|620|171|13|Regular|Investors and customer details for initial public offerings.
+2938|849|171|13|Regular|Users, roles and permissions — create, edit, activate, deactivate and assign.
+2938|1078|171|13|Regular|Every admin action and profile update, searchable.
+3057|620|13|11|Bold|10
+3057|849|10|11|Bold|11
+3057|1078|12|11|Bold|12
+3079|620|171|16|Bold|Notifications
+3079|849|171|16|Bold|Content management
+3079|1078|171|16|Bold|Reset PIN
+3111|620|171|13|Regular|Create, view and delete notifications to customers.
+3111|849|171|13|Regular|FAQs per business, from draft to pending approval to published.
+3111|1078|171|13|Regular|Resetting a customer's transaction PIN securely.
+3230|620|12|11|Bold|13
+3252|620|171|16|Bold|Sign-in
+3284|620|171|13|Regular|Staff sign in with their Active Directory account.
+3450|599|125|12|Bold|Design strategy
+3480|599|672|25|Bold|Five principles behind the portal
+3563|599|23|22|Bold|01
+3563|646|230|16|SemiBold|Mirror the customer's product
+3563|900|371|13|Medium|Banking, GAML and GSL each get their own area, so staff see a customer the way the customer sees their service.
+3648|599|28|22|Bold|02
+3648|651|230|16|SemiBold|One investor profile, consistent tabs
+3648|905|366|13|Medium|Every investor opens on the same tabs — details, ID, transactions, wallet, portfolio — whichever business they belong to.
+3753|599|27|22|Bold|03
+3753|650|230|16|SemiBold|Two people for every sensitive change
+3753|904|367|13|Medium|Tier upgrades and published content move from verifier to approver, with comments, timestamps and names at each step.
+3858|599|29|22|Bold|04
+3858|652|230|16|SemiBold|Decline with a reason
+3858|906|365|13|Medium|Every decline asks for a reason, so customers and colleagues know exactly what to fix.
+3943|599|27|22|Bold|05
+3943|650|230|16|SemiBold|Every action leaves a trail
+3943|904|367|13|Medium|Admin actions and customer profile updates are logged and searchable from one audit trail.
+4111|599|174|12|Bold|Key design challenges
+4141|599|672|25|Bold|Four hard problems, four resolutions
+4224|622|626|16|SemiBold|1. Approving KYC upgrades safely
+4263|622|84|11|Bold|Challenge
+4263|722|526|14|Regular|A tier upgrade raises a customer's limits, so a wrong approval is a real fraud risk.
+4298|622|84|11|Bold|Solution
+4298|722|526|14|Regular|The upgrade screen shows current and requested tier, the documents submitted (photo, NIN slip, proof of address) with click-to-view, the benefits the new tier unlocks, the verifier's comment and time, and an approver comment — then Verify or Decline.
+4444|622|626|16|SemiBold|2. Three businesses, one support desk
+4483|622|84|11|Bold|Challenge
+4483|722|526|14|Regular|A customer can hold a bank account, a fund investment and a stock portfolio, each with different IDs.
+4539|622|84|11|Bold|Solution
+4539|722|526|14|Regular|Separate Customer Management areas for Banking, GAML and GSL, each with the business's own identifier (account number, GAML ID or CSCS ID) and a consistent tab structure, so staff always know which product they're in.
+4664|622|626|16|SemiBold|3. Monitoring investments and trades
+4703|622|84|11|Bold|Challenge
+4703|722|526|14|Regular|Fund investments, redemptions and stock orders have very different shapes from bank transfers.
+4759|622|84|11|Bold|Solution
+4759|722|526|14|Regular|Transaction views built for each: investment and redemption history for GAML; buy and sell orders with stock, order type, price per share, units, term and status for GSL; plus wallet deposits, withdrawals and portfolio by value and by sector.
+4884|622|626|16|SemiBold|4. Publishing content without mistakes
+4923|622|84|11|Bold|Challenge
+4923|722|526|14|Regular|FAQs and notifications speak for the bank, and an error can confuse thousands of customers.
+4979|622|84|11|Bold|Solution
+4979|722|526|14|Regular|Content moves through Draft, Pending Approval and Published for each business, with approve and decline actions — the same review discipline as money movements.
+5149|599|139|12|Bold|Design highlights
+5179|599|672|25|Bold|A tour of the portal
+5426|599|328|16|Bold|Tier upgrade review
+5426|943|328|16|Bold|Banking customer details
+5458|599|328|13|Regular|Documents, verifier comment and approver decision.
+5458|943|328|13|Regular|Profile, documents, limits and transactions.
+5693|599|328|16|Bold|GSL buy orders
+5693|943|328|16|Bold|GSL portfolio by sector
+5725|599|328|13|Regular|Stock orders with type, price, units and status.
+5725|943|328|13|Regular|An investor's holdings at a glance.
+5960|599|328|16|Bold|GAML investments
+5960|943|328|16|Bold|Roles & permissions
+5992|599|328|13|Regular|Fund investments for each investor.
+5992|943|328|13|Regular|Access defined by role, not by person.
+6227|599|328|16|Bold|FAQ pending approval
+6227|943|328|16|Bold|Audit trail
+6259|599|328|13|Regular|Content reviewed before customers see it.
+6259|943|328|13|Regular|Every admin action, searchable.
+6384|599|109|12|Bold|Design system
+6414|599|672|25|Bold|Same Greenwich system, tuned for desktop
+6462|599|672|16|Regular|The portal reuses the Greenwich style guide from the mobile app — the green palette, type, buttons, inputs, tabs, badges and dialogs — so customers and staff see one brand. On desktop it sits on a dark navigation rail with light working surfaces, green status badges, and a consistent pattern for tabs, tables, filters and pagination across every module.
+6658|599|84|12|Medium|Primary green
+6658|697|84|12|Medium|Action green
+6658|795|84|12|Medium|Lime
+6658|893|84|12|Medium|Rail
+6658|991|84|12|Medium|Danger
+6658|1089|84|12|Medium|Surface
+6681|599|47|11|Regular|#006527
+6681|697|44|11|Regular|#12B84F
+6681|795|48|11|Regular|#85CA23
+6681|893|49|11|Regular|#0A0A0A
+6681|991|50|11|Regular|#DC2626
+6681|1089|44|11|Regular|#F5F5F5
+6711|599|672|12|Regular|Colours sampled from the approved screens.
+6835|599|114|12|Bold|What I learned
+6865|599|672|25|Bold|Design the controls as carefully as the product
+6913|599|672|16|Regular|Customers see a fast, simple app; that speed is only safe because of what happens behind it. Designing the admin alongside the mobile app meant every customer flow had a matching staff flow — an upgrade request had a review screen, a trade had an order record, an FAQ had an approval step. Building separation of duties into the interface, rather than leaving it to policy documents, is what made the whole product trustworthy.
+7157|599|672|22|Bold|Three businesses, one back office — and two people behind every decision that matters.
+7249|599|58|11|Regular|Designer
+7249|770|30|11|Regular|Role
+7249|965|57|11|Regular|Product
+7249|1095|58|11|Regular|Industry
+7272|599|123|14|Regular|Olanrewaju Alalade
+7272|770|147|14|Regular|Lead Product Designer
+7272|965|82|14|Regular|Admin portal
+7272|1095|147|14|Regular|Banking & investments
+7333|616|88|13|Regular|Back-office UX
+7333|746|126|13|Regular|Maker-checker flows
+7333|914|92|13|Regular|KYC operations
+7333|1048|132|13|Regular|Investments & trading
+7383|616|115|13|Regular|Role-based access
+7383|773|90|13|Regular|Enterprise web
+IMG|925|580|732|475|/img/assets/mockup-greenwich-admin-hero.jpg|Hero mockup
+IMG|5255|599|328|163|/img/assets/mockup-greenwich-admin-highlight-tier-upgrade-review.webp|Tier upgrade review
+IMG|5255|943|328|163|/img/assets/mockup-greenwich-admin-highlight-banking-customer-details.webp|Banking customer details
+IMG|5522|599|328|163|/img/assets/mockup-greenwich-admin-highlight-gsl-buy-orders.webp|GSL buy orders
+IMG|5522|943|328|163|/img/assets/mockup-greenwich-admin-highlight-gsl-portfolio-by-sector.webp|GSL portfolio by sector
+IMG|5789|599|328|163|/img/assets/mockup-greenwich-admin-highlight-gaml-investments.webp|GAML investments
+IMG|5789|943|328|163|/img/assets/mockup-greenwich-admin-highlight-roles-permissions.webp|Roles & permissions
+IMG|6056|599|328|163|/img/assets/mockup-greenwich-admin-highlight-faq-pending-approval.webp|FAQ pending approval
+IMG|6056|943|328|163|/img/assets/mockup-greenwich-admin-highlight-audit-trail.webp|Audit trail

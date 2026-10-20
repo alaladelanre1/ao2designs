@@ -1,0 +1,147 @@
+---
+import Base from "../layouts/Base.astro";
+import Sparkle from "../components/Sparkle.astro";
+import Marquee from "../components/Marquee.astro";
+import Contact from "../components/Contact.astro";
+import Stats from "../components/Stats.astro";
+import JobList from "../components/JobList.astro";
+import { allProjects } from "../data/projects/list";
+import { tools, experience, education, expertise, marquee } from "../data/content";
+---
+<Base>
+  <section class="hero">
+    <p class="eyebrow">Designing digital products since — Y:2020</p>
+    <h1 aria-label="Olanrewaju Alalade">
+      <span class="l1" aria-hidden="true">OLANREWAJU</span>
+      <span class="l2" aria-hidden="true">ALALADE</span>
+    </h1>
+    <div class="photo"><img src="/img/photo.png" alt="Olanrewaju Alalade" width="786" height="560" /></div>
+    <div class="spark"><Sparkle /></div>
+    <p class="intro">I’m Olanrewaju Alalade — a senior product designer passionately creating digital experiences and solutions for over 6 years</p>
+    <div class="scroll"><i></i><span>SCROLL</span></div>
+  </section>
+
+  <section class="container about" id="about">
+    <div class="title-sep"><h2>About</h2><span class="rule"></span></div>
+    <div class="cols">
+      <p class="lead">At the core of my practice is user empathy. I design experiences that help people navigate complexity with confidence—whether it’s managing money, resolving operational issues, or interacting with large-scale financial platforms.</p>
+      <div class="right">
+        <p>Over the past several years, I’ve worked across fintech, health tech, and enterprise platforms—designing products that balance depth, usability, and real-world constraints.</p>
+        <p>My approach is rooted in strong UX fundamentals, structured thinking, and close collaboration with product and engineering teams.</p>
+        <p>With over 5+ years of experience in product design, I’ve led design efforts, collaborated across cross-functional teams, and helped translate complex requirements into clear, usable interfaces. I’m particularly interested in systems design, financial workflows, and products where trust, clarity, and reliability matter.</p>
+        <p>Whether I’m mapping user flows, refining dashboards, or aligning design decisions with product goals, I’m always asking:<br />How can this be simpler, clearer, and genuinely useful for the people who rely on it?</p>
+        <div class="cards">
+          {tools.map((t, i) => (
+            <div class="card" style={`top:${16 + i * 14}px`}>
+              <div><h3>{t.name}</h3><p>{t.desc}</p></div>
+              <i></i><b>{t.pct}</b>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="experience"><JobList items={experience} /></div>
+
+  <Stats />
+
+  <section class="marquees" aria-hidden="true">
+    <Marquee items={marquee} size={128} speed={45} />
+    <Marquee items={marquee} size={128} speed={45} reverse />
+  </section>
+
+  <section class="container" id="education">
+    <div class="title-sep"><h2>Education</h2><span class="rule"></span></div>
+    <div class="edu">
+      {education.map((e) => (
+        <article>
+          <h3>{e.title}</h3>
+          <p class="meta">{e.meta[0]}<br />{e.meta[1]}</p>
+          <p>{e.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="container" id="expertise">
+    <div class="title-sep"><h2>Expertise</h2><span class="rule"></span></div>
+    <div class="grid3">
+      {expertise.map(([n, l]) => <div><b>{n}</b><span>{l}</span></div>)}
+    </div>
+  </section>
+
+  <section class="container" id="work">
+    <div class="title-sep"><h2>Work</h2><span class="rule"></span></div>
+    <ul class="work">
+      {allProjects.map((p, i) => <li><span>{String(i + 1).padStart(2, "0")}</span><a href={`/projects/${p.slug}`} class:list={{ soon: p.soon }}>{p.title}</a><em>{p.group}</em></li>)}
+    </ul>
+  </section>
+
+  <Contact />
+</Base>
+
+<style>
+  section { margin-bottom: 120px; }
+  /* Hero */
+  .hero { position: relative; max-width: 1440px; margin: 0 auto 120px; padding: 40px 20px 160px; overflow: hidden; }
+  .eyebrow { text-align: center; font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+  h1 { font-family: var(--font-display); font-weight: 900; color: var(--accent-text); font-size: clamp(72px, 18.05vw, 260px); line-height: 1.1; letter-spacing: -0.02em; display: flex; flex-direction: column; position: relative; z-index: 1; padding-left: clamp(0px, 2.4vw, 32px); }
+  .l2 { padding-left: 16%; }
+  .photo { position: absolute; z-index: 2; top: 17%; left: 50%; transform: translateX(-4%); width: clamp(180px, 27.3vw, 393px); aspect-ratio: 393/280; border: 10px solid #fff; border-radius: 100px; overflow: hidden; }
+  .photo img { width: 125%; height: 117%; max-width: none; margin: -8% 0 0 -25%; object-fit: cover; }
+  .spark { color: var(--accent-text); display: flex; justify-content: center; margin: 80px 0 40px; }
+  .intro { font-size: 22px; max-width: 550px; margin: 0 auto; text-align: center; line-height: 1.8; }
+  .scroll { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; letter-spacing: 0.08em; color: var(--muted); }
+  .scroll i { width: 3px; height: 34px; background: var(--line); position: relative; overflow: hidden; }
+  .scroll i::after { content: ""; position: absolute; left: 0; width: 3px; height: 14px; background: var(--accent-text); animation: drop 1.6s ease-in-out infinite; }
+  @keyframes drop { 0% { top: -14px; } 100% { top: 34px; } }
+
+  /* Columns */
+  .cols { display: grid; grid-template-columns: 1fr 430px; gap: 68px; }
+  .lead { font-size: 22px; line-height: 1.7; color: var(--muted); max-width: 414px; }
+  .lead.light { color: var(--fg); }
+  .right > p { font-size: 18px; margin-bottom: 1.1em; }
+  .cards { margin-top: 36px; display: flex; flex-direction: column; gap: 16px; }
+  .card { position: sticky; background: var(--accent); color: var(--on-accent); border-radius: 8px; padding: 0 22px; height: 142px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 0 30px 10px rgba(18,18,18,0.2); }
+  .card h3 { font-size: 26px; font-weight: 600; line-height: 1.1; }
+  .card p { font-size: 18px; line-height: 1.2; }
+  .card i { width: 2px; height: 46px; background: rgba(18,18,18,0.1); }
+  .card b { font-size: 60px; font-weight: 600; color: rgba(18,18,18,0.3); min-width: 150px; text-align: left; }
+
+  /* Education */
+  h3 { font-size: 20px; font-weight: 600; line-height: 1.4; }
+  .meta { font-size: 16px; font-weight: 500; color: var(--muted); line-height: 1.7; }
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 68px; }
+  .edu article:last-child { margin-bottom: 0; }
+  .edu article { border-bottom: 1px solid var(--line); padding-bottom: 28px; }
+  .edu .meta { margin-bottom: 20px; }
+
+  /* Expertise */
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
+  .grid3 > div { padding: 0 32px; display: flex; flex-direction: column; gap: 4px; }
+  .grid3 > div:nth-child(3n+1) { padding-left: 0; }
+  .grid3 > div:nth-child(3n+2) { border-inline: 2px solid var(--line); }
+  .grid3 b { font-size: 60px; font-weight: 600; line-height: 72px; color: var(--accent-text); }
+  .grid3 span { line-height: 1.2; }
+  .marquees { display: flex; flex-direction: column; gap: 20px; overflow: hidden; }
+
+  /* Work */
+  .work { list-style: none; }
+  .work li { display: flex; gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--line); font-size: 22px; font-weight: 500; }
+  .work li > span:first-child { color: var(--accent-text); font-family: var(--font-display); font-weight: 700; }
+  .work a:hover { color: var(--accent-text); }
+  .work a.soon { color: var(--muted); }
+  .work em { margin-left: auto; font-style: normal; font-size: 13px; color: var(--muted); align-self: center; }
+
+  @media (max-width: 900px) {
+    section { margin-bottom: 80px; }
+    .cols, .edu { grid-template-columns: 1fr; gap: 40px; }
+    .photo { position: relative; top: 0; left: 0; transform: none; margin: -20px auto 0; border-width: 6px; border-radius: 60px; }
+    .l2 { padding-left: 8%; }
+    .grid3 { grid-template-columns: 1fr; gap: 32px; }
+    .grid3 > div { padding: 0 !important; border: 0 !important; }
+    .card b { font-size: 44px; min-width: 0; }
+    .work li { font-size: 18px; gap: 16px; }
+  }
+</style>

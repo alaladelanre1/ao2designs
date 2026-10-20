@@ -1,0 +1,15 @@
+---
+import { stats } from "../data/content";
+---
+<section class="container stats">
+  {stats.map((s) => <div><b>{s.n}</b><span>{s.l}</span></div>)}
+</section>
+<style>
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 120px; }
+  div { padding: 0 32px; display: flex; flex-direction: column; gap: 4px; }
+  div:first-child { padding-left: 0; }
+  div:nth-child(2) { border-inline: 2px solid var(--line); }
+  b { font-size: 60px; font-weight: 600; line-height: 72px; color: var(--accent-text); }
+  span { line-height: 1.2; }
+  @media (max-width: 900px) { .stats { grid-template-columns: 1fr; gap: 32px; margin-bottom: 80px; } div { padding: 0 !important; border: 0 !important; } }
+</style>

@@ -1,0 +1,26 @@
+---
+import Base from "./Base.astro";
+import PageTitle from "../components/PageTitle.astro";
+import ProjectNav from "../components/ProjectNav.astro";
+import Flow from "../components/Flow.astro";
+const { p, dump } = Astro.props;
+---
+<Base title={`${p.title} — Olanrewaju Alalade`}>
+  <PageTitle text="Projects" />
+  <div class="container wrap" style={`--pa:${p.accent};--pa-text:color-mix(in srgb, ${p.accent} 62%, var(--fg))`}>
+    <ProjectNav current={p.slug} />
+    <article>
+      <header>
+        <div class="top"><h1>{p.title}</h1>{p.year && <span>{p.year}</span>}</div>
+      </header>
+      <Flow dump={dump} title={p.title} year={p.year} />
+    </article>
+  </div>
+</Base>
+<style>
+  .wrap { display: grid; grid-template-columns: 278px minmax(0, 732px); gap: 40px; justify-content: space-between; margin-bottom: 120px; }
+  .top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 41.6px; line-height: 1.15; }
+  .top span { font-size: 12px; color: var(--muted); }
+  @media (max-width: 900px) { .wrap { grid-template-columns: 1fr; margin-bottom: 80px; } }
+</style>
