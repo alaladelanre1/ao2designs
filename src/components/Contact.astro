@@ -14,7 +14,9 @@ const { id = "contact" } = Astro.props;
         <input name="email" type="email" placeholder="Your email" required aria-label="Email" />
       </div>
       <textarea name="message" placeholder="Message..." required aria-label="Message"></textarea>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
       <button type="submit">Send</button>
+      <p class="status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -30,17 +32,41 @@ const { id = "contact" } = Astro.props;
   textarea { height: 150px; resize: vertical; }
   input:focus, textarea:focus { outline: 2px solid var(--accent-text); outline-offset: 1px; }
   ::placeholder { color: var(--muted); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .status { min-height: 1.4em; font-size: 14px; }
+  .status.ok { color: var(--accent-text); }
+  .status.err { color: #e5484d; }
+  button[disabled] { opacity: 0.6; cursor: progress; }
   button { background: var(--accent); color: var(--on-accent); border: 0; border-radius: 8px; height: 55px; font: 500 16px var(--font-body); cursor: pointer; }
   button:hover { filter: brightness(0.95); }
   @media (max-width: 900px) { section { margin-bottom: 80px; } .cols { grid-template-columns: 1fr; gap: 40px; } .row { grid-template-columns: 1fr; } }
 </style>
 <script>
+  // Messages are delivered to the site owner's inbox through FormSubmit (formsubmit.co).
+  const ENDPOINT = "https://formsubmit.co/ajax/alaladelanre1@gmail.com";
   document.querySelectorAll<HTMLFormElement>(".contact-form").forEach((f) =>
-    f.addEventListener("submit", (e) => {
+    f.addEventListener("submit", async (e) => {
       e.preventDefault();
+      const btn = f.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+      const status = f.querySelector<HTMLElement>(".status")!;
       const d = new FormData(f);
-      const body = `${d.get("message")}\n\n— ${d.get("name")} (${d.get("email")})`;
-      location.href = `mailto:alaladelanre1@gmail.com?subject=${encodeURIComponent("Portfolio enquiry from " + d.get("name"))}&body=${encodeURIComponent(body)}`;
+      btn.disabled = true; btn.textContent = "Sending…"; status.className = "status"; status.textContent = "";
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { Accept: "application/json", "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: d.get("name"), email: d.get("email"), message: d.get("message"), _honey: d.get("_honey"),
+            _replyto: d.get("email"), _subject: `Portfolio enquiry from ${d.get("name")}`, _template: "table", _captcha: "false",
+          }),
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || json.success === "false") throw new Error(json.message || "Request failed");
+        f.reset(); status.classList.add("ok"); status.textContent = "Thanks — your message has been sent. I'll get back to you soon.";
+      } catch {
+        status.classList.add("err");
+        status.innerHTML = 'Sorry, that didn\'t go through. Please email <a href="mailto:alaladelanre1@gmail.com">alaladelanre1@gmail.com</a> directly.';
+      } finally { btn.disabled = false; btn.textContent = "Send"; }
     })
   );
 </script>
